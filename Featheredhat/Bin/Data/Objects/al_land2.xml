@@ -1,0 +1,15 @@
+<node id="16777216">
+	<attribute name="Name" value="al_land2"/>
+	<component id="16777216" type="StaticModel">
+		<attribute name="Model" value="Model;Models/al_land2.mdl"/>
+		<attribute name="Material" value="Material;"/>
+	</component>
+	<component id="16777217" type="RigidBody">
+		<attribute name="Collision Layer" value="2"/>
+		<attribute name="Use Gravity" value="false"/>
+	</component>
+	<component id="16777218" type="CollisionShape">
+		<attribute name="Shape Type" value="TriangleMesh"/>
+		<attribute name="Model" value="Model;Models/al_land2.mdl"/>
+	</component>
+</node>

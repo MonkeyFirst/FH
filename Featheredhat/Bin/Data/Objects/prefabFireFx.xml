@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<node id="16777353">
+	<attribute name="Is Enabled" value="true" />
+	<attribute name="Name" value="PrefabFireFX" />
+	<attribute name="Position" value="-9.49585 23.4559 -6.48182" />
+	<attribute name="Rotation" value="1 0 0 0" />
+	<attribute name="Scale" value="1 1 1" />
+	<attribute name="Variables">
+		<variant hash="6691218" type="Int" value="1" />
+	</attribute>
+	<component type="AnimatedModel" id="16777355">
+		<attribute name="Model" value="Model;Models/FIREFX.mdl" />
+		<attribute name="Material" value="Material;Materials/MT_FireFx.xml;Materials/MT_SmokeFireFX.xml" />
+		<attribute name="Bone Animation Enabled">
+			<variant type="Bool" value="true" />
+			<variant type="Bool" value="true" />
+			<variant type="Bool" value="true" />
+			<variant type="Bool" value="true" />
+			<variant type="Bool" value="true" />
+			<variant type="Bool" value="true" />
+			<variant type="Bool" value="true" />
+			<variant type="Bool" value="true" />
+			<variant type="Bool" value="true" />
+			<variant type="Bool" value="true" />
+		</attribute>
+		<attribute name="Animation States">
+			<variant type="Int" value="1" />
+			<variant type="ResourceRef" value="Animation;Models/FIREFX.ani" />
+			<variant type="String" value="MasterBone" />
+			<variant type="Bool" value="false" />
+			<variant type="Float" value="1" />
+			<variant type="Float" value="1.07933" />
+			<variant type="Int" value="0" />
+		</attribute>
+	</component>
+	<node id="16777354">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="MasterBone" />
+		<attribute name="Position" value="0.00313744 -6.7749e-008 -0.0121091" />
+		<attribute name="Rotation" value="0.707107 0.707107 6.88394e-008 7.02215e-009" />
+		<attribute name="Scale" value="1.31482 1.31482 1.31482" />
+		<attribute name="Variables" />
+		<node id="16777355">
+			<attribute name="Is Enabled" value="true" />
+			<attribute name="Name" value="Splash" />
+			<attribute name="Position" value="0.00882311 0.158817 6.91039e-008" />
+			<attribute name="Rotation" value="1 -3.77489e-008 4.16333e-015 -3.07336e-008" />
+			<attribute name="Scale" value="0.107325 0.107325 0.107325" />
+			<attribute name="Variables" />
+		</node>
+		<node id="16777356">
+			<attribute name="Is Enabled" value="true" />
+			<attribute name="Name" value="FilaPath" />
+			<attribute name="Position" value="-0.00458685 4.9688 -0.0588843" />
+			<attribute name="Rotation" value="0.827885 -1.01312e-007 -0.560898 -2.45954e-009" />
+			<attribute name="Scale" value="0.253267 0.395207 0.253267" />
+			<attribute name="Variables" />
+		</node>
+		<node id="16777357">
+			<attribute name="Is Enabled" value="true" />
+			<attribute name="Name" value="Clouds" />
+			<attribute name="Position" value="-2.10232 6.00502 0.0518401" />
+			<attribute name="Rotation" value="0.493702 -0.246542 0.172051 0.816011" />
+			<attribute name="Scale" value="1.87511 1.87511 1.87511" />
+			<attribute name="Variables" />
+		</node>
+		<node id="16777358">
+			<attribute name="Is Enabled" value="true" />
+			<attribute name="Name" value="FilaPath.001" />
+			<attribute name="Position" value="-0.00987512 6.10715 -0.0721305" />
+			<attribute name="Rotation" value="0.827885 -9.82277e-008 -0.560898 -4.54885e-009" />
+			<attribute name="Scale" value="0.264797 0.413199 0.264797" />
+			<attribute name="Variables" />
+		</node>
+		<node id="16777359">
+			<attribute name="Is Enabled" value="true" />
+			<attribute name="Name" value="Clouds.001" />
+			<attribute name="Position" value="1.70139 5.23773 -1.45348" />
+			<attribute name="Rotation" value="0.513168 -0.255037 0.196159 -0.795699" />
+			<attribute name="Scale" value="1.87511 1.87511 1.87511" />
+			<attribute name="Variables" />
+		</node>
+		<node id="16777360">
+			<attribute name="Is Enabled" value="true" />
+			<attribute name="Name" value="Clouds.002" />
+			<attribute name="Position" value="0.0374556 7.01556 -0.108561" />
+			<attribute name="Rotation" value="0.772118 -0.170378 0.147716 -0.594126" />
+			<attribute name="Scale" value="1.87511 1.87511 1.87511" />
+			<attribute name="Variables" />
+		</node>
+		<node id="16777361">
+			<attribute name="Is Enabled" value="true" />
+			<attribute name="Name" value="Clouds.003" />
+			<attribute name="Position" value="-0.422161 5.75962 -2.2206" />
+			<attribute name="Rotation" value="0.465349 -0.883541 0.0491049 -0.0198685" />
+			<attribute name="Scale" value="1.87511 1.87511 1.87511" />
+			<attribute name="Variables" />
+		</node>
+		<node id="16777362">
+			<attribute name="Is Enabled" value="true" />
+			<attribute name="Name" value="Clouds.004" />
+			<attribute name="Position" value="-0.853542 5.70997 1.93289" />
+			<attribute name="Rotation" value="0.536111 0.820527 -0.166704 -0.107379" />
+			<attribute name="Scale" value="1.87511 1.87511 1.87511" />
+			<attribute name="Variables" />
+		</node>
+		<node id="16777363">
+			<attribute name="Is Enabled" value="true" />
+			<attribute name="Name" value="Clouds.005" />
+			<attribute name="Position" value="1.60302 5.36426 1.28236" />
+			<attribute name="Rotation" value="0.59512 0.050539 -0.208769 -0.774399" />
+			<attribute name="Scale" value="1.87511 1.87511 1.87511" />
+			<attribute name="Variables" />
+		</node>
+	</node>
+</node>

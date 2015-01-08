@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<node id="24">
+	<attribute name="Is Enabled" value="true" />
+	<attribute name="Name" value="shipNode" />
+	<attribute name="Position" value="-9 7.5 12.5" />
+	<attribute name="Rotation" value="1 0 0 0" />
+	<attribute name="Scale" value="0.1 0.1 0.1" />
+	<attribute name="Variables" />
+	<component type="RigidBody" id="16777323">
+		<attribute name="Physics Position" value="-9 7.5 12.5" />
+		<attribute name="Mass" value="10" />
+		<attribute name="Angular Factor" value="0 0 0" />
+	</component>
+	<component type="CollisionShape" id="16777324">
+		<attribute name="Shape Type" value="Sphere" />
+		<attribute name="Size" value="70 80 30" />
+	</component>
+	<node id="16777263">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="" />
+		<attribute name="Position" value="0 0 0" />
+		<attribute name="Rotation" value="0.707107 0 0.707107 0" />
+		<attribute name="Scale" value="1 1 1" />
+		<attribute name="Variables" />
+		<component type="StaticModel" id="16777325">
+			<attribute name="Model" value="Model;Models/propellerModel/propeller.mdl" />
+			<attribute name="Material" value="Material;Materials/propellerMat/MT_CB_TEX2_BLEND.xml;Materials/propellerMat/MT_CB_TEX2_DIFF.xml;Materials/propellerMat/MT_CB_TEX1_DIFF.xml;" />
+		</component>
+	</node>
+</node>

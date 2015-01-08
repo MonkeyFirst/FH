@@ -1,0 +1,149 @@
+<?xml version="1.0"?>
+<node id="16777225">
+	<attribute name="Is Enabled" value="true" />
+	<attribute name="Name" value="FX" />
+	<attribute name="Position" value="0 3 0" />
+	<attribute name="Rotation" value="1 0 0 0" />
+	<attribute name="Scale" value="1 1 1" />
+	<attribute name="Variables" />
+	<node id="2">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="boom" />
+		<attribute name="Position" value="-15.2756 -2.45528 0.459185" />
+		<attribute name="Rotation" value="1 0 0 0" />
+		<attribute name="Scale" value="2 2 2" />
+		<attribute name="Variables">
+			<variant hash="1360791162" type="String" value="boom" />
+			<variant hash="6691218" type="Int" value="1" />
+		</attribute>
+		<component type="StaticModel" id="16777238">
+			<attribute name="Model" value="Model;Models/Icosphere.mdl" />
+			<attribute name="Material" value="Material;Materials/MT_Boom.xml" />
+		</component>
+		<component type="Light" id="16777239">
+			<attribute name="Color" value="1 0.5 0 1" />
+			<attribute name="Specular Intensity" value="0" />
+			<attribute name="Brightness Multiplier" value="3" />
+			<attribute name="Light Shape Texture" value="TextureCube;" />
+		</component>
+		<node id="16777226">
+			<attribute name="Is Enabled" value="true" />
+			<attribute name="Name" value="boomRing" />
+			<attribute name="Position" value="0 0 0" />
+			<attribute name="Rotation" value="1 0 0 0" />
+			<attribute name="Scale" value="1 1 1" />
+			<attribute name="Variables">
+				<variant hash="6691218" type="Int" value="1" />
+			</attribute>
+			<component type="StaticModel" id="16777240">
+				<attribute name="Model" value="Model;Models/BoomMesh.mdl" />
+				<attribute name="Material" value="Material;Materials/MT_BoomRing.xml" />
+			</component>
+		</node>
+	</node>
+	<node id="3">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="boom" />
+		<attribute name="Position" value="12.8563 -2.07224 0.489285" />
+		<attribute name="Rotation" value="1 0 0 0" />
+		<attribute name="Scale" value="1 1 1" />
+		<attribute name="Variables">
+			<variant hash="1360791162" type="String" value="boom" />
+			<variant hash="6691218" type="Int" value="1" />
+		</attribute>
+		<component type="StaticModel" id="16777249">
+			<attribute name="Model" value="Model;Models/Icosphere.mdl" />
+			<attribute name="Material" value="Material;Materials/MT_Boom.xml" />
+		</component>
+		<component type="Light" id="16777250">
+			<attribute name="Color" value="1 0.5 0 1" />
+			<attribute name="Specular Intensity" value="0" />
+			<attribute name="Brightness Multiplier" value="3" />
+			<attribute name="Light Shape Texture" value="TextureCube;" />
+		</component>
+		<node id="16777234">
+			<attribute name="Is Enabled" value="true" />
+			<attribute name="Name" value="boomRing" />
+			<attribute name="Position" value="0 0 0" />
+			<attribute name="Rotation" value="1 0 0 0" />
+			<attribute name="Scale" value="1 1 1" />
+			<attribute name="Variables">
+				<variant hash="6691218" type="Int" value="1" />
+			</attribute>
+			<component type="StaticModel" id="16777251">
+				<attribute name="Model" value="Model;Models/BoomMesh.mdl" />
+				<attribute name="Material" value="Material;Materials/MT_BoomRing.xml" />
+			</component>
+		</node>
+	</node>
+	<node id="4">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="boom" />
+		<attribute name="Position" value="16.7754 7.46255 1.53855" />
+		<attribute name="Rotation" value="1 0 0 0" />
+		<attribute name="Scale" value="1 1 1" />
+		<attribute name="Variables">
+			<variant hash="1360791162" type="String" value="boom" />
+			<variant hash="6691218" type="Int" value="1" />
+		</attribute>
+		<component type="StaticModel" id="16777252">
+			<attribute name="Model" value="Model;Models/Icosphere.mdl" />
+			<attribute name="Material" value="Material;Materials/MT_Boom.xml" />
+		</component>
+		<component type="Light" id="16777253">
+			<attribute name="Color" value="1 0.5 0 1" />
+			<attribute name="Specular Intensity" value="0" />
+			<attribute name="Brightness Multiplier" value="3" />
+			<attribute name="Light Shape Texture" value="TextureCube;" />
+		</component>
+		<node id="16777235">
+			<attribute name="Is Enabled" value="true" />
+			<attribute name="Name" value="boomRing" />
+			<attribute name="Position" value="0 0 0" />
+			<attribute name="Rotation" value="1 0 0 0" />
+			<attribute name="Scale" value="1 1 1" />
+			<attribute name="Variables">
+				<variant hash="6691218" type="Int" value="1" />
+			</attribute>
+			<component type="StaticModel" id="16777254">
+				<attribute name="Model" value="Model;Models/BoomMesh.mdl" />
+				<attribute name="Material" value="Material;Materials/MT_BoomRing.xml" />
+			</component>
+		</node>
+	</node>
+	<node id="5">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="boom" />
+		<attribute name="Position" value="3.29324 0.696405 -9.56556" />
+		<attribute name="Rotation" value="1 0 0 0" />
+		<attribute name="Scale" value="1 1 1" />
+		<attribute name="Variables">
+			<variant hash="1360791162" type="String" value="boom" />
+			<variant hash="6691218" type="Int" value="1" />
+		</attribute>
+		<component type="StaticModel" id="16777255">
+			<attribute name="Model" value="Model;Models/Icosphere.mdl" />
+			<attribute name="Material" value="Material;Materials/MT_Boom.xml" />
+		</component>
+		<component type="Light" id="16777256">
+			<attribute name="Color" value="1 0.5 0 1" />
+			<attribute name="Specular Intensity" value="0" />
+			<attribute name="Brightness Multiplier" value="3" />
+			<attribute name="Light Shape Texture" value="TextureCube;" />
+		</component>
+		<node id="16777236">
+			<attribute name="Is Enabled" value="true" />
+			<attribute name="Name" value="boomRing" />
+			<attribute name="Position" value="0 0 0" />
+			<attribute name="Rotation" value="1 0 0 0" />
+			<attribute name="Scale" value="1 1 1" />
+			<attribute name="Variables">
+				<variant hash="6691218" type="Int" value="1" />
+			</attribute>
+			<component type="StaticModel" id="16777257">
+				<attribute name="Model" value="Model;Models/BoomMesh.mdl" />
+				<attribute name="Material" value="Material;Materials/MT_BoomRing.xml" />
+			</component>
+		</node>
+	</node>
+</node>

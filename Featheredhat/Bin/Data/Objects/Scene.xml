@@ -1,0 +1,93 @@
+<node id="16777216">
+	<attribute name="Name" value="Scene"/>
+	<node id="16777217">
+		<attribute name="Name" value="Character"/>
+		<component id="16777216" type="AnimatedModel">
+			<attribute name="Model" value="Model;Models/Character.mdl"/>
+			<attribute name="Material" value="Material;Materials/MAT_CHAR_AMULET2.xml;Materials/MAT_CHAR_AMULET.xml;Materials/MAT_CHAR_STANI.xml;Materials/MAT_CHAR_REMEN.xml;Materials/MAT_CHAR_PLATIE2.xml;Materials/MAT_CHAR_PLATIE1.xml;Materials/MAT_CHAR_GLAZA.xml;Materials/MAT_CHAR_GLAZA2.xml;Materials/MAT_CHAR_GLAZA3.xml;Materials/MAT_CHAR_THINGS.xml;Materials/MAT_CHAR_BODY.xml;Materials/MAT_CHAR_VOLOSI.xml"/>
+		</component>
+		<component id="16777217" type="RigidBody">
+			<attribute name="Collision Layer" value="2"/>
+			<attribute name="Use Gravity" value="false"/>
+		</component>
+		<component id="16777218" type="CollisionShape">
+			<attribute name="Shape Type" value="TriangleMesh"/>
+			<attribute name="Model" value="Model;Models/Character.mdl"/>
+		</component>
+	</node>
+	<node id="16777218">
+		<attribute name="Name" value="Character.001"/>
+		<component id="16777219" type="AnimatedModel">
+			<attribute name="Model" value="Model;Models/Character.001.mdl"/>
+			<attribute name="Material" value="Material;Materials/MAT_CHAR_BROVI.xml;Materials/MAT_CHAR_BODY.xml;Materials/MAT_CHAR_BODY_LIPS.xml"/>
+		</component>
+		<component id="16777220" type="RigidBody">
+			<attribute name="Collision Layer" value="2"/>
+			<attribute name="Use Gravity" value="false"/>
+		</component>
+		<component id="16777221" type="CollisionShape">
+			<attribute name="Shape Type" value="TriangleMesh"/>
+			<attribute name="Model" value="Model;Models/Character.001.mdl"/>
+		</component>
+	</node>
+	<node id="16777219">
+		<attribute name="Name" value="Circle"/>
+		<component id="16777222" type="AnimatedModel">
+			<attribute name="Model" value="Model;Models/Circle.mdl"/>
+			<attribute name="Material" value="Material;Materials/MAT_HEAD_PERO2.xml;Materials/SHAPKA_WHITE.xml"/>
+		</component>
+		<component id="16777223" type="RigidBody">
+			<attribute name="Collision Layer" value="2"/>
+			<attribute name="Use Gravity" value="false"/>
+		</component>
+		<component id="16777224" type="CollisionShape">
+			<attribute name="Shape Type" value="TriangleMesh"/>
+			<attribute name="Model" value="Model;Models/Circle.mdl"/>
+		</component>
+	</node>
+	<node id="16777220">
+		<attribute name="Name" value="MeshGun"/>
+		<component id="16777225" type="AnimatedModel">
+			<attribute name="Model" value="Model;Models/MeshGun.mdl"/>
+			<attribute name="Material" value="Material;Materials/MAT_GUN_POYAS.xml;Materials/MAT_GUN_STEEL_C1.xml;Materials/MAT_GUN_STEELBLACK.xml;Materials/MAT_GUN_STEELWHITE.xml;Materials/MAT_ROCKEY_C2.xml;Materials/MAT_ROCKET_C3.xml;Materials/MAT_ROCKET_C1.xml"/>
+		</component>
+		<component id="16777226" type="RigidBody">
+			<attribute name="Collision Layer" value="2"/>
+			<attribute name="Use Gravity" value="false"/>
+		</component>
+		<component id="16777227" type="CollisionShape">
+			<attribute name="Shape Type" value="TriangleMesh"/>
+			<attribute name="Model" value="Model;Models/MeshGun.mdl"/>
+		</component>
+	</node>
+	<node id="16777221">
+		<attribute name="Name" value="MeshRocket"/>
+		<component id="16777228" type="AnimatedModel">
+			<attribute name="Model" value="Model;Models/MeshRocket.mdl"/>
+			<attribute name="Material" value="Material;Materials/MAT_ROCKET_C1.xml;Materials/MAT_ROCKEY_C2.xml;Materials/MAT_GUN_STEELWHITE.xml;Materials/MAT_GUN_STEEL_C1.xml;Materials/MAT_ROCKET_C3.xml"/>
+		</component>
+		<component id="16777229" type="RigidBody">
+			<attribute name="Collision Layer" value="2"/>
+			<attribute name="Use Gravity" value="false"/>
+		</component>
+		<component id="16777230" type="CollisionShape">
+			<attribute name="Shape Type" value="TriangleMesh"/>
+			<attribute name="Model" value="Model;Models/MeshRocket.mdl"/>
+		</component>
+	</node>
+	<node id="16777222">
+		<attribute name="Name" value="vorobei"/>
+		<component id="16777231" type="AnimatedModel">
+			<attribute name="Model" value="Model;Models/vorobei.mdl"/>
+			<attribute name="Material" value="Material;Materials/MAT_PTICA.xml;Materials/MAT_PTICA_PERO.xml;Materials/MAT_PTICA_EYE.xml"/>
+		</component>
+		<component id="16777232" type="RigidBody">
+			<attribute name="Collision Layer" value="2"/>
+			<attribute name="Use Gravity" value="false"/>
+		</component>
+		<component id="16777233" type="CollisionShape">
+			<attribute name="Shape Type" value="TriangleMesh"/>
+			<attribute name="Model" value="Model;Models/vorobei.mdl"/>
+		</component>
+	</node>
+</node>

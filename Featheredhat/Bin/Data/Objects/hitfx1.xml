@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<node id="16777291">
+	<attribute name="Is Enabled" value="true" />
+	<attribute name="Name" value="HITFX" />
+	<attribute name="Position" value="0 12.2183 0" />
+	<attribute name="Rotation" value="1 0 0 0" />
+	<attribute name="Scale" value="1 1 1" />
+	<attribute name="Variables">
+		<variant hash="6691218" type="Int" value="1" />
+	</attribute>
+	<component type="StaticModel" id="16777335">
+		<attribute name="Model" value="Model;Models/hitfx1.mdl" />
+		<attribute name="Material" value="Material;Materials/mat_hitfx1.xml" />
+		<attribute name="View Mask" value="64" />
+	</component>
+	<component type="RigidBody" id="16777346">
+		<attribute name="Physics Position" value="0 12.2183 0" />
+		<attribute name="Collision Layer" value="64" />
+		<attribute name="Collision Mask" value="0" />
+	</component>
+	<component type="CollisionShape" id="16777347">
+		<attribute name="Shape Type" value="Sphere" />
+	</component>
+</node>

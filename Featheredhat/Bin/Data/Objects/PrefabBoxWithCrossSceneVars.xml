@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<node id="16777216">
+	<attribute name="Is Enabled" value="true" />
+	<attribute name="Name" value="PrefabBoxWithCrossSceneVars" />
+	<attribute name="Position" value="0 0 0" />
+	<attribute name="Rotation" value="1 0 0 0" />
+	<attribute name="Scale" value="1 1 1" />
+	<attribute name="Variables">
+		<variant hash="1799871024" type="String" value="Box" />
+		<variant hash="-1501895069" type="Vector3" value="1 0 0" />
+		<variant hash="1732818812" type="String" value="Простоя коробка" />
+		<variant hash="-1908729943" type="Float" value="12.1" />
+	</attribute>
+	<component type="StaticModel" id="16777217">
+		<attribute name="Model" value="Model;Models/Box.mdl" />
+		<attribute name="Material" value="Material;" />
+	</component>
+</node>

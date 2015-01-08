@@ -1,0 +1,12 @@
+<animation>
+    <trigger time="1.25" type="String" value="JointBullet" />
+    <trigger time="1.50" type="String" value="JointBullet" />
+    <trigger time="1.75" type="String" value="JointBullet" />
+    <trigger time="2.0" type="String" value="JointBullet" />
+    <trigger time="2.25" type="String" value="JointBullet" />
+    <trigger time="2.5" type="String" value="JointBullet" />
+    <trigger time="2.75" type="String" value="JointBullet" />
+    <trigger time="3.0" type="String" value="JointBullet" />
+    <trigger time="3.25" type="String" value="JointBullet" />
+    <trigger time="3.5" type="String" value="JointBullet" />
+</animation>

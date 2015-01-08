@@ -1,0 +1,9 @@
+<cubemap>
+    <face name="skyRight.dds" />
+    <face name="skyLeft.dds" />
+    <face name="skyTop.dds" />
+    <face name="skyBottom.dds" />
+    <face name="skyForward.dds" />
+    <face name="skyBackward.dds" />
+    <quality low="0" />
+</cubemap>

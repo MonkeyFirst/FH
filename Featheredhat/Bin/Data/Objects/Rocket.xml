@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<node id="16777972">
+	<attribute name="Is Enabled" value="true" />
+	<attribute name="Name" value="Rocket" />
+	<attribute name="Position" value="0 0 0" />
+	<attribute name="Rotation" value="1 0 0 0" />
+	<attribute name="Scale" value="1 1 1" />
+	<attribute name="Variables">
+		<variant hash="6691218" type="Int" value="1" />
+	</attribute>
+	<component type="StaticModel" id="16777464">
+		<attribute name="Model" value="Model;Models/MeshRocket.mdl" />
+		<attribute name="Material" value="Material;Materials/MAT_ROCKET_C1.xml;Materials/MAT_ROCKEY_C2.xml;Materials/MAT_GUN_STEELWHITE.xml;Materials/MAT_GUN_STEEL_C1.xml;Materials/MAT_ROCKET_C3.xml" />
+	</component>
+	<component type="RigidBody" id="16777465">
+		<attribute name="Physics Rotation" value="0.0129698 0.976627 -0.00540592 0.214481" />
+		<attribute name="Physics Position" value="-6.64283 25.0055 -32.1629" />
+	</component>
+	<component type="CollisionShape" id="16777466">
+		<attribute name="Shape Type" value="Capsule" />
+		<attribute name="Size" value="3 8 1" />
+		<attribute name="Offset Rotation" value="0.707107 0.707107 0 0" />
+	</component>
+</node>

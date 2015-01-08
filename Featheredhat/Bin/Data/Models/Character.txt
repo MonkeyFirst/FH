@@ -1,0 +1,16 @@
+Materials/MAT_CHAR_BROVI.xml
+Materials/MAT_CHAR_BODY.xml
+Materials/MAT_CHAR_BODY_LIPS.xml
+Materials/MAT_HEAD_PERO2.xml
+Materials/SHAPKA_WHITE.xml
+Materials/MAT_CHAR_AMULET2.xml
+Materials/MAT_CHAR_AMULET.xml
+Materials/MAT_CHAR_STANI.xml
+Materials/MAT_CHAR_REMEN.xml
+Materials/MAT_CHAR_PLATIE2.xml
+Materials/MAT_CHAR_PLATIE1.xml
+Materials/MAT_CHAR_GLAZA.xml
+Materials/MAT_CHAR_GLAZA2.xml
+Materials/MAT_CHAR_GLAZA3.xml
+Materials/MAT_CHAR_THINGS.xml
+Materials/MAT_CHAR_VOLOSI.xml

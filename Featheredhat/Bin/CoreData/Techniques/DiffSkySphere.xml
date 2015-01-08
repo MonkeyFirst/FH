@@ -1,0 +1,3 @@
+<technique vs="Skysphere" ps="Skysphere">
+    <pass name="postopaque" depthwrite="false" />
+</technique>

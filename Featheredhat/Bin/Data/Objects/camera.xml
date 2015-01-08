@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<node id="16777229">
+	<attribute name="Is Enabled" value="true" />
+	<attribute name="Name" value="cam" />
+	<attribute name="Position" value="0 6 0" />
+	<attribute name="Rotation" value="1 0 0 0" />
+	<attribute name="Scale" value="1 1 1" />
+	<attribute name="Variables" />
+	<node id="16777230">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="shakeNode" />
+		<attribute name="Position" value="0 0 0" />
+		<attribute name="Rotation" value="1 0 0 0" />
+		<attribute name="Scale" value="1 1 1" />
+		<attribute name="Variables" />
+		<node id="16777231">
+			<attribute name="Is Enabled" value="true" />
+			<attribute name="Name" value="angleNode" />
+			<attribute name="Position" value="0 0 0" />
+			<attribute name="Rotation" value="1 0 0 0" />
+			<attribute name="Scale" value="1 1 1" />
+			<attribute name="Variables" />
+			<node id="16777232">
+				<attribute name="Is Enabled" value="true" />
+				<attribute name="Name" value="cameraNode" />
+				<attribute name="Position" value="0 0 0" />
+				<attribute name="Rotation" value="1 0 0 0" />
+				<attribute name="Scale" value="1 1 1" />
+				<attribute name="Variables" />
+				<component type="Camera" id="16777241">
+					<attribute name="FOV" value="75" />
+					<attribute name="Aspect Ratio" value="1.77778" />
+				</component>
+			</node>
+		</node>
+	</node>
+</node>

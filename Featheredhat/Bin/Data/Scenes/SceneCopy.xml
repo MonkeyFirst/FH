@@ -1,0 +1,303 @@
+<?xml version="1.0"?>
+<scene id="1">
+	<attribute name="Name" value="" />
+	<attribute name="Time Scale" value="1" />
+	<attribute name="Smoothing Constant" value="50" />
+	<attribute name="Snap Threshold" value="5" />
+	<attribute name="Elapsed Time" value="0" />
+	<attribute name="Next Replicated Node ID" value="3" />
+	<attribute name="Next Replicated Component ID" value="7" />
+	<attribute name="Next Local Node ID" value="16777234" />
+	<attribute name="Next Local Component ID" value="16777249" />
+	<attribute name="Variables" />
+	<attribute name="Variable Names" value="fx" />
+	<component type="Octree" id="1" />
+	<component type="DebugRenderer" id="2" />
+	<component type="Light" id="3">
+		<attribute name="Light Type" value="Directional" />
+	</component>
+	<component type="PhysicsWorld" id="4" />
+	<component type="Zone" id="5">
+		<attribute name="Bounding Box Min" value="-100 -100 -100" />
+		<attribute name="Bounding Box Max" value="100 100 100" />
+		<attribute name="Ambient Color" value="0.1 0.2 0.2 1" />
+		<attribute name="Fog Color" value="1 1 1 1" />
+		<attribute name="Fog Start" value="50" />
+		<attribute name="Fog End" value="100" />
+	</component>
+	<component type="Skybox" id="6">
+		<attribute name="Model" value="Model;Models/SkySphere.mdl" />
+		<attribute name="Material" value="Material;Materials/SkySphere.xml" />
+	</component>
+	<node id="16777216">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="Scene" />
+		<attribute name="Position" value="0 0 0" />
+		<attribute name="Rotation" value="1 0 0 0" />
+		<attribute name="Scale" value="1 1 1" />
+		<attribute name="Variables" />
+		<node id="16777217">
+			<attribute name="Is Enabled" value="true" />
+			<attribute name="Name" value="land1" />
+			<attribute name="Position" value="0 0 0" />
+			<attribute name="Rotation" value="1 0 0 0" />
+			<attribute name="Scale" value="1 1 1" />
+			<attribute name="Variables" />
+			<component type="StaticModel" id="16777216">
+				<attribute name="Model" value="Model;Models/land1.mdl" />
+				<attribute name="Material" value="Material;Materials/MT_land1.xml" />
+			</component>
+			<component type="RigidBody" id="16777217">
+				<attribute name="Collision Layer" value="2" />
+				<attribute name="Use Gravity" value="false" />
+			</component>
+			<component type="CollisionShape" id="16777218">
+				<attribute name="Shape Type" value="TriangleMesh" />
+				<attribute name="Model" value="Model;Models/land1.mdl" />
+			</component>
+		</node>
+		<node id="16777218">
+			<attribute name="Is Enabled" value="true" />
+			<attribute name="Name" value="land2" />
+			<attribute name="Position" value="0 0 0" />
+			<attribute name="Rotation" value="1 0 0 0" />
+			<attribute name="Scale" value="1 1 1" />
+			<attribute name="Variables" />
+			<component type="StaticModel" id="16777219">
+				<attribute name="Model" value="Model;Models/land2.mdl" />
+				<attribute name="Material" value="Material;Materials/MT_land2.xml" />
+			</component>
+			<component type="RigidBody" id="16777220">
+				<attribute name="Collision Layer" value="2" />
+				<attribute name="Use Gravity" value="false" />
+			</component>
+			<component type="CollisionShape" id="16777221">
+				<attribute name="Shape Type" value="TriangleMesh" />
+				<attribute name="Model" value="Model;Models/land2.mdl" />
+			</component>
+		</node>
+		<node id="16777219">
+			<attribute name="Is Enabled" value="true" />
+			<attribute name="Name" value="land3" />
+			<attribute name="Position" value="0 0 0" />
+			<attribute name="Rotation" value="1 0 0 0" />
+			<attribute name="Scale" value="1 1 1" />
+			<attribute name="Variables" />
+			<component type="StaticModel" id="16777222">
+				<attribute name="Model" value="Model;Models/land3.mdl" />
+				<attribute name="Material" value="Material;Materials/MT_land3.xml" />
+			</component>
+			<component type="RigidBody" id="16777223">
+				<attribute name="Collision Layer" value="2" />
+				<attribute name="Use Gravity" value="false" />
+			</component>
+			<component type="CollisionShape" id="16777224">
+				<attribute name="Shape Type" value="TriangleMesh" />
+				<attribute name="Model" value="Model;Models/land3.mdl" />
+			</component>
+		</node>
+		<node id="16777220">
+			<attribute name="Is Enabled" value="true" />
+			<attribute name="Name" value="land4" />
+			<attribute name="Position" value="0 0 0" />
+			<attribute name="Rotation" value="1 0 0 0" />
+			<attribute name="Scale" value="1 1 1" />
+			<attribute name="Variables" />
+			<component type="StaticModel" id="16777225">
+				<attribute name="Model" value="Model;Models/land4.mdl" />
+				<attribute name="Material" value="Material;Materials/MT_land4.xml" />
+			</component>
+			<component type="RigidBody" id="16777226">
+				<attribute name="Collision Layer" value="2" />
+				<attribute name="Use Gravity" value="false" />
+			</component>
+			<component type="CollisionShape" id="16777227">
+				<attribute name="Shape Type" value="TriangleMesh" />
+				<attribute name="Model" value="Model;Models/land4.mdl" />
+			</component>
+		</node>
+		<node id="16777221">
+			<attribute name="Is Enabled" value="true" />
+			<attribute name="Name" value="land5" />
+			<attribute name="Position" value="0 0 0" />
+			<attribute name="Rotation" value="1 0 0 0" />
+			<attribute name="Scale" value="1 1 1" />
+			<attribute name="Variables" />
+			<component type="StaticModel" id="16777228">
+				<attribute name="Model" value="Model;Models/land5.mdl" />
+				<attribute name="Material" value="Material;Materials/MT_land5.xml" />
+			</component>
+			<component type="RigidBody" id="16777229">
+				<attribute name="Collision Layer" value="2" />
+				<attribute name="Use Gravity" value="false" />
+			</component>
+			<component type="CollisionShape" id="16777230">
+				<attribute name="Shape Type" value="TriangleMesh" />
+				<attribute name="Model" value="Model;Models/land5.mdl" />
+			</component>
+		</node>
+		<node id="16777222">
+			<attribute name="Is Enabled" value="true" />
+			<attribute name="Name" value="land6" />
+			<attribute name="Position" value="0 0 0" />
+			<attribute name="Rotation" value="1 0 0 0" />
+			<attribute name="Scale" value="1 1 1" />
+			<attribute name="Variables" />
+			<component type="StaticModel" id="16777231">
+				<attribute name="Model" value="Model;Models/land6.mdl" />
+				<attribute name="Material" value="Material;Materials/MT_land6.xml" />
+			</component>
+			<component type="RigidBody" id="16777232">
+				<attribute name="Collision Layer" value="2" />
+				<attribute name="Use Gravity" value="false" />
+			</component>
+			<component type="CollisionShape" id="16777233">
+				<attribute name="Shape Type" value="TriangleMesh" />
+				<attribute name="Model" value="Model;Models/land6.mdl" />
+			</component>
+		</node>
+		<node id="16777223">
+			<attribute name="Is Enabled" value="true" />
+			<attribute name="Name" value="land7" />
+			<attribute name="Position" value="0 0 0" />
+			<attribute name="Rotation" value="1 0 0 0" />
+			<attribute name="Scale" value="1 1 1" />
+			<attribute name="Variables" />
+			<component type="StaticModel" id="16777234">
+				<attribute name="Model" value="Model;Models/land7.mdl" />
+				<attribute name="Material" value="Material;Materials/MT_land7.xml" />
+			</component>
+			<component type="RigidBody" id="16777235">
+				<attribute name="Collision Layer" value="2" />
+				<attribute name="Use Gravity" value="false" />
+			</component>
+			<component type="CollisionShape" id="16777236">
+				<attribute name="Shape Type" value="TriangleMesh" />
+				<attribute name="Model" value="Model;Models/land7.mdl" />
+			</component>
+		</node>
+	</node>
+	<node id="16777224">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="" />
+		<attribute name="Position" value="0 6 0" />
+		<attribute name="Rotation" value="0.881299 0.472558 0 0" />
+		<attribute name="Scale" value="1 1 1" />
+		<attribute name="Variables" />
+		<component type="Light" id="16777237">
+			<attribute name="Light Type" value="Directional" />
+			<attribute name="Brightness Multiplier" value="2" />
+			<attribute name="Range" value="100" />
+		</component>
+	</node>
+	<node id="16777225">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="" />
+		<attribute name="Position" value="0 3 0" />
+		<attribute name="Rotation" value="1 0 0 0" />
+		<attribute name="Scale" value="1 1 1" />
+		<attribute name="Variables" />
+		<node id="2">
+			<attribute name="Is Enabled" value="true" />
+			<attribute name="Name" value="boom" />
+			<attribute name="Position" value="-15.2756 -2.45528 0.459185" />
+			<attribute name="Rotation" value="1 0 0 0" />
+			<attribute name="Scale" value="2 2 2" />
+			<attribute name="Variables">
+				<variant hash="1360791162" type="String" value="boom" />
+				<variant hash="6691218" type="Int" value="1" />
+			</attribute>
+			<component type="StaticModel" id="16777238">
+				<attribute name="Model" value="Model;Models/Icosphere.mdl" />
+				<attribute name="Material" value="Material;Materials/MT_Boom.xml" />
+			</component>
+			<component type="Light" id="16777239">
+				<attribute name="Color" value="1 0.5 0 1" />
+				<attribute name="Specular Intensity" value="0" />
+				<attribute name="Brightness Multiplier" value="3" />
+				<attribute name="Light Shape Texture" value="TextureCube;" />
+			</component>
+			<node id="16777226">
+				<attribute name="Is Enabled" value="true" />
+				<attribute name="Name" value="boomRing" />
+				<attribute name="Position" value="0 0 0" />
+				<attribute name="Rotation" value="1 0 0 0" />
+				<attribute name="Scale" value="1 1 1" />
+				<attribute name="Variables">
+					<variant hash="6691218" type="Int" value="1" />
+				</attribute>
+				<component type="StaticModel" id="16777240">
+					<attribute name="Model" value="Model;Models/BoomMesh.mdl" />
+					<attribute name="Material" value="Material;Materials/MT_BoomRing.xml" />
+				</component>
+			</node>
+		</node>
+	</node>
+	<node id="16777227">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="playerNode" />
+		<attribute name="Position" value="0 2.5 0" />
+		<attribute name="Rotation" value="1 0 0 0" />
+		<attribute name="Scale" value="0.2 0.2 0.2" />
+		<attribute name="Variables" />
+		<component type="RigidBody" id="16777245">
+			<attribute name="Physics Position" value="0 2.5 0" />
+			<attribute name="Mass" value="1" />
+			<attribute name="Friction" value="1" />
+			<attribute name="Angular Factor" value="0 0 0" />
+			<attribute name="Collision Event Mode" value="Always" />
+		</component>
+		<component type="CollisionShape" id="16777246">
+			<attribute name="Shape Type" value="Capsule" />
+			<attribute name="Size" value="2 4 1" />
+		</component>
+		<node id="16777228">
+			<attribute name="Is Enabled" value="true" />
+			<attribute name="Name" value="" />
+			<attribute name="Position" value="0 0 0" />
+			<attribute name="Rotation" value="1 0 0 0" />
+			<attribute name="Scale" value="1 3 1" />
+			<attribute name="Variables" />
+			<component type="StaticModel" id="16777242">
+				<attribute name="Model" value="Model;Models/Box.mdl" />
+				<attribute name="Material" value="Material;" />
+			</component>
+		</node>
+	</node>
+	<node id="16777229">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="cam" />
+		<attribute name="Position" value="0 6 0" />
+		<attribute name="Rotation" value="1 0 0 0" />
+		<attribute name="Scale" value="1 1 1" />
+		<attribute name="Variables" />
+		<node id="16777230">
+			<attribute name="Is Enabled" value="true" />
+			<attribute name="Name" value="shakeNode" />
+			<attribute name="Position" value="0 0 0" />
+			<attribute name="Rotation" value="1 0 0 0" />
+			<attribute name="Scale" value="1 1 1" />
+			<attribute name="Variables" />
+			<node id="16777231">
+				<attribute name="Is Enabled" value="true" />
+				<attribute name="Name" value="angleNode" />
+				<attribute name="Position" value="0 0 0" />
+				<attribute name="Rotation" value="1 0 0 0" />
+				<attribute name="Scale" value="1 1 1" />
+				<attribute name="Variables" />
+				<node id="16777232">
+					<attribute name="Is Enabled" value="true" />
+					<attribute name="Name" value="cameraNode" />
+					<attribute name="Position" value="0 0 0" />
+					<attribute name="Rotation" value="1 0 0 0" />
+					<attribute name="Scale" value="1 1 1" />
+					<attribute name="Variables" />
+					<component type="Camera" id="16777241">
+						<attribute name="FOV" value="75" />
+						<attribute name="Aspect Ratio" value="1.77778" />
+					</component>
+				</node>
+			</node>
+		</node>
+	</node>
+</scene>

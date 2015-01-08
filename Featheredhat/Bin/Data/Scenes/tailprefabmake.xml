@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<scene id="1">
+	<attribute name="Name" value="" />
+	<attribute name="Time Scale" value="1" />
+	<attribute name="Smoothing Constant" value="50" />
+	<attribute name="Snap Threshold" value="5" />
+	<attribute name="Elapsed Time" value="0" />
+	<attribute name="Next Replicated Node ID" value="4" />
+	<attribute name="Next Replicated Component ID" value="7" />
+	<attribute name="Next Local Node ID" value="16777219" />
+	<attribute name="Next Local Component ID" value="16777220" />
+	<attribute name="Variables" />
+	<attribute name="Variable Names" value="" />
+	<component type="Octree" id="1" />
+	<component type="DebugRenderer" id="2" />
+	<component type="PhysicsWorld" id="6" />
+	<node id="16777216">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="" />
+		<attribute name="Position" value="-12.4746 2.07585 7.88854" />
+		<attribute name="Rotation" value="0.873429 0.41804 0.225257 0.107812" />
+		<attribute name="Scale" value="1 1 1" />
+		<attribute name="Variables" />
+		<component type="Light" id="16777216">
+			<attribute name="Light Type" value="Directional" />
+		</component>
+	</node>
+	<node id="16777217">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="" />
+		<attribute name="Position" value="0 -3.94427 7.88854" />
+		<attribute name="Rotation" value="1 0 0 0" />
+		<attribute name="Scale" value="1 1 1" />
+		<attribute name="Variables" />
+	</node>
+	<node id="2">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="Plane" />
+		<attribute name="Position" value="0 -4.10351 7.88854" />
+		<attribute name="Rotation" value="1 0 0 0" />
+		<attribute name="Scale" value="1 1 1" />
+		<attribute name="Variables" />
+		<component type="StaticModel" id="3">
+			<attribute name="Model" value="Model;Models/Plane.mdl" />
+			<attribute name="Material" value="Material;Materials/TailLineRed.xml" />
+		</component>
+	</node>
+	<node id="3">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="Plane" />
+		<attribute name="Position" value="0.473272 -4.43796 7.88854" />
+		<attribute name="Rotation" value="1 0 0 0" />
+		<attribute name="Scale" value="1 1 1" />
+		<attribute name="Variables" />
+		<component type="StaticModel" id="5">
+			<attribute name="Model" value="Model;Models/Plane.mdl" />
+			<attribute name="Material" value="Material;Materials/TailLine.xml" />
+		</component>
+	</node>
+	<node id="16777218">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="SmokeFX" />
+		<attribute name="Position" value="7.7486e-007 -3.74209 7.88854" />
+		<attribute name="Rotation" value="1 0 0 0" />
+		<attribute name="Scale" value="1 1 1" />
+		<attribute name="Variables">
+			<variant hash="6691218" type="Int" value="1" />
+		</attribute>
+		<component type="StaticModel" id="16777217">
+			<attribute name="Model" value="Model;Models/Plane.mdl" />
+			<attribute name="Material" value="Material;Materials/SmokeFX.xml" />
+			<attribute name="View Mask" value="64" />
+		</component>
+		<component type="RigidBody" id="16777218">
+			<attribute name="Physics Position" value="7.7486e-007 -3.74209 7.88854" />
+			<attribute name="Collision Layer" value="64" />
+			<attribute name="Collision Mask" value="0" />
+			<attribute name="Is Trigger" value="true" />
+		</component>
+		<component type="CollisionShape" id="16777219">
+			<attribute name="Shape Type" value="Sphere" />
+		</component>
+	</node>
+</scene>

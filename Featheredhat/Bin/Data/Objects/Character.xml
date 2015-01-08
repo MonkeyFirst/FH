@@ -1,0 +1,15 @@
+<node id="16777216">
+	<attribute name="Name" value="Character"/>
+	<component id="16777216" type="AnimatedModel">
+		<attribute name="Model" value="Model;Models/Character.mdl"/>
+		<attribute name="Material" value="Material;Materials/MAT_CHAR_AMULET2.xml;Materials/MAT_CHAR_AMULET.xml;Materials/MAT_CHAR_STANI.xml;Materials/MAT_CHAR_REMEN.xml;Materials/MAT_CHAR_PLATIE2.xml;Materials/MAT_CHAR_PLATIE1.xml;Materials/MAT_CHAR_GLAZA.xml;Materials/MAT_CHAR_GLAZA2.xml;Materials/MAT_CHAR_GLAZA3.xml;Materials/MAT_CHAR_THINGS.xml;Materials/MAT_CHAR_BODY.xml;Materials/MAT_CHAR_VOLOSI.xml"/>
+	</component>
+	<component id="16777217" type="RigidBody">
+		<attribute name="Collision Layer" value="2"/>
+		<attribute name="Use Gravity" value="false"/>
+	</component>
+	<component id="16777218" type="CollisionShape">
+		<attribute name="Shape Type" value="TriangleMesh"/>
+		<attribute name="Model" value="Model;Models/Character.mdl"/>
+	</component>
+</node>

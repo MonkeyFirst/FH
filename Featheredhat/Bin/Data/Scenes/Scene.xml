@@ -1,0 +1,56 @@
+<scene id="1">
+	<component id="1" type="Octree"/>
+	<component id="2" type="DebugRenderer"/>
+	<component id="3" type="Light">
+		<attribute name="Light Type" value="Directional"/>
+	</component>
+	<component id="4" type="PhysicsWorld"/>
+	<node id="16777216">
+		<attribute name="Name" value="Scene"/>
+		<node id="16777217">
+			<attribute name="Name" value="HI_POLY_A"/>
+			<component id="16777216" type="StaticModel">
+				<attribute name="Model" value="Model;Models/HI_POLY_A.mdl"/>
+				<attribute name="Material" value="Material;Materials/MAT_RED.xml"/>
+			</component>
+			<component id="16777217" type="RigidBody">
+				<attribute name="Collision Layer" value="2"/>
+				<attribute name="Use Gravity" value="false"/>
+			</component>
+			<component id="16777218" type="CollisionShape">
+				<attribute name="Shape Type" value="TriangleMesh"/>
+				<attribute name="Model" value="Model;Models/HI_POLY_A.mdl"/>
+			</component>
+		</node>
+		<node id="16777218">
+			<attribute name="Name" value="LOW_POLY_A"/>
+			<component id="16777219" type="StaticModel">
+				<attribute name="Model" value="Model;Models/LOW_POLY_A.mdl"/>
+				<attribute name="Material" value="Material;Materials/MAT_RED.xml"/>
+			</component>
+			<component id="16777220" type="RigidBody">
+				<attribute name="Collision Layer" value="2"/>
+				<attribute name="Use Gravity" value="false"/>
+			</component>
+			<component id="16777221" type="CollisionShape">
+				<attribute name="Shape Type" value="TriangleMesh"/>
+				<attribute name="Model" value="Model;Models/LOW_POLY_A.mdl"/>
+			</component>
+		</node>
+		<node id="16777219">
+			<attribute name="Name" value="LOW_POLY_A_W_NORMAL"/>
+			<component id="16777222" type="StaticModel">
+				<attribute name="Model" value="Model;Models/LOW_POLY_A_W_NORMAL.mdl"/>
+				<attribute name="Material" value="Material;Materials/MAT_RED_WITH_NORMALMAP.xml"/>
+			</component>
+			<component id="16777223" type="RigidBody">
+				<attribute name="Collision Layer" value="2"/>
+				<attribute name="Use Gravity" value="false"/>
+			</component>
+			<component id="16777224" type="CollisionShape">
+				<attribute name="Shape Type" value="TriangleMesh"/>
+				<attribute name="Model" value="Model;Models/LOW_POLY_A_W_NORMAL.mdl"/>
+			</component>
+		</node>
+	</node>
+</scene>

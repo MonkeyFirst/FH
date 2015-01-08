@@ -1,0 +1,6 @@
+<material>
+	<technique name="Techniques/Diff.xml"/>
+	<texture name="Textures/L5Color.dds" unit="diffuse"/>
+	<parameter name="MatDiffColor" value="0.8 0.8 0.8 1"/>
+	<parameter name="MatSpecColor" value="0 0 0 50"/>
+</material>

@@ -1,0 +1,8 @@
+Materials/MAT_GUN_POYAS.xml
+Materials/MAT_GUN_STEEL_C1.xml
+Materials/MAT_GUN_STEELBLACK.xml
+Materials/MAT_GUN_STEELWHITE.xml
+Materials/MAT_ROCKEY_C2.xml
+Materials/MAT_ROCKET_C3.xml
+Materials/MAT_ROCKET_C1.xml
+Materials/MAT_GUN_FIREFX.xml

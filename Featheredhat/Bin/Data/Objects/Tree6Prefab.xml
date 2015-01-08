@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<node id="16777223">
+	<attribute name="Is Enabled" value="true" />
+	<attribute name="Name" value="PrefabTree-6" />
+	<attribute name="Position" value="24.0099 0 0" />
+	<attribute name="Rotation" value="1 0 0 0" />
+	<attribute name="Scale" value="1 1 1" />
+	<attribute name="Variables" />
+	<component type="StaticModel" id="16777233">
+		<attribute name="Model" value="Model;Models/Trees/TREE-6.mdl" />
+		<attribute name="Material" value="Material;Materials/Trees/MT_Tree_6.xml" />
+		<attribute name="Cast Shadows" value="true" />
+		<attribute name="LOD Bias" value="0.3" />
+	</component>
+	<component type="RigidBody" id="16777234">
+		<attribute name="Physics Position" value="24.0099 0 0" />
+	</component>
+	<component type="CollisionShape" id="16777235">
+		<attribute name="Shape Type" value="TriangleMesh" />
+		<attribute name="Model" value="Model;Models/Trees/TREE-6-COLLIDER.mdl" />
+	</component>
+</node>

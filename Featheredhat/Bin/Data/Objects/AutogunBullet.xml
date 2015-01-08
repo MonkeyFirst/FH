@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<node id="16777970">
+	<attribute name="Is Enabled" value="true" />
+	<attribute name="Name" value="AutogunBullet" />
+	<attribute name="Position" value="0 0 0" />
+	<attribute name="Rotation" value="1 0 0 0" />
+	<attribute name="Scale" value="1 1 1" />
+	<attribute name="Variables">
+		<variant hash="6691218" type="Int" value="1" />
+	</attribute>
+	<component type="StaticModel" id="16777459">
+		<attribute name="Model" value="Model;Models/MeshBullet.mdl" />
+		<attribute name="Material" value="Material;Materials/MAT_ROCKET_C3.xml;Materials/MAT_GUN_STEELWHITE.xml" />
+	</component>
+	<component type="RigidBody" id="16777460">
+		<attribute name="Physics Rotation" value="0.0142041 0.977565 -0.000706486 0.210152" />
+		<attribute name="Physics Position" value="-7.76034 25.0359 -32.6426" />
+		<attribute name="Mass" value="0.1" />
+		<attribute name="Collision Layer" value="64" />
+	</component>
+	<component type="CollisionShape" id="16777462">
+		<attribute name="Size" value="0.5 0.5 2.5" />
+		<attribute name="Offset Position" value="0 0 -0.4" />
+	</component>
+</node>

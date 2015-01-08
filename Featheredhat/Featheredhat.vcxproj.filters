@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="F:\GIT_PROJECTS\FH\Featheredhat\BotAI.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\GIT_PROJECTS\FH\Featheredhat\Character.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\GIT_PROJECTS\FH\Featheredhat\Common.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\GIT_PROJECTS\FH\Featheredhat\GameMain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\GIT_PROJECTS\FH\Featheredhat\ScriptBoom.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\GIT_PROJECTS\FH\Featheredhat\ScriptFireFx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\GIT_PROJECTS\FH\Featheredhat\ScriptHitFx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\GIT_PROJECTS\FH\Featheredhat\ScriptShipAI.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\GIT_PROJECTS\FH\Featheredhat\ScriptSmokeFx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\GIT_PROJECTS\FH\Featheredhat\ScriptTailLine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\GIT_PROJECTS\FH\Featheredhat\ThirdPersonCamera.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="F:\GIT_PROJECTS\FH\Featheredhat\BotAI.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="F:\GIT_PROJECTS\FH\Featheredhat\Character.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="F:\GIT_PROJECTS\FH\Featheredhat\Common.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="F:\GIT_PROJECTS\FH\Featheredhat\GameMain.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="F:\GIT_PROJECTS\FH\Featheredhat\ScriptBoom.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="F:\GIT_PROJECTS\FH\Featheredhat\ScriptFireFx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="F:\GIT_PROJECTS\FH\Featheredhat\ScriptHitFx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="F:\GIT_PROJECTS\FH\Featheredhat\ScriptShipAI.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="F:\GIT_PROJECTS\FH\Featheredhat\ScriptSmokeFx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="F:\GIT_PROJECTS\FH\Featheredhat\ScriptTailLine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="F:\GIT_PROJECTS\FH\Featheredhat\SplineMover.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="F:\GIT_PROJECTS\FH\Featheredhat\ThirdPersonCamera.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="F:\GIT_PROJECTS\FH\Featheredhat\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{8A11BB52-8C4B-4897-888A-7DA45256FC08}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{6ADA6838-F77C-4ED6-8610-295BEA7DB298}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Featheredhat.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="ico.ico" />
+  </ItemGroup>
+</Project>

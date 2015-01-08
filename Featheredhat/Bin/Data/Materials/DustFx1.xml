@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<material>
+	<technique name="Techniques/DiffAlphaMaskWithFactor.xml" quality="0" loddistance="0" />
+	<texture unit="diffuse" name="Textures/DustFX1.dds" />
+	<parameter name="UOffset" value="1 0 0 0" />
+	<parameter name="VOffset" value="0 1 0 0" />
+	<parameter name="MatDiffColor" value="0.1 0.1 0.1 0" />
+	<parameter name="MatEmissiveColor" value="0 0 0" />
+	<parameter name="MatEnvMapColor" value="0 0 0" />
+	<parameter name="MatSpecColor" value="0 0 0 50" />
+	<parameter name="Factor" value="-0.28" />
+	<cull value="none" />
+	<shadowcull value="ccw" />
+	<depthbias constant="0" slopescaled="0" />
+</material>

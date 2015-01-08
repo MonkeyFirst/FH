@@ -1,0 +1,172 @@
+<?xml version="1.0"?>
+<scene id="1">
+	<attribute name="Name" value="" />
+	<attribute name="Time Scale" value="1" />
+	<attribute name="Smoothing Constant" value="50" />
+	<attribute name="Snap Threshold" value="5" />
+	<attribute name="Elapsed Time" value="0" />
+	<attribute name="Next Replicated Node ID" value="1" />
+	<attribute name="Next Replicated Component ID" value="5" />
+	<attribute name="Next Local Node ID" value="16777224" />
+	<attribute name="Next Local Component ID" value="16777236" />
+	<attribute name="Variables" />
+	<attribute name="Variable Names" value="" />
+	<component type="Octree" id="1" />
+	<component type="DebugRenderer" id="2" />
+	<component type="PhysicsWorld" id="3" />
+	<component type="Zone" id="4">
+		<attribute name="Bounding Box Min" value="-100 -100 -100" />
+		<attribute name="Bounding Box Max" value="100 100 100" />
+		<attribute name="Ambient Color" value="0.3 0.3 0.3 1" />
+	</component>
+	<node id="16777216">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="light" />
+		<attribute name="Position" value="0 7.49294 0" />
+		<attribute name="Rotation" value="0.962753 0.270381 0 0" />
+		<attribute name="Scale" value="1 1 1" />
+		<attribute name="Variables" />
+		<component type="Light" id="16777216">
+			<attribute name="Light Type" value="Directional" />
+			<attribute name="Cast Shadows" value="true" />
+		</component>
+	</node>
+	<node id="16777217">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="light2" />
+		<attribute name="Position" value="0 0 -11.7252" />
+		<attribute name="Rotation" value="1 0 0 0" />
+		<attribute name="Scale" value="1 1 1" />
+		<attribute name="Variables" />
+		<component type="Light" id="16777217">
+			<attribute name="Brightness Multiplier" value="2" />
+			<attribute name="Range" value="100" />
+			<attribute name="Light Shape Texture" value="TextureCube;" />
+			<attribute name="Cast Shadows" value="true" />
+		</component>
+	</node>
+	<node id="16777218">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="PrefabTree-1" />
+		<attribute name="Position" value="0 0 0" />
+		<attribute name="Rotation" value="1 0 0 0" />
+		<attribute name="Scale" value="1 1 1" />
+		<attribute name="Variables" />
+		<component type="StaticModel" id="16777218">
+			<attribute name="Model" value="Model;Models/Trees/TREE-1.mdl" />
+			<attribute name="Material" value="Material;Materials/Trees/MT_Tree_1.xml" />
+			<attribute name="Cast Shadows" value="true" />
+			<attribute name="LOD Bias" value="0.3" />
+		</component>
+		<component type="RigidBody" id="16777219" />
+		<component type="CollisionShape" id="16777220">
+			<attribute name="Shape Type" value="TriangleMesh" />
+			<attribute name="Model" value="Model;Models/Trees/TREE-1-COLLIDER.mdl" />
+		</component>
+	</node>
+	<node id="16777219">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="PrefabTree-2" />
+		<attribute name="Position" value="4.39081 0 0" />
+		<attribute name="Rotation" value="1 0 0 0" />
+		<attribute name="Scale" value="1 1 1" />
+		<attribute name="Variables" />
+		<component type="StaticModel" id="16777221">
+			<attribute name="Model" value="Model;Models/Trees/TREE-2.mdl" />
+			<attribute name="Material" value="Material;Materials/Trees/MT_Tree_2.xml" />
+			<attribute name="Cast Shadows" value="true" />
+			<attribute name="LOD Bias" value="0.3" />
+		</component>
+		<component type="RigidBody" id="16777222">
+			<attribute name="Physics Position" value="4.39081 0 0" />
+		</component>
+		<component type="CollisionShape" id="16777223">
+			<attribute name="Shape Type" value="TriangleMesh" />
+			<attribute name="Model" value="Model;Models/Trees/TREE-2-COLLIDER.mdl" />
+		</component>
+	</node>
+	<node id="16777220">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="PrefabTree-3" />
+		<attribute name="Position" value="10.0751 0 0" />
+		<attribute name="Rotation" value="1 0 0 0" />
+		<attribute name="Scale" value="1 1 1" />
+		<attribute name="Variables" />
+		<component type="StaticModel" id="16777224">
+			<attribute name="Model" value="Model;Models/Trees/TREE-3.mdl" />
+			<attribute name="Material" value="Material;Materials/Trees/MT_Tree_3.xml" />
+			<attribute name="Cast Shadows" value="true" />
+			<attribute name="LOD Bias" value="0.3" />
+		</component>
+		<component type="RigidBody" id="16777225">
+			<attribute name="Physics Position" value="10.0751 0 0" />
+		</component>
+		<component type="CollisionShape" id="16777226">
+			<attribute name="Shape Type" value="TriangleMesh" />
+			<attribute name="Model" value="Model;Models/Trees/TREE-3-COLLIDER.mdl" />
+		</component>
+	</node>
+	<node id="16777221">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="PrefabTree-4" />
+		<attribute name="Position" value="14.666 0 0" />
+		<attribute name="Rotation" value="1 0 0 0" />
+		<attribute name="Scale" value="1 1 1" />
+		<attribute name="Variables" />
+		<component type="StaticModel" id="16777227">
+			<attribute name="Model" value="Model;Models/Trees/TREE-4.mdl" />
+			<attribute name="Material" value="Material;Materials/Trees/MT_Tree_4.xml" />
+			<attribute name="Cast Shadows" value="true" />
+			<attribute name="LOD Bias" value="0.3" />
+		</component>
+		<component type="RigidBody" id="16777228">
+			<attribute name="Physics Position" value="14.666 0 0" />
+		</component>
+		<component type="CollisionShape" id="16777229">
+			<attribute name="Shape Type" value="TriangleMesh" />
+			<attribute name="Model" value="Model;Models/Trees/TREE-4-COLLIDER.mdl" />
+		</component>
+	</node>
+	<node id="16777222">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="PrefabTree-5" />
+		<attribute name="Position" value="19.0849 0 0" />
+		<attribute name="Rotation" value="1 0 0 0" />
+		<attribute name="Scale" value="1 1 1" />
+		<attribute name="Variables" />
+		<component type="StaticModel" id="16777230">
+			<attribute name="Model" value="Model;Models/Trees/TREE-5.mdl" />
+			<attribute name="Material" value="Material;Materials/Trees/MT_Tree_5.xml" />
+			<attribute name="Cast Shadows" value="true" />
+			<attribute name="LOD Bias" value="0.3" />
+		</component>
+		<component type="RigidBody" id="16777231">
+			<attribute name="Physics Position" value="19.0849 0 0" />
+		</component>
+		<component type="CollisionShape" id="16777232">
+			<attribute name="Shape Type" value="TriangleMesh" />
+			<attribute name="Model" value="Model;Models/Trees/TREE-5-COLLIDER.mdl" />
+		</component>
+	</node>
+	<node id="16777223">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="PrefabTree-6" />
+		<attribute name="Position" value="24.0099 0 0" />
+		<attribute name="Rotation" value="1 0 0 0" />
+		<attribute name="Scale" value="1 1 1" />
+		<attribute name="Variables" />
+		<component type="StaticModel" id="16777233">
+			<attribute name="Model" value="Model;Models/Trees/TREE-6.mdl" />
+			<attribute name="Material" value="Material;Materials/Trees/MT_Tree_6.xml" />
+			<attribute name="Cast Shadows" value="true" />
+			<attribute name="LOD Bias" value="0.3" />
+		</component>
+		<component type="RigidBody" id="16777234">
+			<attribute name="Physics Position" value="24.0099 0 0" />
+		</component>
+		<component type="CollisionShape" id="16777235">
+			<attribute name="Shape Type" value="TriangleMesh" />
+			<attribute name="Model" value="Model;Models/Trees/TREE-6-COLLIDER.mdl" />
+		</component>
+	</node>
+</scene>

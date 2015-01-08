@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<scene id="1">
+	<attribute name="Name" value="" />
+	<attribute name="Time Scale" value="1" />
+	<attribute name="Smoothing Constant" value="50" />
+	<attribute name="Snap Threshold" value="5" />
+	<attribute name="Elapsed Time" value="0" />
+	<attribute name="Next Replicated Node ID" value="1" />
+	<attribute name="Next Replicated Component ID" value="4" />
+	<attribute name="Next Local Node ID" value="16777221" />
+	<attribute name="Next Local Component ID" value="16777223" />
+	<attribute name="Variables" />
+	<attribute name="Variable Names" value="" />
+	<component type="Octree" id="1" />
+	<component type="DebugRenderer" id="2" />
+	<component type="PhysicsWorld" id="3" />
+	<node id="16777216">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="" />
+		<attribute name="Position" value="43.5074 -3.94427 -32.3547" />
+		<attribute name="Rotation" value="0.869665 0.328564 -0.36569 0.0447076" />
+		<attribute name="Scale" value="1 1.2 1" />
+		<attribute name="Variables" />
+		<component type="Light" id="16777216">
+			<attribute name="Light Type" value="Directional" />
+			<attribute name="Brightness Multiplier" value="0.1" />
+			<attribute name="Range" value="100" />
+		</component>
+	</node>
+	<node id="16777217">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="" />
+		<attribute name="Position" value="49.6761 16.2875 13.0437" />
+		<attribute name="Rotation" value="0.970995 0.239101 0 0" />
+		<attribute name="Scale" value="1 1 1" />
+		<attribute name="Variables" />
+		<component type="Light" id="16777217">
+			<attribute name="Brightness Multiplier" value="0.6" />
+			<attribute name="Range" value="100" />
+			<attribute name="Light Shape Texture" value="TextureCube;" />
+			<attribute name="Cast Shadows" value="true" />
+		</component>
+	</node>
+	<node id="16777218">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="" />
+		<attribute name="Position" value="-7.9797 -11.1005 13.0437" />
+		<attribute name="Rotation" value="1 0 0 0" />
+		<attribute name="Scale" value="1 1 1" />
+		<attribute name="Variables" />
+		<component type="StaticModel" id="16777218">
+			<attribute name="Model" value="Model;Models/propellerModel/propeller.001.mdl" />
+			<attribute name="Material" value="Material;Materials/propellerMat/MT_CB_TEX2_DIFF.xml;Materials/propellerMat/MT_CB_TEX1_DIFF.xml;" />
+			<attribute name="Cast Shadows" value="true" />
+		</component>
+	</node>
+	<node id="16777220">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="PrefabCloudyBike" />
+		<attribute name="Position" value="0 0 -77.1474" />
+		<attribute name="Rotation" value="1 0 0 0" />
+		<attribute name="Scale" value="1 1 1" />
+		<attribute name="Variables" />
+		<component type="StaticModel" id="16777220">
+			<attribute name="Model" value="Model;Models/propellerModel/propeller.mdl" />
+			<attribute name="Material" value="Material;Materials/propellerMat/MT_CB_TEX2_BLEND.xml;Materials/propellerMat/MT_CB_TEX2_DIFF.xml;Materials/propellerMat/MT_CB_TEX1_DIFF.xml;" />
+		</component>
+		<component type="RigidBody" id="16777221">
+			<attribute name="Physics Position" value="0 0 -77.1474" />
+		</component>
+		<component type="CollisionShape" id="16777222">
+			<attribute name="Size" value="100 80 30" />
+		</component>
+	</node>
+</scene>

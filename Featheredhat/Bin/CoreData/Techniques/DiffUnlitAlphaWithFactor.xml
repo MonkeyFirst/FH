@@ -1,0 +1,5 @@
+<technique vs="UnlitAlphaMask" ps="UnlitAlphaMask" psdefines="DIFFMAP ALPHAMASK" alphamask="true">
+    <pass name="base" />
+    <pass name="depth" vs="Depth" ps="Depth" psdefines="ALPHAMASK" />
+    <pass name="deferred" psdefines="DEFERRED" />
+</technique>
