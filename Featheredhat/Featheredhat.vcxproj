@@ -330,6 +330,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="BigBotStates.cpp" />
+    <ClCompile Include="LifeTime.cpp" />
+    <ClInclude Include="BigBot.h" />
+    <ClInclude Include="BigBotStates.h" />
     <ClInclude Include="F:\GIT_PROJECTS\FH\Featheredhat\BotAI.h" />
     <ClInclude Include="F:\GIT_PROJECTS\FH\Featheredhat\Character.h" />
     <ClInclude Include="F:\GIT_PROJECTS\FH\Featheredhat\Common.h" />
@@ -342,6 +346,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClInclude Include="F:\GIT_PROJECTS\FH\Featheredhat\ScriptTailLine.h" />
     <ClInclude Include="F:\GIT_PROJECTS\FH\Featheredhat\SplineMover.h" />
     <ClInclude Include="F:\GIT_PROJECTS\FH\Featheredhat\ThirdPersonCamera.h" />
+    <ClCompile Include="BigBot.cpp" />
     <ClCompile Include="F:\GIT_PROJECTS\FH\Featheredhat\BotAI.cpp" />
     <ClCompile Include="F:\GIT_PROJECTS\FH\Featheredhat\Character.cpp" />
     <ClCompile Include="F:\GIT_PROJECTS\FH\Featheredhat\Common.cpp" />
@@ -353,6 +358,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="F:\GIT_PROJECTS\FH\Featheredhat\ScriptSmokeFx.cpp" />
     <ClCompile Include="F:\GIT_PROJECTS\FH\Featheredhat\ScriptTailLine.cpp" />
     <ClCompile Include="F:\GIT_PROJECTS\FH\Featheredhat\ThirdPersonCamera.cpp" />
+    <ClInclude Include="LifeTime.h" />
     <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>

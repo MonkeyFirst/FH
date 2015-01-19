@@ -9,6 +9,9 @@
 #include <Urho3D/UI/Text.h>
 #include <Urho3D/Audio/Sound.h>
 #include <Urho3D/Audio/SoundSource.h>
+#include <Urho3D/UI/Button.h>
+#include <Urho3D/UI/Text.h>
+#include <Urho3D/UI/CheckBox.h>
 
 // My Scripts 
 #include "Character.h"
@@ -21,6 +24,8 @@
 #include "ScriptFireFx.h"
 #include "BotAI.h"
 #include "ScriptTailLine.h"
+#include "BigBot.h"
+#include "LifeTime.h"
 
 using namespace Urho3D;
 
@@ -38,6 +43,7 @@ typedef struct GameWorld
 	{
 		SharedPtr<Node> node_;
 		SharedPtr<Node> TPCNode_;
+		WeakPtr<ThirdPersonCamera> TPCLogic_;
 		WeakPtr<Camera> camera_;
 		SharedPtr<Viewport> viewport;
 		SharedPtr<RenderPath> effectRenderPath;
@@ -72,9 +78,11 @@ typedef struct GameWorld
 		
 		SharedPtr<XMLFile> prefabHitFx1_;
 		SharedPtr<XMLFile> prefabSmokeFx_;
+		SharedPtr<XMLFile> prefabBlackSmokeFx_;
 		SharedPtr<XMLFile> prefabFireFx_;
 		SharedPtr<XMLFile> prefabBoomFx_;
 		SharedPtr<XMLFile> prefabAutogunBullet_;
+
 		
 	} prefabs;
 
@@ -95,9 +103,38 @@ typedef struct GameWorld
 		PODVector<BotAI*> botsLogic;
 	} R2Bots;
 
+	struct
+	{
+		PODVector<Node*> bigbotsNodes;
+		PODVector<BigBot*> bigbotsLogic;
+	} Bigbots;
+
 
 
 } GameWorld; 
+
+typedef struct GameMenu 
+{
+	
+	Button* btnNewGame;
+	Text* txtNewGame;
+
+	Button* btnOptions;
+	Text* txtOptions;
+
+	Button* btnExit;
+	Text* txtExit;
+
+	CheckBox* optTone;
+	Text* txtTone;
+
+
+
+
+	bool isActive;
+
+} GameMenu;
+
 
 
 class GameMain : public Application
@@ -110,11 +147,14 @@ public:
 
 protected:
 	GameWorld world;
+	GameMenu menu;
+
 	SharedPtr<Scene> scene_;
 	SharedPtr<Sound> music_;
 	SharedPtr<Node> musicNode_;
 	SharedPtr<SoundSource> musicSource_;
 
+	
 
 private:
 	// SETUP
@@ -130,7 +170,10 @@ private:
 	void WaterSetup(Urho3D::String waterNodeName);
 	void Setup2DResources();
 	void SetupR2Bots();
+	void SetupBigBots();
 	void SetupMusic();
+	void CreateMenu();
+
 
 	// UPDATE
 	void UpdateBotPosition(float timeStep);
@@ -149,7 +192,6 @@ private:
 	// VARS
 	bool paused_;
 	bool drawDebug_;
-
-	Text* t; 
-
+	
+	
 };

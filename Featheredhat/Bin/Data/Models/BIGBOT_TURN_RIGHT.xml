@@ -1,0 +1,5 @@
+<animation>
+    <trigger time="0.67" type="String" value="StepL" />
+    <trigger time="2.00" type="String" value="StepL" />
+    <trigger time="2.60" type="String" value="StepR" />
+</animation>

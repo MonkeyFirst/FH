@@ -2,6 +2,7 @@
 #include "Character.h"
 
 
+
 Character::Character(Context* context) : LogicComponent(context)
 {
 	// Only the physics update event is needed: unsubscribe from the rest for optimization
@@ -387,12 +388,27 @@ void Character::HandleAnimationTrigger(StringHash eventType, VariantMap& eventDa
 		Vector3 pos = AutogunBulletJoint_->GetWorldPosition(); // позиция для префаба
 		Quaternion quat = AutogunBulletJoint_->GetWorldRotation(); // ориентация
 
-		SharedPtr<Node> gilza_ = SharedPtr<Node>(GetScene()->InstantiateXML(gameworld_->prefabs.prefabAutogunBullet_->GetRoot(), pos, quat, LOCAL));
+		Node* gilza_ = GetScene()->InstantiateXML(gameworld_->prefabs.prefabAutogunBullet_->GetRoot(), pos, quat, LOCAL);
 		gilza_->SetWorldScale(Vector3(0.11f, 0.11f, 0.11f));
+		LifeTime* lt = gilza_->CreateComponent<LifeTime>();
+		lt->SetLifeTime(5.0f);
+
+		// дым от гильзы
+		Node* smokeFx = GetScene()->InstantiateXML(gameworld_->prefabs.prefabBlackSmokeFx_->GetRoot(), pos, quat, LOCAL);
+		smokeFx->SetParent(gilza_);
+		smokeFx->SetPosition(Vector3(0, 0, 2));
+		
+		float rx = Random(0.0f, 360.0f);
+		smokeFx->SetRotation(Quaternion(rx, rx, rx));
+		smokeFx->SetScale(Vector3::ONE * 4.0f);
+		smokeFx->CreateComponent<ScriptSmokeFx>();
+		
+
 
 		// инерция вылета гильзы в нужном направлении
 		RigidBody* gilzaRigidbody_ = gilza_->GetComponent<RigidBody>();
 		gilzaRigidbody_->SetLinearVelocity((quatGuns * (Vector3::UP + Vector3::RIGHT)) * 3.0f);
+		gilzaRigidbody_->SetAngularVelocity(Vector3(-1.0f, 0.1f, 0.0f));
 		AutogunLight_->SetBrightness(2.0f);
 		
 		
@@ -411,6 +427,7 @@ void Character::HandleAnimationTrigger(StringHash eventType, VariantMap& eventDa
 			Node* hitFx = GetScene()->InstantiateXML(gameworld_->prefabs.prefabHitFx1_->GetRoot(), hitPos, q, LOCAL);
 			hitFx->SetWorldScale(Vector3::ONE * 0.5f);
 			hitFx->CreateComponent<ScriptHitFx>();
+			
 			
 
 			
@@ -468,7 +485,7 @@ bool Character::Raycast(float maxDistance, Vector3& hitPos, Vector3& hitNormal, 
 
 	if (results.Size())
 	{
-		for (int i = 0; i < results.Size(); i++)
+		for (unsigned int i = 0; i < results.Size(); i++)
 		{
 			RayQueryResult& result = results[i];
 

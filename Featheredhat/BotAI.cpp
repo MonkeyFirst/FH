@@ -375,7 +375,7 @@ bool BotAI::Raycast(Ray& ray, float maxDistance, Vector3& hitPos, Vector3& hitNo
 
 	if (results.Size())
 	{
-		for (int i = 0; i < results.Size(); i++) 
+		for (unsigned int i = 0; i < results.Size(); i++) 
 		{
 			RayQueryResult& result = results[i];
 			Variant fx = result.node_->GetVar("fx");

@@ -1,25 +1,25 @@
 <?xml version="1.0"?>
-<node id="16777218">
+<node id="16777293">
 	<attribute name="Is Enabled" value="true" />
 	<attribute name="Name" value="SmokeFX" />
-	<attribute name="Position" value="7.7486e-007 -3.74209 7.88854" />
+	<attribute name="Position" value="0.445927 11.2667 -0.320031" />
 	<attribute name="Rotation" value="1 0 0 0" />
 	<attribute name="Scale" value="1 1 1" />
 	<attribute name="Variables">
 		<variant hash="6691218" type="Int" value="1" />
 	</attribute>
-	<component type="StaticModel" id="16777217">
-		<attribute name="Model" value="Model;Models/Plane.mdl" />
+	<component type="StaticModel" id="16777336">
+		<attribute name="Model" value="Model;Models/Plane3D.mdl" />
 		<attribute name="Material" value="Material;Materials/SmokeFX.xml" />
 		<attribute name="View Mask" value="64" />
 	</component>
-	<component type="RigidBody" id="16777218">
-		<attribute name="Physics Position" value="7.7486e-007 -3.74209 7.88854" />
+	<component type="RigidBody" id="16777348">
+		<attribute name="Physics Position" value="0.445927 11.2667 -0.320031" />
 		<attribute name="Collision Layer" value="64" />
 		<attribute name="Collision Mask" value="0" />
 		<attribute name="Is Trigger" value="true" />
 	</component>
-	<component type="CollisionShape" id="16777219">
+	<component type="CollisionShape" id="16777349">
 		<attribute name="Shape Type" value="Sphere" />
 	</component>
 </node>

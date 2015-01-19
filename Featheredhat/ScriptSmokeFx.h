@@ -34,6 +34,7 @@ public:
 	virtual void FixedUpdate(float timeStep);
 	void SetOrientationToNode(Node *target);
 	void SetScaleFactor(float scaleFactor_);
+	void SetStartEndColors(Vector4 color1, Vector4 color2);
 
 	float maxLifeTime;
 
@@ -42,8 +43,14 @@ private:
 	SharedPtr<ValueAnimation> scaleAnim_;
 	SharedPtr<ValueAnimation> factorAnim_;
 	SharedPtr<ValueAnimation> colorAnim_;
+	SharedPtr<ValueAnimation> colorAnim2_;
+
 	SharedPtr<Material> mat_;
 	WeakPtr<Node> target_;
+
+	bool isUseStartEndColor;
+	Vector4 startColor;
+	Vector4 endColor;
 
 	float startScale;
 

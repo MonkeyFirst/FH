@@ -11,8 +11,8 @@ GameMain::GameMain(Context* context) : Application(context)
 	engineParameters_["WindowWidth"] = 1280;
 	engineParameters_["WindowHeight"] = 720; 
 	engineParameters_["LogName"]     = GetSubsystem<FileSystem>()->GetAppPreferencesDir("urho3d", "logs") + GetTypeName() + ".log";
-	engineParameters_["RenderPath"] = "Bin\CoreData\RenderPaths\Forward.xml";
-	//engineParameters_["RenderPath"] = "Bin\CoreData\RenderPaths\DeferredSAO.xml";
+	engineParameters_["RenderPath"] = "Bin/CoreData/RenderPaths/Forward.xml";
+	//e	ngineParameters_["RenderPath"] = "Bin/CoreData/RenderPaths/DeferredSAO.xml";
 	//engineParameters_["FlushGPU"] = true;
 	RegistrateScripts();
 
@@ -30,6 +30,8 @@ void GameMain::RegistrateScripts()
 	ScriptFireFx::RegisterObject(context_);
 	BotAI::RegisterObject(context_);
 	ScriptTailLine::RegisterObject(context_);
+	BigBot::RegisterObject(context_);
+	LifeTime::RegisterObject(context_);
 }
 
 void GameMain::Start()
@@ -54,10 +56,14 @@ void GameMain::Start()
 	LoadObjects();
 	WaterSetup("waterNode");
 	Setup2DResources();
+	CreateMenu();
 
 	//LEVEL OBJECTS PROCESS
 	SetupR2Bots();
+	SetupBigBots();
 	SetupMusic();
+
+	
 }
 
 void GameMain::LoadScene(Urho3D::String sceneFileName) 
@@ -77,6 +83,8 @@ void GameMain::LoadPrefabs()
 	ResourceCache* cache = GetSubsystem<ResourceCache>();
 	world.prefabs.prefabHitFx1_ = cache->GetResource<XMLFile>("Objects/hitfx1.xml");
 	world.prefabs.prefabSmokeFx_ = cache->GetResource<XMLFile>("Objects/SmokeFx.xml");
+	world.prefabs.prefabBlackSmokeFx_ = cache->GetResource<XMLFile>("Objects/BlackSmokeFx.xml");
+
 	world.prefabs.prefabFireFx_ = cache->GetResource<XMLFile>("Objects/prefabFireFx.xml");
 	world.prefabs.prefabBoomFx_ = cache->GetResource<XMLFile>("Objects/boom.xml");
 	world.prefabs.prefabAutogunBullet_ = cache->GetResource<XMLFile>("Objects/AutogunBullet.xml");
@@ -113,11 +121,10 @@ void GameMain::CameraSetup(Urho3D::String cameraNodeName)
 	// render path
 	
 	ResourceCache* cache = GetSubsystem<ResourceCache>();
-	world.camera.effectRenderPath = world.camera.viewport->GetRenderPath()->Clone();
-	
-	world.camera.effectRenderPath->Append(cache->GetResource<XMLFile>("PostProcess/Bloom.xml"));
+	world.camera.effectRenderPath = world.camera.viewport->GetRenderPath()->Clone();	
+	//world.camera.effectRenderPath->Append(cache->GetResource<XMLFile>("PostProcess/Bloom.xml"));
 	world.camera.effectRenderPath->Append(cache->GetResource<XMLFile>("PostProcess/FXAA2.xml"));
-	world.camera.effectRenderPath->Append(cache->GetResource<XMLFile>("PostProcess/Tonemap.xml"));
+	//world.camera.effectRenderPath->Append(cache->GetResource<XMLFile>("PostProcess/Tonemap.xml"));
 
 	// Make the bloom mixing parameter more pronounced
 	world.camera.effectRenderPath->SetShaderParameter("BloomMix", Vector2(0.5f, 0.3f));
@@ -142,12 +149,12 @@ void GameMain::LoadObjects()
 	world.player.character_ = world.player.node_->CreateComponent<Character>();
 	world.player.character_->gameworld_ = &world;
 	world.camera.TPCNode_ = scene_->GetChild("cam", true);
-	world.camera.TPCNode_->CreateComponent<ThirdPersonCamera>();
-
+	world.camera.TPCLogic_ = world.camera.TPCNode_->CreateComponent<ThirdPersonCamera>();
+	
 	//booms
 	PODVector<Node*> objects; 
 	scene_->GetChildrenWithComponent<StaticModel>(objects, true);
-	for (int i=0; i< objects.Size(); ++i)
+	for (unsigned int i=0; i< objects.Size(); ++i)
 	{
 		Variant name_ = objects[i]->GetVar("type");
 		if (name_.GetString() == "boom") 
@@ -157,12 +164,13 @@ void GameMain::LoadObjects()
 	}
 
 	// botty
+
 	world.flyingBot.node_ = scene_->GetChild("botty", true);
 	world.flyingBot.botSplinePath_ = world.flyingBot.node_->GetComponent<SplinePath>();
 
 	Node* aiNode_ = scene_->GetChild("AI", true);
 	aiNode_->GetChildren(world.flyingBot.aiWaypoints_);
-	for (int i = 0; i < world.flyingBot.aiWaypoints_.Size(); i++) 
+	for (unsigned int i = 0; i < world.flyingBot.aiWaypoints_.Size(); i++) 
 	{
 		world.flyingBot.botSplinePath_->AddControlPoint(world.flyingBot.aiWaypoints_[i]);
 	}
@@ -192,7 +200,7 @@ void GameMain::SetupR2Bots()
 	scene_->GetChildrenWithComponent<SplinePath>(objects, true);
 	//scene_->GetChildrenWithComponent<ScriptInstance>(objects, true);
 	
-	for (int i=0; i< objects.Size(); ++i)
+	for (unsigned int i=0; i< objects.Size(); ++i)
 	{
 		Variant name_ = objects[i]->GetVar("tag");
 		if (name_.GetString() == "R2BOT") 
@@ -208,30 +216,129 @@ void GameMain::SetupR2Bots()
 	}	
 }
 
+void GameMain::SetupBigBots()
+{
+	PODVector<Node*> objects;
+	scene_->GetChildren(objects, true);
+
+	for (unsigned int i = 0; i < objects.Size(); i++)
+	{
+		Variant name_ = objects[i]->GetVar("tag");
+		if (name_.GetString() == "BIGBOT")
+		{
+			world.Bigbots.bigbotsNodes.Push( objects[i] );
+			BigBot* script = objects[i]->CreateComponent<BigBot>();
+			script->SetGameWorld(world);
+			world.Bigbots.bigbotsLogic.Push(  script );
+		}
+	}
+}
+
 void GameMain::Setup2DResources() 
 {
+}
+
+void GameMain::CreateMenu()
+{
+
 	ResourceCache* cache = GetSubsystem<ResourceCache>();
 	UI* ui = GetSubsystem<UI>();
 	UIElement* root = ui->GetRoot();
 	//GetSubsystem<Input>()->SetMouseVisible(true);
 	root->SetDefaultStyle(cache->GetResource<XMLFile>("UI/DefaultStyle.xml"));
-	
-	Button* b = new Button(context_);
-	root->AddChild(b);
 
-	b->SetStyle("Button");
-	b->SetSize(300,100);
-	b->SetPosition(10,10);
+	// New Game
+	menu.btnNewGame = new Button(context_);
+	root->AddChild(menu.btnNewGame);
+	menu.btnNewGame->SetHorizontalAlignment(HA_CENTER);
+	menu.btnNewGame->SetVerticalAlignment(VA_CENTER);
+	menu.btnNewGame->SetName("NewGame");
+	menu.btnNewGame->SetStyleAuto();
+	menu.btnNewGame->SetSize(200, 50);
+	menu.btnNewGame->SetVar("MENU", Variant(1));
 
-	t = new Text(context_);
-	b->AddChild(t);
-	t->SetStyle("Text");
-	t->SetHorizontalAlignment(HA_CENTER);
-	t->SetVerticalAlignment(VA_CENTER);
-	t->SetName("Text");
-	t->SetVisible(true);	
-	t->SetText("Button123");
-	
+
+	menu.txtNewGame = new Text(context_);
+	menu.btnNewGame->AddChild(menu.txtNewGame);
+	menu.txtNewGame->SetStyleAuto();
+	menu.txtNewGame->SetHorizontalAlignment(HA_CENTER);
+	menu.txtNewGame->SetVerticalAlignment(VA_CENTER);
+	menu.txtNewGame->SetVisible(true);
+	menu.txtNewGame->SetText("New game");
+	menu.txtNewGame->SetVar("MENU", Variant(1));
+
+
+	// options
+	menu.btnOptions = new Button(context_);
+	root->AddChild(menu.btnOptions);
+	menu.btnOptions->SetHorizontalAlignment(HA_CENTER);
+	menu.btnOptions->SetVerticalAlignment(VA_CENTER);
+	menu.btnOptions->SetName("Options");
+	menu.btnOptions->SetStyleAuto();
+	menu.btnOptions->SetSize(200, 50);
+	menu.btnOptions->SetPosition(menu.btnNewGame->GetPosition() + IntVector2(0, 55));
+	menu.btnOptions->SetVar("MENU", Variant(1));
+
+
+	menu.txtOptions = new Text(context_);
+	menu.btnOptions->AddChild(menu.txtOptions);
+	menu.txtOptions->SetStyleAuto();
+	menu.txtOptions->SetHorizontalAlignment(HA_CENTER);
+	menu.txtOptions->SetVerticalAlignment(VA_CENTER);
+	menu.txtOptions->SetVisible(true);
+	menu.txtOptions->SetText("Options");
+	menu.txtOptions->SetVar("MENU", Variant(1));
+
+	//tone
+	menu.optTone = new CheckBox(context_);
+	root->AddChild(menu.optTone);
+	menu.optTone->SetStyleAuto();
+	menu.optTone->SetName("Tone");
+	menu.optTone->SetVisible(true);
+	menu.optTone->SetHorizontalAlignment(HA_CENTER);
+	menu.optTone->SetVerticalAlignment(VA_CENTER);
+	menu.optTone->SetPosition(menu.btnOptions->GetPosition() + IntVector2(120, 0));
+	menu.optTone->SetVar("MENU", Variant(1));
+
+
+	menu.txtTone = new Text(context_);
+	menu.optTone->AddChild(menu.txtTone);
+	menu.txtTone->SetStyleAuto();
+	menu.txtTone->SetHorizontalAlignment(HA_LEFT);
+	menu.txtTone->SetVerticalAlignment(VA_CENTER);
+	menu.txtTone->SetPosition(IntVector2(20, 0));
+	menu.txtTone->SetVisible(true);
+	menu.txtTone->SetText("Tonemapping");
+	menu.txtTone->SetVar("MENU", Variant(1));
+
+
+	// Exit
+	menu.btnExit = new Button(context_);
+	root->AddChild(menu.btnExit);
+
+	menu.btnExit->SetHorizontalAlignment(HA_CENTER);
+	menu.btnExit->SetVerticalAlignment(VA_CENTER);
+	menu.btnExit->SetStyleAuto();
+	menu.btnExit->SetSize(200, 50);
+	menu.btnExit->SetName("Exit");
+	menu.btnExit->SetPosition(menu.btnOptions->GetPosition() + IntVector2(0, 55));
+	menu.btnExit->SetVar("MENU", Variant(1));
+
+	menu.txtExit = new Text(context_);
+	menu.btnExit->AddChild(menu.txtExit);
+	menu.txtExit->SetStyleAuto();
+	menu.txtExit->SetHorizontalAlignment(HA_CENTER);
+	menu.txtExit->SetVerticalAlignment(VA_CENTER);
+	//exitBtnText->SetName("Exit");
+	menu.txtExit->SetVisible(true);
+	menu.txtExit->SetText("Exit");
+	menu.txtExit->SetVar("MENU", Variant(1));
+
+
+	GetSubsystem<Input>()->SetMouseVisible(true);
+
+	menu.isActive = true;
+
 }
 
 void GameMain::SetupMusic()
@@ -319,7 +426,7 @@ void GameMain::SubscribeToEvents()
 	//SubscribeToEvent(E_RENDERUPDATE, HANDLER(GameMain, HandleRenderUpdate));
 
 	//UI
-	//SubscribeToEvent(E_UIMOUSECLICK, HANDLER(GameMain, HandleControlClicked));
+	SubscribeToEvent(E_UIMOUSECLICK, HANDLER(GameMain, HandleControlClicked));
 
 
 }
@@ -380,28 +487,24 @@ void GameMain::HandleKeyDown(StringHash eventType, VariantMap& eventData)
 {
 	using namespace KeyDown;
 	int key = eventData[P_KEY].GetInt();
-	
+	Input* input_ = GetSubsystem<Input>();
+	UI* ui = GetSubsystem<UI>();
+	UIElement* root = ui->GetRoot();
+
+
 	if (key == KEY_ESC)
 	{
+		menu.isActive = !menu.isActive;
 
-		Input* input_ = GetSubsystem<Input>();
-
-		if (input_->IsMouseVisible())
+		Vector<SharedPtr<UIElement>> elements = root->GetChildren();
+		
+		for (unsigned int i = 0; i < elements.Size(); i++) 
 		{
-			input_->SetMouseVisible(false);
-
+			if (elements[i]->GetVar("MENU").GetInt() == 1)
+				elements[i]->SetVisible(menu.isActive);
 		}
-		else
-		{
-			input_->SetMouseVisible(true);
-
-			Console* console = GetSubsystem<Console>();
-			if (console->IsVisible())
-				console->SetVisible(false);
-			else
-				engine_->Exit();
-
-		}
+		
+		input_->SetMouseVisible(menu.isActive);		
 	}
 	else if (key == KEY_F1) 
 	{
@@ -481,7 +584,7 @@ bool GameMain::Raycast(float maxDistance, Vector3& hitPos, Vector3& hitNormal, D
 
 	if (results.Size())
 	{
-		for (int i = 0; i < results.Size(); i++) 
+		for (unsigned int i = 0; i < results.Size(); i++) 
 		{
 			RayQueryResult& result = results[i];
 
@@ -497,4 +600,26 @@ bool GameMain::Raycast(float maxDistance, Vector3& hitPos, Vector3& hitNormal, D
 	}
 
 	return false;
+}
+
+
+void GameMain::HandleControlClicked(StringHash eventType, VariantMap& eventData)
+{
+	// Get control that was clicked
+	UIElement* clicked = static_cast<UIElement*>(eventData[UIMouseClick::P_ELEMENT].GetPtr());
+
+	String name = "...?";
+	if (clicked)
+	{
+		// Get the name of the control that was clicked
+		name = clicked->GetName();
+		if (name == "New Game") 
+		{
+			
+		}
+		else if (name == "Exit") 
+		{
+			engine_->Exit();
+		}
+	}
 }

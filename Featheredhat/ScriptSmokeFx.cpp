@@ -1,5 +1,6 @@
 #include "Common.h"
 #include "ScriptSmokeFx.h"
+#include <time.h>
 
 
 ScriptSmokeFx::ScriptSmokeFx(Context* context) : LogicComponent(context)
@@ -50,18 +51,32 @@ void ScriptSmokeFx::Start()
 	mat_->SetScene(GetScene());
 
 	// color fade
-	colorAnim_ = SharedPtr<ValueAnimation>(new ValueAnimation(context_));
-	colorAnim_->SetKeyFrame(0.0f, Vector4(1.0f,1.0f,1.0f, 1.0f));
-	colorAnim_->SetKeyFrame((maxLifeTime / 3.0f), Vector4(1.0f,1.0f,1.0f, 1.0f));
-	colorAnim_->SetKeyFrame(maxLifeTime + (maxLifeTime / 5.0f), Vector4(0.2f,0.2f,0.2f, 1.0f));
-	mat_->SetShaderParameterAnimation("MatDiffColor", colorAnim_);
-	mat_->SetScene(GetScene());
+	
+	/*colorAnim_ = SharedPtr<ValueAnimation>(new ValueAnimation(context_));
+	colorAnim_->SetKeyFrame(0.0f, Vector4(1.0f, 1.0f, 1.0f, 1.0f));
+	colorAnim_->SetKeyFrame((maxLifeTime / 3.0f), Vector4(1.0f, 1.0f, 1.0f, 1.0f));
+	colorAnim_->SetKeyFrame(maxLifeTime + (maxLifeTime / 5.0f), Vector4(0.7f, 0.7f, 0.7f, 1.0f));*/
+	//mat_->SetShaderParameterAnimation("MatDiffColor", colorAnim_);
 
+
+	mat_->SetScene(GetScene());
 	model->SetMaterial(0,mat_);
 
-	
+	startColor = Vector4::ONE;
+	endColor = Vector4::ZERO;
 	
 	target_ = NULL;
+
+	Quaternion q;
+
+	SetRandomSeed(time(NULL));
+	float rx = Random(0.0f, 360.0f);
+	float ry = Random(0.0f, 360.0f);
+	float rz = Random(0.0f, 360.0f);
+
+	q.FromEulerAngles(rx, ry, rz);
+
+	GetNode()->SetRotation(q);
 }
 
 void ScriptSmokeFx::Update(float timeStep) 
@@ -69,11 +84,14 @@ void ScriptSmokeFx::Update(float timeStep)
 	if (target_) 
 	{
 		Vector3 targetPos = GetNode()->GetWorldPosition() - target_->GetWorldPosition();
+		//Vector3 targetPos = target_->GetWorldPosition();
+
 		Quaternion smokeOrient;
 
 		smokeOrient.FromRotationTo(GetNode()->GetWorldPosition(), targetPos);
-
+		
 		GetNode()->SetWorldRotation(smokeOrient);
+		//GetNode()->SetWorldDirection((target_->GetWorldPosition() - GetNode()->GetWorldPosition()).Normalized());
 	}
 	
 
@@ -95,4 +113,15 @@ void ScriptSmokeFx::FixedUpdate(float timeStep)
 void ScriptSmokeFx::SetOrientationToNode(Node *target) 
 {
 	target_ = target;
+}
+
+void ScriptSmokeFx::SetStartEndColors(Vector4 color1, Vector4 color2)
+{
+	isUseStartEndColor = true;
+	startColor = color1;
+	endColor = color2;
+
+
+	//StaticModel* model = GetComponent<StaticModel>();
+	//model->SetMaterial(0, mat_);
 }

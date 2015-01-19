@@ -53,12 +53,14 @@ public:
 
 	void HandleGlobalBlastEvent(StringHash eventType, VariantMap& eventData);
 	
+	SharedPtr<Node> cameraNode_;
+
 private:
 
 	SharedPtr<Node> target_;
 	SharedPtr<Node> shakeNode_;
 	SharedPtr<Node> angleNode_;
-	SharedPtr<Node> cameraNode_;
+	
 	SharedPtr<Camera> camera_;
 
 	int wheel_;
