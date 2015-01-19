@@ -197,3 +197,65 @@ void BigBotAIStateIdleTurnRight::ExitState()
 	
 
 }
+
+////////////////////////////////////////////////////////////////////////// < ATTACK WITH GUN
+void BigBotAIStateAttackWithGun::Update(float timeStep) 
+{
+	
+	BigBot_->animAttackWithGun_->SetWeight(1.0f);
+	BigBot_->animAttackWithGun_->AddTime(timeStep);
+
+	float t = BigBot_->animAttackWithGun_->GetTime();
+	float l = BigBot_->animAttackWithGun_->GetLength() - timeStep;
+
+	if (t >= l)
+	{
+		//VariantMap eventData;
+		//eventData["BIGBOT"] = BigBot_;
+		//BigBot_->SendEvent("GoToNewIdleState", eventData);
+
+		BigBot_->ChangeState(BigBot_->states[BigBotAIState::ANI_IDLE]);
+	}
+}
+
+void BigBotAIStateAttackWithGun::FixedUpdate(float timeStep)
+{
+	if (BigBot_->target == NULL) return;
+	
+	Vector3 playerPos = BigBot_->target->GetWorldPosition();
+	Vector3 botPos = BigBot_->node_->GetWorldPosition();
+	float distanceBetween = (playerPos - botPos).Length();
+
+	if (distanceBetween < BigBot_->ATTACKRANGE) // player in range, go fire
+	{
+		Vector3 dir = ((Vector3(0.0f,-5.0f,0.0f)) + (playerPos - botPos)).Normalized();
+		Quaternion q;
+		//q.FromRotationTo(playerPos.Normalized(), botPos.Normalized());
+		
+		Vector3 pdir = Vector3(dir.x_, 0.0f, dir.z_); // direction on plane
+		//pdir.Normalized();
+		//BigBot_->node_->SetWorldRotation(q);
+		BigBot_->node_->SetWorldDirection(pdir.CrossProduct(Vector3::UP));
+		BigBot_->boneCenter_->node_->SetWorldDirection( -dir);
+
+	}
+	else // lost player
+	{
+	
+		BigBot_->target = NULL;
+		//BigBot_->ChangeState(BigBot_->states[BigBotAIState::ANI_IDLE]);
+	}
+}
+
+void BigBotAIStateAttackWithGun::EnterState()
+{
+
+	BigBotAIState::EnterState();
+	BigBot_->boneCenter_->animated_ = false;
+}
+
+void BigBotAIStateAttackWithGun::ExitState()
+{
+	BigBotAIState::ExitState();
+	BigBot_->boneCenter_->animated_ = true;
+}

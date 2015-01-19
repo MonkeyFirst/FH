@@ -29,6 +29,10 @@ public:
 	friend class BigBotAIStateIdleLookRight;
 	friend class BigBotAIStateIdleTurnLeft;
 	friend class BigBotAIStateIdleTurnRight;
+	friend class BigBotAIStateAttackWithGun;
+
+	const float SPEED = 3.0f;
+	const float ATTACKRANGE = 20.0f;
 
 
 	GameWorld* gameWorld_;
@@ -56,7 +60,10 @@ public:
 
 	void ChangeState(BigBotAIState* newState);
 	void ClearPrevAnimStates();
+	void CheckForFireByPlayer(float range_);
 
+	bool isAttacking;
+	Node* target;
 	
 	BigBotAIState* states[BigBotAIState::ANI_LAST];
 

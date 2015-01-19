@@ -43,8 +43,9 @@ void BigBot::Start()
 	rigidbody_ = node_->GetComponent<RigidBody>();
 	animModel_ = node_->GetComponent<AnimatedModel>();
 	animController_ = node_->GetComponent<AnimationController>();
-	boneCenter_ = animModel_->GetSkeleton().GetBone("Center");
+	boneCenter_ = animModel_->GetSkeleton().GetBone("Rotator");
 	//boneCenter_->animated_ = false;
+	
 
 
 	// get animations
@@ -120,6 +121,8 @@ void BigBot::Start()
 	states[BigBotAIState::ANI_IDLE_LOOK_RIGHT] = new BigBotAIStateIdleLookRight(this);
 	states[BigBotAIState::ANI_TURN_LEFT] = new BigBotAIStateIdleTurnLeft(this);
 	states[BigBotAIState::ANI_TURN_RIGHT] = new BigBotAIStateIdleTurnRight(this);
+	states[BigBotAIState::ANI_ATTACK_WITH_GUN] = new BigBotAIStateAttackWithGun(this);
+
 
 
 	animPrevState_ = BigBotAIState::ANI_NONE;
@@ -210,6 +213,11 @@ void BigBot::FixedUpdate(float timeStep)
 {
 	SmokeAnimation(timeStep);
 
+	// если бот не подбит и не валяется пусть проверит наличие игрока рядом 
+	if (animState_ != BigBotAIState::ANI_HITED || animState_ != BigBotAIState::ANI_HITED_IDLE)
+	{
+		CheckForFireByPlayer(ATTACKRANGE);
+	}
 
 	if (state_) state_->FixedUpdate(timeStep);
 
@@ -356,4 +364,25 @@ void BigBot::ClearPrevAnimStates()
 	}
 
 	animPrevState_ = BigBotAIState::ANI_NONE;
+}
+
+
+void BigBot::CheckForFireByPlayer(float range_)
+{
+	if (animState_ == BigBotAIState::ANI_ATTACK_WITH_GUN) return;
+
+	Vector3 botPos = node_->GetWorldPosition();
+	Vector3 playerPos = gameWorld_->player.node_->GetWorldPosition();
+	float distanceBetween = (botPos - playerPos).Length();
+
+	float distanceByY = (botPos.y_ - playerPos.y_);
+
+
+	if (distanceBetween < range_ && distanceByY < 0.0f) // player in range, go fire
+	{
+		target = gameWorld_->player.node_;
+		ChangeState(states[BigBotAIState::ANI_ATTACK_WITH_GUN]);
+		isAttacking = true;
+	}
+	isAttacking = false;
 }

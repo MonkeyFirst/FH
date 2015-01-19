@@ -47,7 +47,6 @@ public:
 	BigBotAIStateIdle(){};
 	BigBotAIStateIdle(BigBot* bot)
 	{
-		//stateType_ = BigBotAIState::ANI_IDLE;
 		stateAni_ = ANIMStates::ANI_IDLE;
 		SetActor(bot);
 	};
@@ -63,7 +62,6 @@ public:
 	BigBotAIStateIdleLookLeft(){};
 	BigBotAIStateIdleLookLeft(BigBot* bot)
 	{
-		//stateType_ = BigBotAIState::ANI_IDLE;
 		stateAni_ = ANIMStates::ANI_IDLE_LOOK_LEFT;
 		SetActor(bot);
 	};
@@ -79,7 +77,6 @@ public:
 	BigBotAIStateIdleLookRight(){};
 	BigBotAIStateIdleLookRight(BigBot* bot)
 	{
-		//stateType_ = BigBotAIState::ANI_IDLE;
 		stateAni_ = ANIMStates::ANI_IDLE_LOOK_RIGHT;
 		SetActor(bot);
 	};
@@ -95,7 +92,6 @@ public:
 	BigBotAIStateIdleTurnLeft(){};
 	BigBotAIStateIdleTurnLeft(BigBot* bot)
 	{
-		//stateType_ = BigBotAIState::ANI_IDLE;
 		stateAni_ = ANIMStates::ANI_TURN_LEFT;
 		SetActor(bot);
 	};
@@ -113,8 +109,24 @@ public:
 	BigBotAIStateIdleTurnRight(){};
 	BigBotAIStateIdleTurnRight(BigBot* bot)
 	{
-		//stateType_ = BigBotAIState::ANI_IDLE;
 		stateAni_ = ANIMStates::ANI_TURN_RIGHT;
+		SetActor(bot);
+	};
+
+	void Update(float timeStep);
+	void FixedUpdate(float timeStep);
+	virtual void EnterState();
+	virtual void ExitState();
+};
+
+class BigBotAIStateAttackWithGun : public BigBotAIState
+{
+
+public:
+	BigBotAIStateAttackWithGun(){};
+	BigBotAIStateAttackWithGun(BigBot* bot)
+	{
+		stateAni_ = ANIMStates::ANI_ATTACK_WITH_GUN;
 		SetActor(bot);
 	};
 
