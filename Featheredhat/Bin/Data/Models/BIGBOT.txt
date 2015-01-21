@@ -1,2 +1,3 @@
+Materials/MAT_BIGBOT_PUSHKA.xml
 Materials/MAT_BIGBOT.xml
 Materials/MAT_BIGBOT_LUK.xml

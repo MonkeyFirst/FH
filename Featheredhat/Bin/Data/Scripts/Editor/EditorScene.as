@@ -99,6 +99,7 @@ bool ResetScene()
     StopSceneUpdate();
 
     UpdateWindowTitle();
+    DisableInspectorLock();
     UpdateHierarchyItem(editorScene, true);
     ClearEditActions();
 
@@ -116,6 +117,8 @@ void SetResourcePath(String newPath, bool usePreferredDir = true, bool additive 
 {
     if (newPath.empty)
         return;
+    if (!IsAbsolutePath(newPath))
+        newPath = fileSystem.currentDir + newPath;
 
     if (usePreferredDir)
         newPath = AddTrailingSlash(cache.GetPreferredResourceDir(newPath));
@@ -137,6 +140,17 @@ void SetResourcePath(String newPath, bool usePreferredDir = true, bool additive 
 
         if (!sceneResourcePath.empty && !isDefaultResourcePath)
             cache.RemoveResourceDir(sceneResourcePath);
+    }
+    else
+    {
+        // If additive (path of a loaded prefab) check that the new path isn't already part of an old path
+        Array<String>@ resourceDirs = cache.resourceDirs;
+
+        for (uint i = 0; i < resourceDirs.length; ++i)
+        {
+            if (newPath.StartsWith(resourceDirs[i], false))
+                return;
+        }
     }
 
     // Add resource path as first priority so that it takes precedence over the default data paths
@@ -211,6 +225,7 @@ bool LoadScene(const String&in fileName)
     editorScene.updateEnabled = false;
 
     UpdateWindowTitle();
+    DisableInspectorLock();
     UpdateHierarchyItem(editorScene, true);
     ClearEditActions();
 
@@ -1070,12 +1085,15 @@ void CreateModelWithStaticModel(String filepath, Node@ parent)
 {
     if (parent is null)
         return;
+    /// \todo should be able to specify the createmode
+    if (parent is editorScene)
+        parent = CreateNode(REPLICATED);
 
     Model@ model = cache.GetResource("Model", filepath);
     if (model is null)
         return;
 
-    StaticModel@ staticModel = cast<StaticModel>(editNode.CreateComponent("StaticModel"));
+    StaticModel@ staticModel = parent.GetOrCreateComponent("StaticModel");
     staticModel.model = model;
     CreateLoadedComponent(staticModel);
 }
@@ -1084,12 +1102,15 @@ void CreateModelWithAnimatedModel(String filepath, Node@ parent)
 {
     if (parent is null)
         return;
+    /// \todo should be able to specify the createmode
+    if (parent is editorScene)
+        parent = CreateNode(REPLICATED);
 
     Model@ model = cache.GetResource("Model", filepath);
     if (model is null)
         return;
 
-    AnimatedModel@ animatedModel = cast<StaticModel>(editNode.CreateComponent("AnimatedModel"));
+    AnimatedModel@ animatedModel = parent.GetOrCreateComponent("AnimatedModel");
     animatedModel.model = model;
     CreateLoadedComponent(animatedModel);
 }

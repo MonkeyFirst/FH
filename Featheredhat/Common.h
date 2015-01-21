@@ -4,6 +4,8 @@
 
 #include "GameMain.h"
 
+//#define URHO3D_API
+
 #include <Urho3D/Urho3D.h>
 #include <Urho3D/Engine/Application.h>
 

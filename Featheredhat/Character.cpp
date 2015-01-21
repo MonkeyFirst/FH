@@ -436,15 +436,39 @@ void Character::HandleAnimationTrigger(StringHash eventType, VariantMap& eventDa
 			//source->Play(gameworld_->sfx.hitSound);
 			//source->SetFarDistance(20.0f);
 			//source->SetAutoRemove(true);
+			VariantMap eventData;
+			Node* node = hitDrawable->GetNode();
+
+
 			Variant v = hitDrawable->GetNode()->GetVar("type");
 			if (v.GetString() == "r2bot") 
 			{
 				//BotAI* ai = hitDrawable->GetNode()->GetComponent<BotAI>();
 				//if (ai) ai->Hit();
-				VariantMap eventData;
-				Node* node = hitDrawable->GetNode();
-				eventData[P_DATA] = node->GetParent();
-				GetNode()->SendEvent("YouAreHit", eventData);
+				if (node->GetParent()) {
+					eventData[P_DATA] = node->GetParent();
+					GetNode()->SendEvent("YouAreHit", eventData);
+				}
+			}
+			
+
+			// Проверим попали ли мы в hitbox bigbot'a
+			Node * hitNode;
+			Vector3 hitAnyPos;
+			Vector3 hitAnyNormal;
+
+			if (PhysicRaycastRigidBodyByNodeTag("hitbox", 100.0f, hitAnyPos, hitAnyNormal, hitNode))
+			{
+			//if (RaycastAnyByTag("hitbox", 100.0f, hitAnyPos, hitAnyNormal, hitAnyDrawable)) {
+				
+				//float distanceHit = (hitAnyPos - hitPos).Length();
+
+				//if (distanceHit < 0.1f)
+				if (hitNode)
+				{
+					eventData[P_DATA] = hitNode;
+					GetNode()->SendEvent("BigBotYouAreHit", eventData);
+				}
 			}
 		}
 
@@ -471,6 +495,8 @@ bool Character::Raycast(float maxDistance, Vector3& hitPos, Vector3& hitNormal, 
 {
 
 	hitDrawable = 0;
+	hitPos = Vector3::ZERO;
+	hitNormal = Vector3::ZERO;
 
 	//Graphics* graphics = GetSubsystem<Graphics>();
 	Node* gunNode_ = nodeGuns_->GetChild("JointFireFx", true);
@@ -479,6 +505,7 @@ bool Character::Raycast(float maxDistance, Vector3& hitPos, Vector3& hitNormal, 
 
 	PODVector<RayQueryResult> results;
 	RayOctreeQuery query(results, gunRay, RAY_TRIANGLE, maxDistance, DRAWABLE_GEOMETRY, 191); // all except 7 bit (layer for fx)
+	//RayOctreeQuery query(results, gunRay, RAY_TRIANGLE, maxDistance, DRAWABLE_, 191); // all except 7 bit (layer for fx)
 
 	Octree* octree = GetScene()->GetComponent<Octree>();
 	octree->Raycast(query);
@@ -496,6 +523,7 @@ bool Character::Raycast(float maxDistance, Vector3& hitPos, Vector3& hitNormal, 
 			hitNormal = result.normal_;
 			hitDrawable = result.drawable_;
 			
+			
 
 
 			return true;
@@ -504,6 +532,74 @@ bool Character::Raycast(float maxDistance, Vector3& hitPos, Vector3& hitNormal, 
 
 	return false;
 }
+bool Character::PhysicRaycastRigidBodyByNodeTag(String tag, float maxDistance, Vector3& hitPos, Vector3& hitNormal, Node*& hitNode)
+{
+	hitNode = NULL;
+	hitPos = Vector3::ZERO;
+	hitNormal = Vector3::ZERO;
+
+	PhysicsWorld* pw = GetScene()->GetComponent<PhysicsWorld>();
+
+	Node* gunNode_ = nodeGuns_->GetChild("JointFireFx", true);
+	Ray gunRay = Ray(gunNode_->GetWorldPosition(), nodeGuns_->GetWorldDirection());
+	PhysicsRaycastResult result;
+	
+	pw->RaycastSingle(result, gunRay, maxDistance);
+
+	if (result.body_) {
+		Node* parentNode = result.body_->GetNode();
+
+		if (parentNode) {
+			Variant v = parentNode->GetVar("tag");
+			if (v.GetString() == tag) 
+			{
+				hitPos = result.position_;
+				hitNormal = result.normal_;
+				hitNode = parentNode;
+				return true;
+			}
+		}
+	}
+	
+	return false;
+}
+
+
+bool Character::RaycastAnyByTag(String tag, float maxDistance, Vector3& hitPos, Vector3& hitNormal, Drawable*& hitDrawable) 
+{
+	hitDrawable = 0;
+	hitPos = Vector3::ZERO;
+	hitNormal = Vector3::ZERO;
+
+	Node* gunNode_ = nodeGuns_->GetChild("JointFireFx", true);
+	Ray gunRay = Ray(gunNode_->GetWorldPosition(), nodeGuns_->GetWorldDirection());
+	PODVector<RayQueryResult> results;
+	RayOctreeQuery query(results, gunRay, RAY_TRIANGLE, maxDistance, DRAWABLE_ANY, -1); // all
+	//RayOctreeQuery query(results, gunRay, RAY_TRIANGLE, maxDistance, DRAWABLE_GEOMETRY, 191); // all except 7 bit (layer for fx)
+
+	Octree* octree = GetScene()->GetComponent<Octree>();
+	octree->Raycast(query);
+
+	if (results.Size())
+	{
+		for (unsigned int i = 0; i < results.Size(); i++)
+		{
+			RayQueryResult& result = results[i];
+
+			Variant fx = result.node_->GetVar("tag");
+			if (fx.GetString() != tag) continue;
+
+			hitPos = result.position_;
+			hitNormal = result.normal_;
+			hitDrawable = result.drawable_;
+
+			return true;
+		}
+	}
+
+	return false;
+}
+
 
 
 /************************************************************************/

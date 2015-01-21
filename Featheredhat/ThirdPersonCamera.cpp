@@ -229,9 +229,9 @@ void ThirdPersonCamera::HandleGlobalBlastEvent(StringHash eventType, VariantMap&
 
 	float distanceTo = (GetNode()->GetWorldPosition() - BlastPos).Length();
 
-	if (distanceTo < 5.0f) 
+	if (distanceTo < 30.0f) 
 	{
-		SetShake(0.5f, 10.0f, 2.0f);	
+		SetShake(0.7f, 5.0f, 2.0f);	
 		
 	}
 }

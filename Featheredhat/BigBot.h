@@ -30,9 +30,16 @@ public:
 	friend class BigBotAIStateIdleTurnLeft;
 	friend class BigBotAIStateIdleTurnRight;
 	friend class BigBotAIStateAttackWithGun;
+	friend class BigBotAIStateHited;
+	friend class BigBotAIStateHitedIdle;
+	friend class BigBotAIStateAttackWithClaw;
+	friend class BigBotAIStateHitedUp;
+	friend class BigBotAIStateSkill1A;
+	friend class BigBotAIStateSkill1B;
 
 	const float SPEED = 3.0f;
-	const float ATTACKRANGE = 20.0f;
+	const float ATTACKRANGE = 14.0f;
+	const float ATTACKRANGE_LOW = 8;
 
 
 	GameWorld* gameWorld_;
@@ -83,6 +90,9 @@ protected:
 	SharedPtr<AnimationState> animAttackWithGun_;
 	SharedPtr<AnimationState> animHited_;
 	SharedPtr<AnimationState> animHitedIdle_;
+	SharedPtr<AnimationState> animAttackWithClaw_;
+	SharedPtr<AnimationState> animHitedUp_;
+
 
 	WeakPtr<RigidBody> rigidbody_;
 	SharedPtr<Node> footL_;
@@ -93,6 +103,9 @@ protected:
 	SharedPtr<Node> helperTruba1_;
 	SharedPtr<Node> helperTruba2_;
 	SharedPtr<Node> helperTruba3_;
+
+	SharedPtr<Node> helperSmoke[5];
+	
 
 	void SmokeAnimation(float timeStep);
 	int cur_stage;

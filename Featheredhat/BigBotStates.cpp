@@ -210,10 +210,6 @@ void BigBotAIStateAttackWithGun::Update(float timeStep)
 
 	if (t >= l)
 	{
-		//VariantMap eventData;
-		//eventData["BIGBOT"] = BigBot_;
-		//BigBot_->SendEvent("GoToNewIdleState", eventData);
-
 		BigBot_->ChangeState(BigBot_->states[BigBotAIState::ANI_IDLE]);
 	}
 }
@@ -228,34 +224,252 @@ void BigBotAIStateAttackWithGun::FixedUpdate(float timeStep)
 
 	if (distanceBetween < BigBot_->ATTACKRANGE) // player in range, go fire
 	{
-		Vector3 dir = ((Vector3(0.0f,-5.0f,0.0f)) + (playerPos - botPos)).Normalized();
-		Quaternion q;
-		//q.FromRotationTo(playerPos.Normalized(), botPos.Normalized());
-		
-		Vector3 pdir = Vector3(dir.x_, 0.0f, dir.z_); // direction on plane
-		//pdir.Normalized();
-		//BigBot_->node_->SetWorldRotation(q);
-		BigBot_->node_->SetWorldDirection(pdir.CrossProduct(Vector3::UP));
+		// direction for non-influent on animation bone(Rotator) with fix by Y
+		Vector3 dir = ((Vector3(0.0f,-5.0f,0.0f)) + (playerPos - botPos)).Normalized(); 
+		// direction on plane for node
+		Vector3 pdir = Vector3(dir.x_, 0.0f, dir.z_);
+		// rotate Node for looking on player
+		BigBot_->node_->SetWorldDirection(pdir);
+		// rotate Bone-Rotator to Player 
 		BigBot_->boneCenter_->node_->SetWorldDirection( -dir);
 
 	}
 	else // lost player
 	{
 	
-		BigBot_->target = NULL;
-		//BigBot_->ChangeState(BigBot_->states[BigBotAIState::ANI_IDLE]);
+		BigBot_->target = NULL; // reset target
 	}
 }
 
 void BigBotAIStateAttackWithGun::EnterState()
 {
-
+	// call std enter for all animation stages
 	BigBotAIState::EnterState();
+	// when this animation state going we off the bone from animation for manual rotate
 	BigBot_->boneCenter_->animated_ = false;
 }
 
 void BigBotAIStateAttackWithGun::ExitState()
 {
+	// call std exit for all animation stages
+	BigBotAIState::ExitState();
+	// when state ends we on bone to animation 
+	BigBot_->boneCenter_->animated_ = true;
+}
+////////////////////////////////////////////////////////////////////////// < ATTACK CLAW
+void BigBotAIStateAttackWithClaw::Update(float timeStep) 
+{
+	BigBot_->animAttackWithClaw_->SetWeight(1.0f);
+	BigBot_->animAttackWithClaw_->AddTime(timeStep);
+
+	float t = BigBot_->animAttackWithClaw_->GetTime();
+	float l = BigBot_->animAttackWithClaw_->GetLength() - timeStep;
+
+	if (t >= l)
+	{
+		BigBot_->ChangeState(BigBot_->states[BigBotAIState::ANI_IDLE]);
+	}
+}
+
+void BigBotAIStateAttackWithClaw::FixedUpdate(float timeStep)
+{
+	if (BigBot_->target == NULL) return;
+
+	Vector3 playerPos = BigBot_->target->GetWorldPosition();
+	Vector3 botPos = BigBot_->node_->GetWorldPosition();
+	float distanceBetween = (playerPos - botPos).Length();
+
+	if (distanceBetween < BigBot_->ATTACKRANGE_LOW) // player in range, go fire
+	{
+		// direction for non-influent on animation bone(Rotator) with fix by Y
+		Vector3 dir = ((Vector3(0.0f, -4.0f, 0.0f)) + (playerPos - botPos)).Normalized();
+		// direction on plane for node
+		Vector3 pdir = Vector3(dir.x_, 0.0f, dir.z_);
+		// rotate Node for looking on player
+		BigBot_->node_->SetWorldDirection(pdir);
+		// rotate Bone-Rotator to Player 
+		BigBot_->boneCenter_->node_->SetWorldDirection(-dir);
+
+	}
+	else // lost player
+	{
+
+		BigBot_->target = NULL; // reset target
+	}
+}
+
+void BigBotAIStateAttackWithClaw::EnterState()
+{
+	BigBotAIState::EnterState();
+	BigBot_->boneCenter_->animated_ = false;
+}
+
+void BigBotAIStateAttackWithClaw::ExitState()
+{
 	BigBotAIState::ExitState();
 	BigBot_->boneCenter_->animated_ = true;
+}
+
+
+////////////////////////////////////////////////////////////////////////// < HITED
+void BigBotAIStateHited::Update(float timeStep) 
+{
+	BigBot_->animHited_->SetWeight(1.0f);
+	BigBot_->animHited_->AddTime(timeStep);
+
+	float t = BigBot_->animHited_->GetTime();
+	float l = BigBot_->animHited_->GetLength() - timeStep;
+
+	if (t >= l)
+	{
+		BigBot_->ChangeState(BigBot_->states[BigBotAIState::ANI_HITED_IDLE]);
+	}
+}
+
+void BigBotAIStateHited::FixedUpdate(float timeStep) 
+{
+	
+}
+
+void BigBotAIStateHited::EnterState() 
+{
+	BigBotAIState::EnterState();
+}
+
+void BigBotAIStateHited::ExitState() 
+{
+	BigBotAIState::ExitState();
+}
+
+////////////////////////////////////////////////////////////////////////// < HITED IDLE
+
+void BigBotAIStateHitedIdle::Update(float timeStep)
+{
+	BigBot_->animHitedIdle_->SetWeight(1.0f);
+	BigBot_->animHitedIdle_->AddTime(timeStep);
+
+	float t = BigBot_->animHitedIdle_->GetTime();
+	float l = BigBot_->animHitedIdle_->GetLength() - timeStep;
+
+	if (t >= l)
+	{
+		if (playedCount_ < 10) {
+			playedCount_++;
+			//BigBot_->animHitedIdle_->AddTime(0.0f);
+		}
+		else 
+		{
+			BigBot_->ChangeState(BigBot_->states[BigBotAIState::ANI_HITED_UP]);
+		}
+	}
+}
+
+void BigBotAIStateHitedIdle::FixedUpdate(float timeStep)
+{
+
+}
+
+void BigBotAIStateHitedIdle::EnterState()
+{
+	BigBotAIState::EnterState();
+	playedCount_ = 0;
+}
+
+void BigBotAIStateHitedIdle::ExitState()
+{
+	BigBotAIState::ExitState();
+	playedCount_ = 0;
+}
+
+////////////////////////////////////////////////////////////////////////// < HITED UP
+
+void BigBotAIStateHitedUp::Update(float timeStep)
+{
+	BigBot_->animHitedUp_->SetWeight(1.0f);
+	BigBot_->animHitedUp_->AddTime(timeStep);
+
+	float t = BigBot_->animHitedUp_->GetTime();
+	float l = BigBot_->animHitedUp_->GetLength() - timeStep;
+
+	if (t >= l)
+	{
+		BigBot_->ChangeState(BigBot_->states[BigBotAIState::ANI_IDLE]);
+	}
+}
+
+void BigBotAIStateHitedUp::FixedUpdate(float timeStep)
+{
+
+}
+
+void BigBotAIStateHitedUp::EnterState()
+{
+	BigBotAIState::EnterState();
+}
+
+void BigBotAIStateHitedUp::ExitState()
+{
+	BigBotAIState::ExitState();
+}
+
+////////////////////////////////////////////////////////////////////////// < SKILL1_A
+
+void BigBotAIStateSkill1A::Update(float timeStep) 
+{
+	BigBot_->animSkill1A_->SetWeight(1.0f);
+	BigBot_->animSkill1A_->AddTime(timeStep);
+
+	float t = BigBot_->animSkill1A_->GetTime();
+	float l = BigBot_->animSkill1A_->GetLength() - timeStep;
+
+	if (t >= l)
+	{
+		BigBot_->ChangeState(BigBot_->states[BigBotAIState::ANI_SKILL1B]);
+	}
+}
+
+void BigBotAIStateSkill1A::FixedUpdate(float timeStep)
+{
+
+}
+
+void BigBotAIStateSkill1A::EnterState()
+{
+	BigBotAIState::EnterState();
+}
+
+void BigBotAIStateSkill1A::ExitState()
+{
+	BigBotAIState::ExitState();
+}
+
+////////////////////////////////////////////////////////////////////////// < SKILL1_B
+
+void BigBotAIStateSkill1B::Update(float timeStep)
+{
+	BigBot_->animSkill1B_->SetWeight(1.0f);
+	BigBot_->animSkill1B_->AddTime(timeStep);
+
+	float t = BigBot_->animSkill1B_->GetTime();
+	float l = BigBot_->animSkill1B_->GetLength() - timeStep;
+
+	if (t >= l)
+	{
+		BigBot_->ChangeState(BigBot_->states[BigBotAIState::ANI_IDLE]);
+	}
+}
+
+void BigBotAIStateSkill1B::FixedUpdate(float timeStep)
+{
+
+}
+
+void BigBotAIStateSkill1B::EnterState()
+{
+	BigBotAIState::EnterState();
+}
+
+void BigBotAIStateSkill1B::ExitState()
+{
+	BigBotAIState::ExitState();
 }

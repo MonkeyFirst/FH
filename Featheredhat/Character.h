@@ -142,7 +142,8 @@ public:
 	void ChangeState(CharacterState* newState);
 	void ClearPrevAnimStates();
 	bool Raycast(float maxDistance, Vector3& hitPos, Vector3& hitNormal, Drawable*& hitDrawable);
-
+	bool RaycastAnyByTag(String tag, float maxDistance, Vector3& hitPos, Vector3& hitNormal, Drawable*& hitDrawable);
+	bool PhysicRaycastRigidBodyByNodeTag(String tag, float maxDistance, Vector3& hitPos, Vector3& hitNormal, Node*& hitNode);
 
 private:
 	void HandleNodeCollision(StringHash eventType, VariantMap& eventData);

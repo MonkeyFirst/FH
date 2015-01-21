@@ -4,10 +4,10 @@
 	<texture unit="diffuse" name="Textures/BigBotTexture.png" />
 	<parameter name="UOffset" value="1 0 0 0" />
 	<parameter name="VOffset" value="0 1 0 0" />
-	<parameter name="MatDiffColor" value="1 1 2 1" />
+	<parameter name="MatDiffColor" value="1 1 1 1" />
 	<parameter name="MatEmissiveColor" value="0 0 0" />
 	<parameter name="MatEnvMapColor" value="1 1 1" />
-	<parameter name="MatSpecColor" value="1 1 1 50" />
+	<parameter name="MatSpecColor" value="1 1 1 150" />
 	<cull value="none" />
 	<shadowcull value="ccw" />
 	<depthbias constant="0" slopescaled="0" />

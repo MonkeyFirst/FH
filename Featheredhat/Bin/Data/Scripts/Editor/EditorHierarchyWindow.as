@@ -844,8 +844,6 @@ void HandleDragDropFinish(StringHash eventType, VariantMap& eventData)
             if (targetNode is null)
                 return;
 
-            // editNode = targetNode;
-
             if (type == RESOURCE_TYPE_PREFAB)
             {
                 LoadNode(browserFile.GetFullPath(), targetNode);
@@ -876,12 +874,16 @@ void HandleDragDropFinish(StringHash eventType, VariantMap& eventData)
             {
                 if (browserFile.extension == "xml")
                 {
-                    ParticleEffect2D@ effect = cache.GetResource("ParticleEffect2D", browserFile.resourceKey);
+                    Resource@ effect = cache.GetResource("ParticleEffect2D", browserFile.resourceKey);
                     if (effect is null)
                         return;
 
-                    ParticleEmitter2D@ emitter = targetNode.CreateComponent("ParticleEmitter2D");
-                    emitter.effect = effect;
+                    ResourceRef effectRef;
+                    effectRef.type = effect.type;
+                    effectRef.name = effect.name;
+
+                    Component@ emitter = targetNode.CreateComponent("ParticleEmitter2D");
+                    emitter.SetAttribute("Particle Effect", Variant(effectRef));
                     createdComponent = emitter;
                 }
             }
@@ -1555,6 +1557,18 @@ bool SelectAll()
             return SceneSelectAll();    // If nothing is selected yet, fall back to scene select all
     }
 
+    return false;
+}
+
+bool DeselectAll()
+{
+    if (CheckHierarchyWindowFocus())
+    {
+        BeginSelectionModify();
+        hierarchyList.ClearSelection();
+        EndSelectionModify();
+        return true;
+    }
     return false;
 }
 

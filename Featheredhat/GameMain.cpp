@@ -122,9 +122,9 @@ void GameMain::CameraSetup(Urho3D::String cameraNodeName)
 	
 	ResourceCache* cache = GetSubsystem<ResourceCache>();
 	world.camera.effectRenderPath = world.camera.viewport->GetRenderPath()->Clone();	
-	//world.camera.effectRenderPath->Append(cache->GetResource<XMLFile>("PostProcess/Bloom.xml"));
+	world.camera.effectRenderPath->Append(cache->GetResource<XMLFile>("PostProcess/Bloom.xml"));
 	world.camera.effectRenderPath->Append(cache->GetResource<XMLFile>("PostProcess/FXAA2.xml"));
-	//world.camera.effectRenderPath->Append(cache->GetResource<XMLFile>("PostProcess/Tonemap.xml"));
+	world.camera.effectRenderPath->Append(cache->GetResource<XMLFile>("PostProcess/Tonemap.xml"));
 
 	// Make the bloom mixing parameter more pronounced
 	world.camera.effectRenderPath->SetShaderParameter("BloomMix", Vector2(0.5f, 0.3f));

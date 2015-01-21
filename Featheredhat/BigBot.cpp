@@ -60,6 +60,9 @@ void BigBot::Start()
 	animHitedIdle_ = animModel_->GetAnimationState(StringHash("BIGBOT_HITED_IDLE"));
 	animWalk_ = animModel_->GetAnimationState(StringHash("BIGBOT_WALK"));
 	animAttackWithGun_ = animModel_->GetAnimationState(StringHash("BIGBOT_ATTACK_1"));
+	animAttackWithClaw_ = animModel_->GetAnimationState(StringHash("BIGBOT_ATTACK_2"));
+	animHitedUp_ = animModel_->GetAnimationState(StringHash("BIGBOT_HITED_UP"));
+
 
 
 	animIdle_->SetLooped(true);
@@ -73,6 +76,8 @@ void BigBot::Start()
 	animHitedIdle_->SetLooped(true);
 	animWalk_->SetLooped(true);
 	animAttackWithGun_->SetLooped(false);
+	animAttackWithClaw_->SetLooped(false);
+	animHitedUp_->SetLooped(false);
 
 	animIdle_->SetWeight(1.0f);
 	animTurnLeft_->SetWeight(0.0f);
@@ -85,7 +90,8 @@ void BigBot::Start()
 	animHitedIdle_->SetWeight(0.0f);
 	animWalk_->SetWeight(0.0f);
 	animAttackWithGun_->SetWeight(0.0f);
-
+	animAttackWithClaw_->SetWeight(0.0f);
+	animHitedUp_->SetWeight(0.0f);
 
 	animIdle_->SetLayer(1);
 	animTurnLeft_->SetLayer(2);
@@ -98,13 +104,15 @@ void BigBot::Start()
 	animHitedIdle_->SetLayer(5);
 	animWalk_->SetLayer(6);
 	animAttackWithGun_->SetLayer(7);
+	animAttackWithClaw_->SetLayer(7);
+	animHitedUp_->SetLayer(5);
 
 	
 	SubscribeToEvent(node_, E_ANIMATIONTRIGGER, HANDLER(BigBot, HandleAnimationTrigger));
 	SubscribeToEvent("GoToNewIdleState", HANDLER(BigBot, HandleNewIdleState));
 	SubscribeToEvent("BotDestroy", HANDLER(BigBot, HandleBotDestroy));
 	SubscribeToEvent("CheckPoint", HANDLER(BigBot, HandleCheckPoint));
-	SubscribeToEvent(StringHash("YouAreHit"), HANDLER(BigBot, HandleHit));
+	SubscribeToEvent(StringHash("BigBotYouAreHit"), HANDLER(BigBot, HandleHit));
 
 
 	// delo truba
@@ -115,6 +123,12 @@ void BigBot::Start()
 	stage = 0;
 	stage_time = 0.0f;
 
+	// hited smokes
+	helperSmoke[0] = node_->GetChild("smoke1", true);
+	helperSmoke[1] = node_->GetChild("smoke2", true);
+	helperSmoke[2] = node_->GetChild("smoke3", true);
+	helperSmoke[3] = node_->GetChild("smoke4", true);
+	helperSmoke[4] = node_->GetChild("smoke5", true);
 
 	states[BigBotAIState::ANI_IDLE] = new BigBotAIStateIdle(this);
 	states[BigBotAIState::ANI_IDLE_LOOK_LEFT] = new BigBotAIStateIdleLookLeft(this);
@@ -122,8 +136,13 @@ void BigBot::Start()
 	states[BigBotAIState::ANI_TURN_LEFT] = new BigBotAIStateIdleTurnLeft(this);
 	states[BigBotAIState::ANI_TURN_RIGHT] = new BigBotAIStateIdleTurnRight(this);
 	states[BigBotAIState::ANI_ATTACK_WITH_GUN] = new BigBotAIStateAttackWithGun(this);
-
-
+	states[BigBotAIState::ANI_HITED] = new BigBotAIStateHited(this);
+	states[BigBotAIState::ANI_HITED_IDLE] = new BigBotAIStateHitedIdle(this);
+	states[BigBotAIState::ANI_ATTACK_WITH_CLAW] = new BigBotAIStateAttackWithClaw(this);
+	states[BigBotAIState::ANI_HITED_UP] = new BigBotAIStateHitedUp(this);
+	states[BigBotAIState::ANI_SKILL1A] = new BigBotAIStateSkill1A(this);
+	states[BigBotAIState::ANI_SKILL1B] = new BigBotAIStateSkill1B(this);
+	
 
 	animPrevState_ = BigBotAIState::ANI_NONE;
 	state_ = NULL;
@@ -157,7 +176,7 @@ void BigBot::HandleAnimationTrigger(StringHash eventType, VariantMap& eventData)
 		//script->SetOrientationToNode(gameWorld_->camera.TPCLogic_->cameraNode_);
 		
 	}
-	else if (as == animTurnLeft_ || as == animTurnRight_)
+	else if (as == animTurnLeft_ || as == animTurnRight_ || as == animAttackWithGun_)
 	{
 		Vector3 pos;
 		String value = eventData[P_DATA].GetString();
@@ -171,6 +190,28 @@ void BigBot::HandleAnimationTrigger(StringHash eventType, VariantMap& eventData)
 		Node* smokeNode = GetScene()->InstantiateXML(gameWorld_->prefabs.prefabSmokeFx_->GetRoot(), pos, q, LOCAL);
 		smokeNode->SetWorldScale(Vector3::ONE* 0.5f);
 		ScriptSmokeFx* script = smokeNode->CreateComponent<ScriptSmokeFx>();
+	}
+	else if (as == animHited_) 
+	{
+		String value = eventData[P_DATA].GetString();
+		if (value == "smoke")
+		{
+			for (unsigned int i = 0; i < 5; i++)
+			{
+				Quaternion q = helperSmoke[i]->GetWorldRotation();
+				Vector3 p = helperSmoke[i]->GetWorldPosition();
+				Node* smokeNode = GetScene()->InstantiateXML(gameWorld_->prefabs.prefabSmokeFx_->GetRoot(), p, q, LOCAL);
+				//smokeNode->SetWorldScale(Vector3::ONE* 0.5f);
+				ScriptSmokeFx* script = smokeNode->CreateComponent<ScriptSmokeFx>();
+				
+			}
+
+			// бот упал... полетели брызги... кочнулсь камера...
+			VariantMap& eventData = GetNode()->GetEventDataMap();
+			eventData[P_DATA] = GetNode()->GetWorldPosition();
+			SendEvent(StringHash("Blast"), eventData);
+
+		}
 	}
 
 }
@@ -201,6 +242,21 @@ void BigBot::HandleCheckPoint(StringHash eventType, VariantMap& eventData)
 void BigBot::HandleHit(StringHash eventType, VariantMap& eventData)
 {
 	using namespace AnimationTrigger;
+
+	// нод который прислали
+	Node* otherNode = (Node*)eventData[P_DATA].GetVoidPtr();
+	
+	if (otherNode == NULL) return;
+
+	// найдем с таким же именем в моделе
+	Node* childNode = GetNode()->GetChild(otherNode->GetName(), true);
+
+	// если это один и тот же нод, значит сообщение нам 
+	if (childNode == otherNode )
+	{
+		// change to hit anim
+		ChangeState(states[BigBotAIState::ANI_HITED]);
+	}
 }
 
 void BigBot::Update(float timeStep)
@@ -214,10 +270,12 @@ void BigBot::FixedUpdate(float timeStep)
 	SmokeAnimation(timeStep);
 
 	// если бот не подбит и не валяется пусть проверит наличие игрока рядом 
-	if (animState_ != BigBotAIState::ANI_HITED || animState_ != BigBotAIState::ANI_HITED_IDLE)
-	{
-		CheckForFireByPlayer(ATTACKRANGE);
-	}
+	if (animState_ != BigBotAIState::ANI_HITED)  
+		if (animState_ != BigBotAIState::ANI_HITED_IDLE)
+		if (animState_ != BigBotAIState::ANI_HITED_UP)
+		{
+			CheckForFireByPlayer(ATTACKRANGE);
+		}
 
 	if (state_) state_->FixedUpdate(timeStep);
 
@@ -361,6 +419,18 @@ void BigBot::ClearPrevAnimStates()
 		animSkill1B_->SetTime(0.0f);
 		break;
 	}
+	case BigBotAIState::ANI_ATTACK_WITH_CLAW:
+	{
+									   animAttackWithClaw_->SetWeight(0.0f);
+									   animAttackWithClaw_->SetTime(0.0f);
+									   break;
+	}
+	case BigBotAIState::ANI_HITED_UP:
+	{
+									   animHitedUp_->SetWeight(0.0f);
+									   animHitedUp_->SetTime(0.0f);
+									   break;
+	}
 	}
 
 	animPrevState_ = BigBotAIState::ANI_NONE;
@@ -370,6 +440,8 @@ void BigBot::ClearPrevAnimStates()
 void BigBot::CheckForFireByPlayer(float range_)
 {
 	if (animState_ == BigBotAIState::ANI_ATTACK_WITH_GUN) return;
+	if (animState_ == BigBotAIState::ANI_ATTACK_WITH_CLAW) return;
+
 
 	Vector3 botPos = node_->GetWorldPosition();
 	Vector3 playerPos = gameWorld_->player.node_->GetWorldPosition();
@@ -381,7 +453,12 @@ void BigBot::CheckForFireByPlayer(float range_)
 	if (distanceBetween < range_ && distanceByY < 0.0f) // player in range, go fire
 	{
 		target = gameWorld_->player.node_;
-		ChangeState(states[BigBotAIState::ANI_ATTACK_WITH_GUN]);
+		if (distanceBetween > ATTACKRANGE_LOW)
+			ChangeState(states[BigBotAIState::ANI_ATTACK_WITH_GUN]);
+		else
+			ChangeState(states[BigBotAIState::ANI_ATTACK_WITH_CLAW]);
+
+
 		isAttacking = true;
 	}
 	isAttacking = false;
