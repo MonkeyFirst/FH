@@ -45,8 +45,17 @@ void BigBot::Start()
 	animController_ = node_->GetComponent<AnimationController>();
 	boneCenter_ = animModel_->GetSkeleton().GetBone("Rotator");
 	//boneCenter_->animated_ = false;
-	
 
+	laserJoint = node_->GetChild("LaserJoint", true);
+	laserNode = laserJoint->GetChild("LaserFx", true);
+	laserModel = laserNode->GetComponent<AnimatedModel>();
+	laserAnimState = laserModel->GetAnimationState(StringHash("LASERFIRE"));
+	laserAnimState->SetLooped(false);
+	laserAnimState->SetWeight(1.0f);
+	laserAnimState->SetLayer(1);
+	
+	laserNode->SetEnabled(false);
+	
 
 	// get animations
 	animIdle_ = animModel_->GetAnimationState(StringHash("BIGBOT_IDLE"));
@@ -180,16 +189,23 @@ void BigBot::HandleAnimationTrigger(StringHash eventType, VariantMap& eventData)
 	{
 		Vector3 pos;
 		String value = eventData[P_DATA].GetString();
-		if (value == "StepL")
-			pos = footL_->GetWorldPosition();
-		else
-			pos = footR_->GetWorldPosition();
+		if (value == "laser") 
+		{
+			laserNode->SetParent(GetScene());
+		}
+		else 
+		{
+			if (value == "StepL")
+				pos = footL_->GetWorldPosition();
+			else
+				pos = footR_->GetWorldPosition();
 
-		Quaternion q = footL_->GetWorldRotation();
+			Quaternion q = footL_->GetWorldRotation();
 
-		Node* smokeNode = GetScene()->InstantiateXML(gameWorld_->prefabs.prefabSmokeFx_->GetRoot(), pos, q, LOCAL);
-		smokeNode->SetWorldScale(Vector3::ONE* 0.5f);
-		ScriptSmokeFx* script = smokeNode->CreateComponent<ScriptSmokeFx>();
+			Node* smokeNode = GetScene()->InstantiateXML(gameWorld_->prefabs.prefabSmokeFx_->GetRoot(), pos, q, LOCAL);
+			smokeNode->SetWorldScale(Vector3::ONE* 0.5f);
+			ScriptSmokeFx* script = smokeNode->CreateComponent<ScriptSmokeFx>();
+		}
 	}
 	else if (as == animHited_) 
 	{
@@ -211,6 +227,12 @@ void BigBot::HandleAnimationTrigger(StringHash eventType, VariantMap& eventData)
 			eventData[P_DATA] = GetNode()->GetWorldPosition();
 			SendEvent(StringHash("Blast"), eventData);
 
+		}
+		else if (value == "laser") 
+		{
+			//laserNode->SetEnabled(true);
+			//laserNode->SetParent(GetScene());
+			
 		}
 	}
 
@@ -252,7 +274,9 @@ void BigBot::HandleHit(StringHash eventType, VariantMap& eventData)
 	Node* childNode = GetNode()->GetChild(otherNode->GetName(), true);
 
 	// если это один и тот же нод, значит сообщение нам 
-	if (childNode == otherNode )
+	if (childNode == otherNode)
+	if (animState_ != BigBotAIState::ANI_HITED)
+	if (animState_ != BigBotAIState::ANI_HITED_IDLE)
 	{
 		// change to hit anim
 		ChangeState(states[BigBotAIState::ANI_HITED]);
@@ -273,6 +297,8 @@ void BigBot::FixedUpdate(float timeStep)
 	if (animState_ != BigBotAIState::ANI_HITED)  
 		if (animState_ != BigBotAIState::ANI_HITED_IDLE)
 		if (animState_ != BigBotAIState::ANI_HITED_UP)
+		if (animState_ != BigBotAIState::ANI_ATTACK_WITH_GUN)
+		if (animState_ != BigBotAIState::ANI_ATTACK_WITH_CLAW)
 		{
 			CheckForFireByPlayer(ATTACKRANGE);
 		}
@@ -393,6 +419,9 @@ void BigBot::ClearPrevAnimStates()
 	{
 								 animAttackWithGun_->SetWeight(0.0f);
 								 animAttackWithGun_->SetTime(0.0f);
+								 laserAnimState->SetTime(0.0f);
+
+
 								 break;
 	}
 	case BigBotAIState::ANI_HITED:

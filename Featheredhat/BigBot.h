@@ -38,7 +38,7 @@ public:
 	friend class BigBotAIStateSkill1B;
 
 	const float SPEED = 3.0f;
-	const float ATTACKRANGE = 14.0f;
+	const float ATTACKRANGE = 20.0f;
 	const float ATTACKRANGE_LOW = 8;
 
 
@@ -106,7 +106,12 @@ protected:
 
 	SharedPtr<Node> helperSmoke[5];
 	
+	SharedPtr<Node> laserJoint;
+	SharedPtr<AnimatedModel> laserModel;
+	SharedPtr<AnimationState> laserAnimState;
+	SharedPtr<Node> laserNode;
 
+	
 	void SmokeAnimation(float timeStep);
 	int cur_stage;
 	int stage;

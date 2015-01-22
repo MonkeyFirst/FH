@@ -205,6 +205,9 @@ void BigBotAIStateAttackWithGun::Update(float timeStep)
 	BigBot_->animAttackWithGun_->SetWeight(1.0f);
 	BigBot_->animAttackWithGun_->AddTime(timeStep);
 
+	BigBot_->laserAnimState->SetWeight(1.0f);
+	BigBot_->laserAnimState->AddTime(timeStep);
+
 	float t = BigBot_->animAttackWithGun_->GetTime();
 	float l = BigBot_->animAttackWithGun_->GetLength() - timeStep;
 
@@ -232,6 +235,7 @@ void BigBotAIStateAttackWithGun::FixedUpdate(float timeStep)
 		BigBot_->node_->SetWorldDirection(pdir);
 		// rotate Bone-Rotator to Player 
 		BigBot_->boneCenter_->node_->SetWorldDirection( -dir);
+		//BigBot_->laserNode->SetParent(BigBot_->GetScene());
 
 	}
 	else // lost player
@@ -247,6 +251,9 @@ void BigBotAIStateAttackWithGun::EnterState()
 	BigBotAIState::EnterState();
 	// when this animation state going we off the bone from animation for manual rotate
 	BigBot_->boneCenter_->animated_ = false;
+	BigBot_->laserNode->SetEnabled(true);
+	//BigBot_->laserNode->SetParent(BigBot_->GetScene());
+
 }
 
 void BigBotAIStateAttackWithGun::ExitState()
@@ -255,6 +262,14 @@ void BigBotAIStateAttackWithGun::ExitState()
 	BigBotAIState::ExitState();
 	// when state ends we on bone to animation 
 	BigBot_->boneCenter_->animated_ = true;
+	
+	BigBot_->laserNode->SetParent(BigBot_->laserJoint);
+	BigBot_->laserNode->SetPosition(Vector3::ZERO);
+	BigBot_->laserNode->SetRotation(Quaternion(0.0f, 0.0f, 0.0f));
+	BigBot_->laserNode->SetDirection(Vector3::FORWARD);
+	BigBot_->laserNode->SetScale(Vector3::ONE);
+	BigBot_->laserNode->SetEnabled(false);
+	
 }
 ////////////////////////////////////////////////////////////////////////// < ATTACK CLAW
 void BigBotAIStateAttackWithClaw::Update(float timeStep) 
@@ -317,6 +332,9 @@ void BigBotAIStateHited::Update(float timeStep)
 	BigBot_->animHited_->SetWeight(1.0f);
 	BigBot_->animHited_->AddTime(timeStep);
 
+	BigBot_->laserAnimState->SetWeight(1.0f);
+	BigBot_->laserAnimState->AddTime(timeStep);
+
 	float t = BigBot_->animHited_->GetTime();
 	float l = BigBot_->animHited_->GetLength() - timeStep;
 
@@ -334,11 +352,19 @@ void BigBotAIStateHited::FixedUpdate(float timeStep)
 void BigBotAIStateHited::EnterState() 
 {
 	BigBotAIState::EnterState();
+	BigBot_->laserNode->SetEnabled(true);
 }
 
 void BigBotAIStateHited::ExitState() 
 {
 	BigBotAIState::ExitState();
+
+	BigBot_->laserNode->SetParent(BigBot_->laserJoint);
+	BigBot_->laserNode->SetPosition(Vector3::ZERO);
+	BigBot_->laserNode->SetRotation(Quaternion(0.0f, 0.0f, 0.0f));
+	//BigBot_->laserNode->SetDirection(Vector3::FORWARD);
+	BigBot_->laserNode->SetScale(Vector3::ONE);
+	BigBot_->laserNode->SetEnabled(false);
 }
 
 ////////////////////////////////////////////////////////////////////////// < HITED IDLE

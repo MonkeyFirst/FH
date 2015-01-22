@@ -7,8 +7,8 @@
 	<attribute name="Elapsed Time" value="15594.3" />
 	<attribute name="Next Replicated Node ID" value="47" />
 	<attribute name="Next Replicated Component ID" value="14" />
-	<attribute name="Next Local Node ID" value="16778363" />
-	<attribute name="Next Local Component ID" value="16777538" />
+	<attribute name="Next Local Node ID" value="16778467" />
+	<attribute name="Next Local Component ID" value="16777551" />
 	<attribute name="Variables" />
 	<attribute name="Variable Names" value="type;fx;ai;tag;showlife;land;foot;noclip" />
 	<component type="Octree" id="1" />
@@ -4525,18 +4525,6 @@
 				</attribute>
 				<attribute name="Animation States">
 					<variant type="Int" value="13" />
-					<variant type="ResourceRef" value="Animation;Models/BIGBOT_ATTACK_1.ani" />
-					<variant type="String" value="MasterBone" />
-					<variant type="Bool" value="false" />
-					<variant type="Float" value="0" />
-					<variant type="Float" value="0" />
-					<variant type="Int" value="0" />
-					<variant type="ResourceRef" value="Animation;Models/BIGBOT_ATTACK_2.ani" />
-					<variant type="String" value="MasterBone" />
-					<variant type="Bool" value="false" />
-					<variant type="Float" value="0" />
-					<variant type="Float" value="0" />
-					<variant type="Int" value="0" />
 					<variant type="ResourceRef" value="Animation;Models/BIGBOT_HITED.ani" />
 					<variant type="String" value="MasterBone" />
 					<variant type="Bool" value="false" />
@@ -4547,7 +4535,7 @@
 					<variant type="String" value="MasterBone" />
 					<variant type="Bool" value="false" />
 					<variant type="Float" value="0" />
-					<variant type="Float" value="0" />
+					<variant type="Float" value="0.665011" />
 					<variant type="Int" value="0" />
 					<variant type="ResourceRef" value="Animation;Models/BIGBOT_HITED_UP.ani" />
 					<variant type="String" value="MasterBone" />
@@ -4603,6 +4591,18 @@
 					<variant type="Float" value="1" />
 					<variant type="Float" value="0.676971" />
 					<variant type="Int" value="0" />
+					<variant type="ResourceRef" value="Animation;Models/BIGBOT_ATTACK_2.ani" />
+					<variant type="String" value="MasterBone" />
+					<variant type="Bool" value="false" />
+					<variant type="Float" value="0" />
+					<variant type="Float" value="1.96667" />
+					<variant type="Int" value="1" />
+					<variant type="ResourceRef" value="Animation;Models/BIGBOT_ATTACK_1.ani" />
+					<variant type="String" value="MasterBone" />
+					<variant type="Bool" value="true" />
+					<variant type="Float" value="1" />
+					<variant type="Float" value="0.745019" />
+					<variant type="Int" value="1" />
 				</attribute>
 			</component>
 			<node id="16778297">
@@ -4615,52 +4615,213 @@
 				<node id="16778298">
 					<attribute name="Is Enabled" value="true" />
 					<attribute name="Name" value="Bone" />
-					<attribute name="Position" value="-0.0258023 9.05919 7.20151" />
-					<attribute name="Rotation" value="0.707107 0.707107 0.000371024 -0.000371192" />
+					<attribute name="Position" value="-0.227744 8.74913 7.08967" />
+					<attribute name="Rotation" value="0.706621 0.706621 -0.026218 -0.0262173" />
 					<attribute name="Scale" value="1 1 1" />
 					<attribute name="Variables" />
 					<node id="16778299">
 						<attribute name="Is Enabled" value="true" />
 						<attribute name="Name" value="Rotator" />
-						<attribute name="Position" value="2.60141e-010 0.733548 1.25175e-007" />
-						<attribute name="Rotation" value="1 3.23835e-017 1.19209e-007 -8.99689e-012" />
+						<attribute name="Position" value="-9.53322e-009 0.733549 -6.89004e-008" />
+						<attribute name="Rotation" value="1 2.47078e-016 1.1848e-007 -1.85093e-016" />
 						<attribute name="Scale" value="1 1 1" />
 						<attribute name="Variables" />
 						<node id="16778300">
 							<attribute name="Is Enabled" value="true" />
 							<attribute name="Name" value="Center" />
-							<attribute name="Position" value="2.23345e-010 0.93935 1.16963e-007" />
-							<attribute name="Rotation" value="0.999858 -4.78844e-010 -3.02148e-009 -0.0168333" />
+							<attribute name="Position" value="-8.93809e-009 0.939351 2.79223e-008" />
+							<attribute name="Rotation" value="0.972416 0.00143846 0.230998 -0.0323311" />
 							<attribute name="Scale" value="1 1 1" />
 							<attribute name="Variables" />
 							<node id="16778301">
 								<attribute name="Is Enabled" value="true" />
 								<attribute name="Name" value="Plecho.L" />
-								<attribute name="Position" value="2.20177e-009 8.46404 5.80832e-008" />
+								<attribute name="Position" value="-6.26894e-008 8.46405 -5.47661e-008" />
 								<attribute name="Rotation" value="0.512034 0.501977 0.498015 -0.487669" />
-								<attribute name="Scale" value="1 1 1" />
+								<attribute name="Scale" value="1 0.999999 1" />
 								<attribute name="Variables" />
 								<node id="16778302">
 									<attribute name="Is Enabled" value="true" />
 									<attribute name="Name" value="Ruka.L" />
-									<attribute name="Position" value="-4.47446e-008 5.86144 -3.24478e-007" />
-									<attribute name="Rotation" value="0.905808 0.362532 0.211011 0.0596332" />
+									<attribute name="Position" value="-5.42342e-009 5.86144 -4.81065e-006" />
+									<attribute name="Rotation" value="0.908551 -0.0826441 -0.113826 -0.393382" />
 									<attribute name="Scale" value="1 1 1" />
 									<attribute name="Variables" />
 									<node id="16778303">
 										<attribute name="Is Enabled" value="true" />
 										<attribute name="Name" value="Ruka.L.001" />
-										<attribute name="Position" value="4.85493e-007 7.39442 -2.07849e-006" />
-										<attribute name="Rotation" value="0.799601 0.477854 0.00486469 -0.363688" />
+										<attribute name="Position" value="1.32225e-006 7.39442 8.25062e-007" />
+										<attribute name="Rotation" value="0.977003 -0.0227502 -0.00306642 -0.211984" />
 										<attribute name="Scale" value="1 1 1" />
 										<attribute name="Variables" />
 										<node id="16778304">
 											<attribute name="Is Enabled" value="true" />
 											<attribute name="Name" value="Ruka.L.003" />
-											<attribute name="Position" value="4.99033e-007 6.15619 1.01266e-006" />
-											<attribute name="Rotation" value="0.99995 0.00734178 -4.94753e-005 -0.00674253" />
+											<attribute name="Position" value="6.53263e-007 6.15619 7.58069e-007" />
+											<attribute name="Rotation" value="0.99995 0.00734178 -4.94712e-005 -0.00674254" />
 											<attribute name="Scale" value="1 1 1" />
 											<attribute name="Variables" />
+											<node id="16778378">
+												<attribute name="Is Enabled" value="true" />
+												<attribute name="Name" value="LaserJoint" />
+												<attribute name="Position" value="-0.0963898 1.66362 -0.0295105" />
+												<attribute name="Rotation" value="0.707107 -0.707107 0 0" />
+												<attribute name="Scale" value="1 1 1" />
+												<attribute name="Variables" />
+												<node id="16778363">
+													<attribute name="Is Enabled" value="true" />
+													<attribute name="Name" value="LaserFx" />
+													<attribute name="Position" value="0 0 0" />
+													<attribute name="Rotation" value="1 0 0 0" />
+													<attribute name="Scale" value="1 1 1" />
+													<attribute name="Variables">
+														<variant hash="6691218" type="Int" value="1" />
+													</attribute>
+													<component type="AnimatedModel" id="16777538">
+														<attribute name="Model" value="Model;Models/LaserObject.mdl" />
+														<attribute name="Material" value="Material;Materials/MAT_LASER.xml;Materials/MAT_LASER_3.xml;Materials/MAT_LASER_2.xml" />
+														<attribute name="Update When Invisible" value="true" />
+														<attribute name="Animation LOD Bias" value="1.02" />
+														<attribute name="Bone Animation Enabled">
+															<variant type="Bool" value="true" />
+															<variant type="Bool" value="true" />
+															<variant type="Bool" value="true" />
+															<variant type="Bool" value="true" />
+															<variant type="Bool" value="true" />
+															<variant type="Bool" value="true" />
+															<variant type="Bool" value="true" />
+															<variant type="Bool" value="true" />
+															<variant type="Bool" value="true" />
+															<variant type="Bool" value="true" />
+															<variant type="Bool" value="true" />
+															<variant type="Bool" value="true" />
+															<variant type="Bool" value="true" />
+															<variant type="Bool" value="true" />
+														</attribute>
+														<attribute name="Animation States">
+															<variant type="Int" value="1" />
+															<variant type="ResourceRef" value="Animation;Models/LASERFIRE.ani" />
+															<variant type="String" value="MasteBone" />
+															<variant type="Bool" value="true" />
+															<variant type="Float" value="1" />
+															<variant type="Float" value="1.25005" />
+															<variant type="Int" value="1" />
+														</attribute>
+													</component>
+													<node id="16778364">
+														<attribute name="Is Enabled" value="true" />
+														<attribute name="Name" value="MasteBone" />
+														<attribute name="Position" value="0 0 -0" />
+														<attribute name="Rotation" value="4.3913e-008 1.71564e-010 -1 -0.000687335" />
+														<attribute name="Scale" value="1 1 1" />
+														<attribute name="Variables" />
+														<node id="16778365">
+															<attribute name="Is Enabled" value="true" />
+															<attribute name="Name" value="RedLaserBone" />
+															<attribute name="Position" value="1.30682e-011 7.41058e-005 -0.00949022" />
+															<attribute name="Rotation" value="5.34218e-008 -5.36331e-008 -0.707593 0.706621" />
+															<attribute name="Scale" value="0.999901 1.05267 0.999901" />
+															<attribute name="Variables" />
+														</node>
+														<node id="16778366">
+															<attribute name="Is Enabled" value="true" />
+															<attribute name="Name" value="TwoBlueLinesBone" />
+															<attribute name="Position" value="-4.37973e-010 -0.00149393 1.08695" />
+															<attribute name="Rotation" value="0.468561 -0.467917 0.530225 -0.529496" />
+															<attribute name="Scale" value="1 1 1" />
+															<attribute name="Variables" />
+														</node>
+														<node id="16778367">
+															<attribute name="Is Enabled" value="true" />
+															<attribute name="Name" value="YellowLaserBone" />
+															<attribute name="Position" value="2.42908e-009 0.00820968 -6.01551" />
+															<attribute name="Rotation" value="-0.249702 0.249359 -0.66207 0.66116" />
+															<attribute name="Scale" value="0.999901 1.05267 0.999901" />
+															<attribute name="Variables" />
+														</node>
+														<node id="16778368">
+															<attribute name="Is Enabled" value="true" />
+															<attribute name="Name" value="Ring0Bone" />
+															<attribute name="Position" value="1.10068e-011 3.55795e-005 -0.0273164" />
+															<attribute name="Rotation" value="0.855642 -0.00350206 0.00282993 -0.517549" />
+															<attribute name="Scale" value="0.41323 0.41323 0.41323" />
+															<attribute name="Variables" />
+															<node id="16778369">
+																<attribute name="Is Enabled" value="true" />
+																<attribute name="Name" value="Ring0Bone.001" />
+																<attribute name="Position" value="3.14817e-011 0.0213189 -2.2297" />
+																<attribute name="Rotation" value="0.999988 -0.00481171 2.33284e-010 -1.14833e-008" />
+																<attribute name="Scale" value="1.56722 1.56722 1.56722" />
+																<attribute name="Variables" />
+															</node>
+														</node>
+														<node id="16778370">
+															<attribute name="Is Enabled" value="true" />
+															<attribute name="Name" value="Ring0Bone.002" />
+															<attribute name="Position" value="4.16302e-010 0.00142336 -1.03317" />
+															<attribute name="Rotation" value="0.855642 -0.00350217 0.00282993 -0.517549" />
+															<attribute name="Scale" value="0.536348 0.536348 0.536348" />
+															<attribute name="Variables" />
+															<node id="16778371">
+																<attribute name="Is Enabled" value="true" />
+																<attribute name="Name" value="Ring0Bone.003" />
+																<attribute name="Position" value="8.5716e-010 0.00944264 -0.987557" />
+																<attribute name="Rotation" value="0.999997 -0.00240207 -4.23457e-011 7.59617e-009" />
+																<attribute name="Scale" value="1 1 1" />
+																<attribute name="Variables" />
+															</node>
+														</node>
+														<node id="16778372">
+															<attribute name="Is Enabled" value="true" />
+															<attribute name="Name" value="Ring0Bone.004" />
+															<attribute name="Position" value="6.60597e-009 0.0225377 -16.3946" />
+															<attribute name="Rotation" value="0.999992 -0.00409307 -2.02568e-010 2.00641e-010" />
+															<attribute name="Scale" value="0.102077 0.102077 0.102077" />
+															<attribute name="Variables" />
+														</node>
+														<node id="16778373">
+															<attribute name="Is Enabled" value="true" />
+															<attribute name="Name" value="Ring0Bone.005" />
+															<attribute name="Position" value="8.26921e-009 0.0282122 -20.5224" />
+															<attribute name="Rotation" value="0.999992 -0.00409362 -2.02568e-010 2.0064e-010" />
+															<attribute name="Scale" value="0.141637 0.141637 0.141637" />
+															<attribute name="Variables" />
+														</node>
+														<node id="16778374">
+															<attribute name="Is Enabled" value="true" />
+															<attribute name="Name" value="Ring0Bone.006" />
+															<attribute name="Position" value="1.06156e-008 0.0362171 -26.3456" />
+															<attribute name="Rotation" value="0.999992 -0.00409307 -2.02568e-010 2.0064e-010" />
+															<attribute name="Scale" value="0.110491 0.110491 0.110491" />
+															<attribute name="Variables" />
+														</node>
+														<node id="16778375">
+															<attribute name="Is Enabled" value="true" />
+															<attribute name="Name" value="Ring0Bone.007" />
+															<attribute name="Position" value="1.2819e-008 0.0437823 -31.8141" />
+															<attribute name="Rotation" value="0.999992 -0.00409417 -2.02568e-010 2.00641e-010" />
+															<attribute name="Scale" value="0.106277 0.106277 0.106277" />
+															<attribute name="Variables" />
+														</node>
+														<node id="16778376">
+															<attribute name="Is Enabled" value="true" />
+															<attribute name="Name" value="Ring0Bone.008" />
+															<attribute name="Position" value="2.12175e-008 0.0724358 -52.6574" />
+															<attribute name="Rotation" value="0.999992 -0.00409417 -2.02568e-010 2.00641e-010" />
+															<attribute name="Scale" value="0.147873 0.147873 0.147873" />
+															<attribute name="Variables" />
+														</node>
+														<node id="16778377">
+															<attribute name="Is Enabled" value="true" />
+															<attribute name="Name" value="ThunderBone" />
+															<attribute name="Position" value="7.0349 -0.0121405 8.82141" />
+															<attribute name="Rotation" value="-0.00139447 -0.986459 0.0728977 -0.146908" />
+															<attribute name="Scale" value="0.49235 0.49236 0.492236" />
+															<attribute name="Variables" />
+														</node>
+													</node>
+												</node>
+											</node>
 										</node>
 										<node id="16778362">
 											<attribute name="Is Enabled" value="true" />
@@ -4675,8 +4836,8 @@
 												<attribute name="Offset Position" value="0 5.26 0" />
 											</component>
 											<component type="RigidBody" id="16777534">
-												<attribute name="Physics Rotation" value="0.321447 0.621218 0.39402 0.596245" />
-												<attribute name="Physics Position" value="-40.1399 7.34263 -22.8421" />
+												<attribute name="Physics Rotation" value="0.698567 0.704565 -0.0714985 -0.102374" />
+												<attribute name="Physics Position" value="-39.2676 8.88954 -20.2396" />
 												<attribute name="Mass" value="1" />
 												<attribute name="Collision Layer" value="32" />
 												<attribute name="Collision Mask" value="159" />
@@ -4688,36 +4849,36 @@
 							<node id="16778305">
 								<attribute name="Is Enabled" value="true" />
 								<attribute name="Name" value="Plecho.R" />
-								<attribute name="Position" value="2.20177e-009 8.46404 5.80832e-008" />
+								<attribute name="Position" value="-6.26894e-008 8.46405 -5.47661e-008" />
 								<attribute name="Rotation" value="0.512034 0.501977 -0.498015 0.487669" />
-								<attribute name="Scale" value="1 1 1" />
+								<attribute name="Scale" value="1 0.999999 1" />
 								<attribute name="Variables" />
 								<node id="16778306">
 									<attribute name="Is Enabled" value="true" />
 									<attribute name="Name" value="Ruka.R" />
-									<attribute name="Position" value="-2.83106e-008 5.86144 1.07408e-006" />
-									<attribute name="Rotation" value="0.901055 0.278702 -0.157352 -0.292688" />
-									<attribute name="Scale" value="1 1 0.999999" />
+									<attribute name="Position" value="-1.00204e-007 5.86144 1.64539e-006" />
+									<attribute name="Rotation" value="0.948439 0.30477 -0.0757252 0.0429357" />
+									<attribute name="Scale" value="1 1 1" />
 									<attribute name="Variables" />
 									<node id="16778307">
 										<attribute name="Is Enabled" value="true" />
 										<attribute name="Name" value="Ruka.R.001" />
-										<attribute name="Position" value="-8.79972e-007 7.39442 -2.76555e-006" />
-										<attribute name="Rotation" value="0.728773 0.629388 -0.0029278 0.269725" />
+										<attribute name="Position" value="-5.35745e-007 7.39442 -9.24221e-007" />
+										<attribute name="Rotation" value="0.83425 0.439056 -0.00226716 0.333543" />
 										<attribute name="Scale" value="1 1 1" />
 										<attribute name="Variables" />
 										<node id="16778308">
 											<attribute name="Is Enabled" value="true" />
 											<attribute name="Name" value="Ruka.R.002" />
-											<attribute name="Position" value="-4.25888e-007 6.15619 -4.69231e-007" />
+											<attribute name="Position" value="4.83007e-007 6.15619 -2.82351e-007" />
 											<attribute name="Rotation" value="0.876795 -0.480818 -0.00324227 0.00591227" />
 											<attribute name="Scale" value="1 1 1" />
 											<attribute name="Variables" />
 											<node id="16778309">
 												<attribute name="Is Enabled" value="true" />
 												<attribute name="Name" value="Ruka.R.005" />
-												<attribute name="Position" value="6.30734e-007 2.44459 -4.61625e-007" />
-												<attribute name="Rotation" value="0.957441 0.288629 1.69921e-007 -8.23463e-008" />
+												<attribute name="Position" value="-2.46976e-007 2.44459 -3.1892e-007" />
+												<attribute name="Rotation" value="0.952767 0.28722 -0.0284859 0.0944938" />
 												<attribute name="Scale" value="1 1 1" />
 												<attribute name="Variables" />
 											</node>
@@ -4725,15 +4886,15 @@
 										<node id="16778310">
 											<attribute name="Is Enabled" value="true" />
 											<attribute name="Name" value="Ruka.R.003" />
-											<attribute name="Position" value="-4.25888e-007 6.15619 -4.69231e-007" />
-											<attribute name="Rotation" value="0.999847 0.0161224 0.000108691 0.00674182" />
+											<attribute name="Position" value="4.83007e-007 6.15619 -2.82351e-007" />
+											<attribute name="Rotation" value="0.999847 0.0161224 0.0001087 0.00674184" />
 											<attribute name="Scale" value="1 1 1" />
 											<attribute name="Variables" />
 											<node id="16778311">
 												<attribute name="Is Enabled" value="true" />
 												<attribute name="Name" value="Ruka.R.006" />
-												<attribute name="Position" value="-4.56526e-007 2.14539 2.33968e-007" />
-												<attribute name="Rotation" value="0.999725 -0.0234308 3.9567e-008 8.36076e-009" />
+												<attribute name="Position" value="-8.20932e-007 2.14539 -4.23154e-007" />
+												<attribute name="Rotation" value="0.994845 -0.0233164 0.00231253 0.0986671" />
 												<attribute name="Scale" value="1 1 1" />
 												<attribute name="Variables" />
 											</node>
@@ -4741,15 +4902,15 @@
 										<node id="16778312">
 											<attribute name="Is Enabled" value="true" />
 											<attribute name="Name" value="Ruka.R.004" />
-											<attribute name="Position" value="-4.25888e-007 6.15619 -4.69231e-007" />
-											<attribute name="Rotation" value="0.906208 0.422778 0.00285093 0.00611049" />
+											<attribute name="Position" value="4.83007e-007 6.15619 -2.82351e-007" />
+											<attribute name="Rotation" value="0.906208 0.422778 0.00285094 0.00611048" />
 											<attribute name="Scale" value="1 1 1" />
 											<attribute name="Variables" />
 											<node id="16778313">
 												<attribute name="Is Enabled" value="true" />
 												<attribute name="Name" value="Ruka.R.007" />
-												<attribute name="Position" value="4.75509e-007 2.34693 1.22497e-006" />
-												<attribute name="Rotation" value="0.987666 -0.156573 -1.92088e-007 -2.27014e-008" />
+												<attribute name="Position" value="-3.44095e-007 2.34693 3.71161e-007" />
+												<attribute name="Rotation" value="0.982844 -0.155808 0.0154526 0.097477" />
 												<attribute name="Scale" value="1 1 1" />
 												<attribute name="Variables" />
 											</node>
@@ -4767,8 +4928,8 @@
 												<attribute name="Offset Position" value="-0 3.81 -0" />
 											</component>
 											<component type="RigidBody" id="16777535">
-												<attribute name="Physics Rotation" value="-0.194766 -0.51703 0.319369 0.769903" />
-												<attribute name="Physics Position" value="-33.4917 7.7647 -23.9133" />
+												<attribute name="Physics Rotation" value="-0.338085 -0.646276 0.174699 0.661443" />
+												<attribute name="Physics Position" value="-33.3417 7.90018 -24.1318" />
 												<attribute name="Mass" value="1" />
 												<attribute name="Collision Layer" value="32" />
 												<attribute name="Collision Mask" value="159" />
@@ -4780,15 +4941,15 @@
 							<node id="16778314">
 								<attribute name="Is Enabled" value="true" />
 								<attribute name="Name" value="Bone.003" />
-								<attribute name="Position" value="2.20177e-009 8.46404 5.80832e-008" />
-								<attribute name="Rotation" value="0.964789 0.263024 -4.72232e-010 1.08176e-010" />
+								<attribute name="Position" value="-6.26894e-008 8.46405 -5.47661e-008" />
+								<attribute name="Rotation" value="0.964789 0.263024 -7.97607e-009 1.47436e-009" />
 								<attribute name="Scale" value="1 1 1" />
 								<attribute name="Variables" />
 								<node id="16778315">
 									<attribute name="Is Enabled" value="true" />
 									<attribute name="Name" value="Krishka" />
-									<attribute name="Position" value="3.84714e-008 5.47836 1.27714e-007" />
-									<attribute name="Rotation" value="-1.76265e-008 3.81491e-008 -0.543428 0.839456" />
+									<attribute name="Position" value="0 5.47836 -4.60568e-007" />
+									<attribute name="Rotation" value="-3.29886e-008 3.03107e-008 -0.496223 0.868195" />
 									<attribute name="Scale" value="1 1 1" />
 									<attribute name="Variables" />
 								</node>
@@ -4796,15 +4957,15 @@
 							<node id="16778316">
 								<attribute name="Is Enabled" value="true" />
 								<attribute name="Name" value="Bone.004" />
-								<attribute name="Position" value="2.20177e-009 8.46404 5.80832e-008" />
-								<attribute name="Rotation" value="0.533825 0.845595 -2.11773e-008 2.25995e-008" />
+								<attribute name="Position" value="-6.26894e-008 8.46405 -5.47661e-008" />
+								<attribute name="Rotation" value="0.533825 0.845595 -2.17736e-008 1.34356e-008" />
 								<attribute name="Scale" value="1 1 1" />
 								<attribute name="Variables" />
 								<node id="16778317">
 									<attribute name="Is Enabled" value="true" />
 									<attribute name="Name" value="Bone.002" />
-									<attribute name="Position" value="-0.036391 6.19567 -0.316928" />
-									<attribute name="Rotation" value="0.555458 -0.830933 -0.0261444 -0.0182185" />
+									<attribute name="Position" value="-0.0363907 6.19567 -0.316927" />
+									<attribute name="Rotation" value="0.566104 -0.823725 -0.02081 -0.0238838" />
 									<attribute name="Scale" value="1 1 1" />
 									<attribute name="Variables" />
 									<node id="16778318">
@@ -4818,7 +4979,7 @@
 									<node id="16778319">
 										<attribute name="Is Enabled" value="true" />
 										<attribute name="Name" value="Truba2" />
-										<attribute name="Position" value="5.65841 9.54666 -1.0103" />
+										<attribute name="Position" value="5.65842 9.54666 -1.0103" />
 										<attribute name="Rotation" value="0.71395 -0.0189125 0.699408 -0.0273128" />
 										<attribute name="Scale" value="1 1 1" />
 										<attribute name="Variables" />
@@ -4836,30 +4997,30 @@
 							<node id="16778321">
 								<attribute name="Is Enabled" value="true" />
 								<attribute name="Name" value="Bone.005" />
-								<attribute name="Position" value="2.20177e-009 8.46404 5.80832e-008" />
-								<attribute name="Rotation" value="-3.68186e-008 9.76193e-008 -0.48752 0.873112" />
+								<attribute name="Position" value="-6.26894e-008 8.46405 -5.47661e-008" />
+								<attribute name="Rotation" value="-3.42423e-008 9.6587e-008 -0.48752 0.873112" />
 								<attribute name="Scale" value="1 1 1" />
 								<attribute name="Variables" />
 								<node id="16778322">
 									<attribute name="Is Enabled" value="true" />
 									<attribute name="Name" value="Head" />
-									<attribute name="Position" value="3.40029e-009 4.02393 5.01671e-007" />
-									<attribute name="Rotation" value="0.965944 -0.255556 0.0395743 -0.0087601" />
+									<attribute name="Position" value="2.36876e-007 4.02392 8.27947e-007" />
+									<attribute name="Rotation" value="0.905453 -0.358348 0.153604 0.167772" />
 									<attribute name="Scale" value="1 1 1" />
 									<attribute name="Variables" />
 									<node id="16778323">
 										<attribute name="Is Enabled" value="true" />
 										<attribute name="Name" value="HeadHelper" />
-										<attribute name="Position" value="-7.89639e-006 3.12602 -0.535996" />
-										<attribute name="Rotation" value="1 1.0287e-008 -4.12923e-005 -1.02648e-010" />
+										<attribute name="Position" value="-7.20461e-006 3.12602 -0.535995" />
+										<attribute name="Rotation" value="1 9.14725e-009 -4.12962e-005 -4.46906e-010" />
 										<attribute name="Scale" value="1 1 1" />
 										<attribute name="Variables" />
 									</node>
 									<node id="16778324">
 										<attribute name="Is Enabled" value="true" />
 										<attribute name="Name" value="Chelust" />
-										<attribute name="Position" value="-7.89639e-006 3.12602 -0.535996" />
-										<attribute name="Rotation" value="0.867657 0.497163 6.33784e-006 -3.61918e-006" />
+										<attribute name="Position" value="-7.20461e-006 3.12602 -0.535995" />
+										<attribute name="Rotation" value="0.808309 0.585537 0.016105 0.0593597" />
 										<attribute name="Scale" value="1 1 1" />
 										<attribute name="Variables" />
 									</node>
@@ -4868,15 +5029,15 @@
 							<node id="16778360">
 								<attribute name="Is Enabled" value="true" />
 								<attribute name="Name" value="HitBox" />
-								<attribute name="Position" value="-3.70863 9.31551 6.22649" />
+								<attribute name="Position" value="-3.30595 9.32945 6.22647" />
 								<attribute name="Rotation" value="0.991445 0 0 0.130526" />
 								<attribute name="Scale" value="7 7 7" />
 								<attribute name="Variables">
 									<variant hash="964697786" type="String" value="hitbox" />
 								</attribute>
 								<component type="RigidBody" id="16777536">
-									<attribute name="Physics Rotation" value="-4.09236e-008 0.113296 0.993561 -4.21666e-009" />
-									<attribute name="Physics Position" value="-35.6795 9.19751 -24.7141" />
+									<attribute name="Physics Rotation" value="-0.192774 0.0959766 0.976135 -0.0280381" />
+									<attribute name="Physics Position" value="-36.6117 9.15392 -25.0235" />
 									<attribute name="Collision Mask" value="159" />
 								</component>
 								<component type="CollisionShape" id="16777537">
@@ -4889,36 +5050,36 @@
 					<node id="16778325">
 						<attribute name="Is Enabled" value="true" />
 						<attribute name="Name" value="Noga.L" />
-						<attribute name="Position" value="0.130934 -0.205802 9.41935e-008" />
+						<attribute name="Position" value="0.130934 -0.205801 1.6589e-008" />
 						<attribute name="Rotation" value="0.5 0.5 0.5 -0.5" />
 						<attribute name="Scale" value="1 1 1" />
 						<attribute name="Variables" />
 						<node id="16778326">
 							<attribute name="Is Enabled" value="true" />
 							<attribute name="Name" value="Noga.L.001" />
-							<attribute name="Position" value="-1.46426e-007 3.25609 -1.56064e-007" />
-							<attribute name="Rotation" value="0.565968 0.430171 0.503181 0.491367" />
-							<attribute name="Scale" value="1 1 1" />
+							<attribute name="Position" value="4.18547e-007 3.25609 3.09642e-007" />
+							<attribute name="Rotation" value="0.671644 0.156678 0.333644 0.642673" />
+							<attribute name="Scale" value="1 0.999999 1" />
 							<attribute name="Variables" />
 							<node id="16778327">
 								<attribute name="Is Enabled" value="true" />
 								<attribute name="Name" value="Noga.L.002" />
-								<attribute name="Position" value="4.13995e-007 5.06935 6.61312e-007" />
-								<attribute name="Rotation" value="0.963118 -0.233703 0.021492 0.131625" />
+								<attribute name="Position" value="5.86825e-007 5.06935 -5.48117e-007" />
+								<attribute name="Rotation" value="0.999998 -0.00198013 -0.000217974 0.000923351" />
 								<attribute name="Scale" value="1 1 1" />
 								<attribute name="Variables" />
 								<node id="16778328">
 									<attribute name="Is Enabled" value="true" />
 									<attribute name="Name" value="Noga.L.003" />
-									<attribute name="Position" value="2.13887e-007 2.04448 1.93715e-007" />
-									<attribute name="Rotation" value="1.90977e-006 2.07573e-006 -0.707971 -0.706242" />
+									<attribute name="Position" value="-3.09699e-007 2.04448 -5.0387e-007" />
+									<attribute name="Rotation" value="1.90997e-006 2.07263e-006 -0.707971 -0.706242" />
 									<attribute name="Scale" value="1 1 1" />
 									<attribute name="Variables" />
 									<node id="16778329">
 										<attribute name="Is Enabled" value="true" />
 										<attribute name="Name" value="Noga.L.006" />
-										<attribute name="Position" value="5.13426e-008 1.57375 1.74486e-007" />
-										<attribute name="Rotation" value="0.99845 0.0354845 0.0420416 -0.00843282" />
+										<attribute name="Position" value="-2.38419e-007 1.57375 3.27826e-007" />
+										<attribute name="Rotation" value="0.967575 -0.228925 0.0995983 -0.0383742" />
 										<attribute name="Scale" value="1 1 1" />
 										<attribute name="Variables" />
 									</node>
@@ -4926,22 +5087,22 @@
 								<node id="16778330">
 									<attribute name="Is Enabled" value="true" />
 									<attribute name="Name" value="Noga.L.004" />
-									<attribute name="Position" value="2.13887e-007 2.04448 1.93715e-007" />
-									<attribute name="Rotation" value="0.717446 -0.696614 -8.17808e-008 -7.62813e-008" />
+									<attribute name="Position" value="-3.09699e-007 2.04448 -5.0387e-007" />
+									<attribute name="Rotation" value="0.717446 -0.696614 -9.18846e-008 -7.93587e-008" />
 									<attribute name="Scale" value="1 1 1" />
 									<attribute name="Variables" />
 									<node id="16778331">
 										<attribute name="Is Enabled" value="true" />
 										<attribute name="Name" value="Noga.L.005" />
-										<attribute name="Position" value="3.40284e-007 1.64385 -8.13084e-008" />
-										<attribute name="Rotation" value="0.995764 0.0919491 2.89125e-010 1.93848e-009" />
+										<attribute name="Position" value="5.03837e-008 1.64385 -6.20169e-007" />
+										<attribute name="Rotation" value="0.995764 0.0919491 -6.94307e-010 3.04683e-009" />
 										<attribute name="Scale" value="1 1 1" />
 										<attribute name="Variables" />
 										<node id="16778332">
 											<attribute name="Is Enabled" value="true" />
 											<attribute name="Name" value="footL" />
-											<attribute name="Position" value="0.25166 -0.0839253 0.013199" />
-											<attribute name="Rotation" value="0.994684 -0.102978 -5.6178e-009 -5.93104e-008" />
+											<attribute name="Position" value="0.25166 -0.0839244 0.0131993" />
+											<attribute name="Rotation" value="0.994684 -0.102978 -1.00966e-008 -6.73751e-008" />
 											<attribute name="Scale" value="1 1 1" />
 											<attribute name="Variables" />
 										</node>
@@ -4950,15 +5111,15 @@
 								<node id="16778333">
 									<attribute name="Is Enabled" value="true" />
 									<attribute name="Name" value="Noga.L.007" />
-									<attribute name="Position" value="2.13887e-007 2.04448 1.93715e-007" />
+									<attribute name="Position" value="-3.09699e-007 2.04448 -5.0387e-007" />
 									<attribute name="Rotation" value="0.5 -0.5 -0.5 -0.5" />
 									<attribute name="Scale" value="1 1 1" />
 									<attribute name="Variables" />
 									<node id="16778334">
 										<attribute name="Is Enabled" value="true" />
 										<attribute name="Name" value="Noga.L.008" />
-										<attribute name="Position" value="-1.02423e-007 1.29699 6.71784e-008" />
-										<attribute name="Rotation" value="0.98861 0.150499 -7.41011e-008 1.87726e-008" />
+										<attribute name="Position" value="2.3351e-008 1.29699 1.46242e-007" />
+										<attribute name="Rotation" value="0.98861 0.150499 -7.13921e-008 1.26933e-008" />
 										<attribute name="Scale" value="1 1 1" />
 										<attribute name="Variables" />
 									</node>
@@ -4966,15 +5127,15 @@
 								<node id="16778335">
 									<attribute name="Is Enabled" value="true" />
 									<attribute name="Name" value="Noga.L.009" />
-									<attribute name="Position" value="2.13887e-007 2.04448 1.93715e-007" />
+									<attribute name="Position" value="-3.09699e-007 2.04448 -5.0387e-007" />
 									<attribute name="Rotation" value="0.5 -0.5 0.5 0.5" />
 									<attribute name="Scale" value="1 1 1" />
 									<attribute name="Variables" />
 									<node id="16778336">
 										<attribute name="Is Enabled" value="true" />
 										<attribute name="Name" value="Noga.L.010" />
-										<attribute name="Position" value="-1.37774e-007 1.41708 -8.99641e-008" />
-										<attribute name="Rotation" value="0.991611 0.129262 2.00206e-007 4.8324e-009" />
+										<attribute name="Position" value="-4.67616e-007 1.41708 -1.30885e-007" />
+										<attribute name="Rotation" value="0.991611 0.129262 1.88901e-007 7.57163e-009" />
 										<attribute name="Scale" value="1 1 1" />
 										<attribute name="Variables" />
 									</node>
@@ -4985,36 +5146,36 @@
 					<node id="16778337">
 						<attribute name="Is Enabled" value="true" />
 						<attribute name="Name" value="Noga.R" />
-						<attribute name="Position" value="-0.205603 -0.205802 1.7443e-007" />
+						<attribute name="Position" value="-0.205603 -0.205801 2.61611e-008" />
 						<attribute name="Rotation" value="0.5 0.5 -0.5 0.5" />
 						<attribute name="Scale" value="1 1 1" />
 						<attribute name="Variables" />
 						<node id="16778338">
 							<attribute name="Is Enabled" value="true" />
 							<attribute name="Name" value="Noga.R.001" />
-							<attribute name="Position" value="6.40674e-008 3.19802 -2.02074e-007" />
-							<attribute name="Rotation" value="0.313065 0.617412 -0.658336 -0.295613" />
+							<attribute name="Position" value="-1.04544e-007 3.19802 -3.19423e-007" />
+							<attribute name="Rotation" value="0.382197 0.549979 -0.67458 -0.310468" />
 							<attribute name="Scale" value="1 1 1" />
 							<attribute name="Variables" />
 							<node id="16778339">
 								<attribute name="Is Enabled" value="true" />
 								<attribute name="Name" value="Noga.R.002" />
-								<attribute name="Position" value="-7.1276e-008 5.06938 -8.34282e-008" />
-								<attribute name="Rotation" value="0.72973 -0.682945 0.00112957 0.0328402" />
+								<attribute name="Position" value="6.85871e-009 5.06938 -2.05548e-007" />
+								<attribute name="Rotation" value="0.942021 -0.335536 0.00154499 -0.00296223" />
 								<attribute name="Scale" value="1 1 1" />
 								<attribute name="Variables" />
 								<node id="16778340">
 									<attribute name="Is Enabled" value="true" />
 									<attribute name="Name" value="Noga.R.003" />
-									<attribute name="Position" value="-1.2898e-007 2.04448 -1.16628e-007" />
-									<attribute name="Rotation" value="-1.90988e-006 -2.07618e-006 -0.707971 -0.706242" />
+									<attribute name="Position" value="5.15086e-007 2.04448 9.21683e-009" />
+									<attribute name="Rotation" value="-1.90544e-006 -2.07032e-006 -0.707971 -0.706242" />
 									<attribute name="Scale" value="1 1 1" />
 									<attribute name="Variables" />
 									<node id="16778341">
 										<attribute name="Is Enabled" value="true" />
 										<attribute name="Name" value="Noga.R.006" />
-										<attribute name="Position" value="-2.18683e-008 1.57375 8.93425e-009" />
-										<attribute name="Rotation" value="0.752413 0.655951 0.0366456 -0.0475322" />
+										<attribute name="Position" value="-4.19959e-007 1.57375 1.3038e-008" />
+										<attribute name="Rotation" value="0.996966 0.0778357 2.60866e-006 -2.32981e-007" />
 										<attribute name="Scale" value="1 1 1" />
 										<attribute name="Variables" />
 									</node>
@@ -5022,22 +5183,22 @@
 								<node id="16778342">
 									<attribute name="Is Enabled" value="true" />
 									<attribute name="Name" value="Noga.R.004" />
-									<attribute name="Position" value="-1.2898e-007 2.04448 -1.16628e-007" />
-									<attribute name="Rotation" value="0.717446 -0.696614 8.26305e-008 8.45776e-008" />
+									<attribute name="Position" value="5.15086e-007 2.04448 9.21683e-009" />
+									<attribute name="Rotation" value="0.717446 -0.696614 8.5532e-008 8.4239e-008" />
 									<attribute name="Scale" value="1 1 1" />
 									<attribute name="Variables" />
 									<node id="16778343">
 										<attribute name="Is Enabled" value="true" />
 										<attribute name="Name" value="Noga.R.005" />
-										<attribute name="Position" value="2.15518e-007 1.64385 -1.14849e-007" />
-										<attribute name="Rotation" value="0.75526 0.655426 -1.15016e-007 -1.11233e-007" />
+										<attribute name="Position" value="1.33049e-008 1.64385 1.90307e-008" />
+										<attribute name="Rotation" value="0.995764 0.0919491 4.11116e-009 6.8702e-011" />
 										<attribute name="Scale" value="1 1 1" />
 										<attribute name="Variables" />
 										<node id="16778344">
 											<attribute name="Is Enabled" value="true" />
 											<attribute name="Name" value="footR" />
 											<attribute name="Position" value="-0.355349 -0.0732021 0.0626325" />
-											<attribute name="Rotation" value="0.994684 -0.102978 -6.26904e-009 -6.08573e-008" />
+											<attribute name="Rotation" value="0.994684 -0.102978 -5.84403e-009 -6.09742e-008" />
 											<attribute name="Scale" value="1 1 1" />
 											<attribute name="Variables" />
 										</node>
@@ -5046,15 +5207,15 @@
 								<node id="16778345">
 									<attribute name="Is Enabled" value="true" />
 									<attribute name="Name" value="Noga.R.007" />
-									<attribute name="Position" value="-1.2898e-007 2.04448 -1.16628e-007" />
+									<attribute name="Position" value="5.15086e-007 2.04448 9.21683e-009" />
 									<attribute name="Rotation" value="0.5 -0.5 0.5 0.5" />
 									<attribute name="Scale" value="1 1 1" />
 									<attribute name="Variables" />
 									<node id="16778346">
 										<attribute name="Is Enabled" value="true" />
 										<attribute name="Name" value="Noga.R.008" />
-										<attribute name="Position" value="3.52818e-008 1.29699 3.69905e-008" />
-										<attribute name="Rotation" value="0.775856 0.630911 3.22904e-007 1.7364e-007" />
+										<attribute name="Position" value="3.0416e-008 1.29699 -1.55127e-008" />
+										<attribute name="Rotation" value="0.98861 0.150499 1.01218e-007 -1.67627e-008" />
 										<attribute name="Scale" value="1 1 1" />
 										<attribute name="Variables" />
 									</node>
@@ -5062,15 +5223,15 @@
 								<node id="16778347">
 									<attribute name="Is Enabled" value="true" />
 									<attribute name="Name" value="Noga.R.009" />
-									<attribute name="Position" value="-1.2898e-007 2.04448 -1.16628e-007" />
+									<attribute name="Position" value="5.15086e-007 2.04448 9.21683e-009" />
 									<attribute name="Rotation" value="0.5 -0.5 -0.5 -0.5" />
 									<attribute name="Scale" value="1 1 1" />
 									<attribute name="Variables" />
 									<node id="16778348">
 										<attribute name="Is Enabled" value="true" />
 										<attribute name="Name" value="Noga.R.010" />
-										<attribute name="Position" value="-1.26242e-007 1.41708 -2.22125e-008" />
-										<attribute name="Rotation" value="0.696814 0.717252 -5.8364e-007 -1.40928e-007" />
+										<attribute name="Position" value="-3.59469e-008 1.41708 -7.26763e-009" />
+										<attribute name="Rotation" value="0.991611 0.129262 -1.72064e-007 -6.01283e-009" />
 										<attribute name="Scale" value="1 1 1" />
 										<attribute name="Variables" />
 									</node>
@@ -5082,15 +5243,15 @@
 				<node id="16778349">
 					<attribute name="Is Enabled" value="true" />
 					<attribute name="Name" value="IK_Noga.L" />
-					<attribute name="Position" value="3.81736 7.31341 0.335768" />
-					<attribute name="Rotation" value="0.00319114 -0.999995 -1.387e-008 -5.42393e-007" />
-					<attribute name="Scale" value="1 1 0.995934" />
+					<attribute name="Position" value="3.6683 2.62164 1.98331" />
+					<attribute name="Rotation" value="0.0854933 -0.972226 0.128235 -0.176136" />
+					<attribute name="Scale" value="0.999576 0.999835 0.996524" />
 					<attribute name="Variables" />
 					<node id="16778350">
 						<attribute name="Is Enabled" value="true" />
 						<attribute name="Name" value="IK_PoleNoga.L" />
-						<attribute name="Position" value="-0.470341 -5.45132 -1.85049" />
-						<attribute name="Rotation" value="4.49896e-008 -7.94318e-006 -0.00567117 0.999984" />
+						<attribute name="Position" value="-1.65471e-007 -5.45242 -2.02378" />
+						<attribute name="Rotation" value="5.54495e-008 -7.94827e-006 -0.00567118 0.999984" />
 						<attribute name="Scale" value="1 1 1.0026" />
 						<attribute name="Variables" />
 					</node>
@@ -5098,14 +5259,14 @@
 				<node id="16778351">
 					<attribute name="Is Enabled" value="true" />
 					<attribute name="Name" value="IK_Noga.R" />
-					<attribute name="Position" value="-3.85755 10.7381 1.6886" />
+					<attribute name="Position" value="-4.78773 11.3553 0.635881" />
 					<attribute name="Rotation" value="0.00319114 -0.999995 -1.387e-008 -5.42393e-007" />
 					<attribute name="Scale" value="1 1 0.995934" />
 					<attribute name="Variables" />
 					<node id="16778352">
 						<attribute name="Is Enabled" value="true" />
 						<attribute name="Name" value="IK_PoleNoga.R" />
-						<attribute name="Position" value="-1.08986e-007 -5.45243 -2.02378" />
+						<attribute name="Position" value="1.44181e-007 -5.45243 -2.02378" />
 						<attribute name="Rotation" value="-4.49896e-008 7.94319e-006 -0.00567117 0.999984" />
 						<attribute name="Scale" value="1 1 1.0026" />
 						<attribute name="Variables" />
@@ -5114,17 +5275,17 @@
 				<node id="16778353">
 					<attribute name="Is Enabled" value="true" />
 					<attribute name="Name" value="IK_Ruka.L" />
-					<attribute name="Position" value="10.806 14.4245 9.15842" />
-					<attribute name="Rotation" value="0.00947739 -0.996803 -0.0793348 0.000753979" />
-					<attribute name="Scale" value="0.754534 1 0.999421" />
+					<attribute name="Position" value="8.29663 23.8697 17.202" />
+					<attribute name="Rotation" value="0.0095072 -0.999955 -9.82183e-008 -5.50041e-007" />
+					<attribute name="Scale" value="1 1 0.999421" />
 					<attribute name="Variables" />
 				</node>
 				<node id="16778354">
 					<attribute name="Is Enabled" value="true" />
 					<attribute name="Name" value="IK_Ruka.R" />
-					<attribute name="Position" value="-10.512 9.76927 9.10516" />
-					<attribute name="Rotation" value="0.00817017 -0.996814 -0.079336 0.000649718" />
-					<attribute name="Scale" value="0.754534 1 0.999978" />
+					<attribute name="Position" value="-12.5611 8.87795 9.62024" />
+					<attribute name="Rotation" value="0.00819605 -0.999967 -4.08465e-007 -5.52517e-007" />
+					<attribute name="Scale" value="1 1 0.999977" />
 					<attribute name="Variables" />
 				</node>
 				<node id="16778355">
@@ -5146,8 +5307,8 @@
 				<node id="16778357">
 					<attribute name="Is Enabled" value="true" />
 					<attribute name="Name" value="ROCK_JOINT" />
-					<attribute name="Position" value="0.598725 10.8211 -8.35195" />
-					<attribute name="Rotation" value="0.00626047 0.706908 -0.70725 -0.00625233" />
+					<attribute name="Position" value="3.85579 9.94811 -6.38206" />
+					<attribute name="Rotation" value="7.34698e-006 6.50118e-008 -0.999961 -0.00884844" />
 					<attribute name="Scale" value="1 1 1" />
 					<attribute name="Variables" />
 				</node>
@@ -5191,6 +5352,957 @@
 						<attribute name="Variables" />
 					</node>
 					<node id="16778235">
+						<attribute name="Is Enabled" value="true" />
+						<attribute name="Name" value="smoke5" />
+						<attribute name="Position" value="11.0071 12.1491 1.33514e-005" />
+						<attribute name="Rotation" value="1 0 0 0" />
+						<attribute name="Scale" value="1 1 1" />
+						<attribute name="Variables" />
+					</node>
+				</node>
+			</node>
+		</node>
+	</node>
+	<node id="16778379">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="BBPrefab" />
+		<attribute name="Position" value="-38.2016 27.6765 47.1894" />
+		<attribute name="Rotation" value="1 0 0 0" />
+		<attribute name="Scale" value="0.3 0.3 0.3" />
+		<attribute name="Variables">
+			<variant hash="964697786" type="String" value="BIGBOT" />
+			<variant hash="6691218" type="Int" value="1" />
+		</attribute>
+		<node id="16778380">
+			<attribute name="Is Enabled" value="true" />
+			<attribute name="Name" value="BIGBOT" />
+			<attribute name="Position" value="0 0 0" />
+			<attribute name="Rotation" value="1 0 0 0" />
+			<attribute name="Scale" value="1 1 1" />
+			<attribute name="Variables">
+				<variant hash="6691218" type="Int" value="0" />
+				<variant hash="776558865" type="Int" value="1" />
+			</attribute>
+			<component type="RigidBody" id="16777539">
+				<attribute name="Physics Position" value="-38.2016 27.6765 47.1894" />
+				<attribute name="Mass" value="10" />
+				<attribute name="Friction" value="1" />
+				<attribute name="Angular Factor" value="0 0 0" />
+				<attribute name="Collision Layer" value="32" />
+				<attribute name="Collision Mask" value="159" />
+			</component>
+			<component type="CollisionShape" id="16777540">
+				<attribute name="Shape Type" value="Sphere" />
+				<attribute name="Size" value="15 1 1" />
+				<attribute name="Offset Position" value="0 18 0" />
+				<attribute name="Offset Rotation" value="0.707107 0.707107 0 0" />
+			</component>
+			<component type="AnimationController" id="16777541">
+				<attribute name="Node Animation States">
+					<variant type="Int" value="0" />
+				</attribute>
+			</component>
+			<component type="CollisionShape" id="16777542">
+				<attribute name="Shape Type" value="Sphere" />
+				<attribute name="Size" value="12 1 1" />
+				<attribute name="Offset Position" value="0 5.13 0" />
+			</component>
+			<component type="AnimatedModel" id="16777543">
+				<attribute name="Model" value="Model;Models/BIGBOT.mdl" />
+				<attribute name="Material" value="Material;Materials/MAT_BIGBOT_PUSHKA.xml;Materials/MAT_BIGBOT.xml;Materials/MAT_BIGBOT_LUK.xml" />
+				<attribute name="Cast Shadows" value="true" />
+				<attribute name="Bone Animation Enabled">
+					<variant type="Bool" value="true" />
+					<variant type="Bool" value="true" />
+					<variant type="Bool" value="true" />
+					<variant type="Bool" value="true" />
+					<variant type="Bool" value="true" />
+					<variant type="Bool" value="true" />
+					<variant type="Bool" value="true" />
+					<variant type="Bool" value="true" />
+					<variant type="Bool" value="true" />
+					<variant type="Bool" value="true" />
+					<variant type="Bool" value="true" />
+					<variant type="Bool" value="true" />
+					<variant type="Bool" value="true" />
+					<variant type="Bool" value="true" />
+					<variant type="Bool" value="true" />
+					<variant type="Bool" value="true" />
+					<variant type="Bool" value="true" />
+					<variant type="Bool" value="true" />
+					<variant type="Bool" value="true" />
+					<variant type="Bool" value="true" />
+					<variant type="Bool" value="true" />
+					<variant type="Bool" value="true" />
+					<variant type="Bool" value="true" />
+					<variant type="Bool" value="true" />
+					<variant type="Bool" value="true" />
+					<variant type="Bool" value="true" />
+					<variant type="Bool" value="true" />
+					<variant type="Bool" value="true" />
+					<variant type="Bool" value="true" />
+					<variant type="Bool" value="true" />
+					<variant type="Bool" value="true" />
+					<variant type="Bool" value="true" />
+					<variant type="Bool" value="true" />
+					<variant type="Bool" value="true" />
+					<variant type="Bool" value="true" />
+					<variant type="Bool" value="true" />
+					<variant type="Bool" value="true" />
+					<variant type="Bool" value="true" />
+					<variant type="Bool" value="true" />
+					<variant type="Bool" value="true" />
+					<variant type="Bool" value="true" />
+					<variant type="Bool" value="true" />
+					<variant type="Bool" value="true" />
+					<variant type="Bool" value="true" />
+					<variant type="Bool" value="true" />
+					<variant type="Bool" value="true" />
+					<variant type="Bool" value="true" />
+					<variant type="Bool" value="true" />
+					<variant type="Bool" value="true" />
+					<variant type="Bool" value="true" />
+					<variant type="Bool" value="true" />
+					<variant type="Bool" value="true" />
+					<variant type="Bool" value="true" />
+					<variant type="Bool" value="true" />
+					<variant type="Bool" value="true" />
+					<variant type="Bool" value="true" />
+					<variant type="Bool" value="true" />
+					<variant type="Bool" value="true" />
+					<variant type="Bool" value="true" />
+					<variant type="Bool" value="true" />
+					<variant type="Bool" value="true" />
+				</attribute>
+				<attribute name="Animation States">
+					<variant type="Int" value="13" />
+					<variant type="ResourceRef" value="Animation;Models/BIGBOT_HITED.ani" />
+					<variant type="String" value="MasterBone" />
+					<variant type="Bool" value="false" />
+					<variant type="Float" value="0" />
+					<variant type="Float" value="0" />
+					<variant type="Int" value="0" />
+					<variant type="ResourceRef" value="Animation;Models/BIGBOT_HITED_IDLE.ani" />
+					<variant type="String" value="MasterBone" />
+					<variant type="Bool" value="false" />
+					<variant type="Float" value="0" />
+					<variant type="Float" value="0.665011" />
+					<variant type="Int" value="0" />
+					<variant type="ResourceRef" value="Animation;Models/BIGBOT_HITED_UP.ani" />
+					<variant type="String" value="MasterBone" />
+					<variant type="Bool" value="false" />
+					<variant type="Float" value="0" />
+					<variant type="Float" value="0" />
+					<variant type="Int" value="0" />
+					<variant type="ResourceRef" value="Animation;Models/BIGBOT_IDLE.ani" />
+					<variant type="String" value="MasterBone" />
+					<variant type="Bool" value="false" />
+					<variant type="Float" value="0" />
+					<variant type="Float" value="0" />
+					<variant type="Int" value="0" />
+					<variant type="ResourceRef" value="Animation;Models/BIGBOT_IDLE_LOOK_LEFT.ani" />
+					<variant type="String" value="MasterBone" />
+					<variant type="Bool" value="false" />
+					<variant type="Float" value="0" />
+					<variant type="Float" value="0" />
+					<variant type="Int" value="0" />
+					<variant type="ResourceRef" value="Animation;Models/BIGBOT_IDLE_LOOK_RIGHT.ani" />
+					<variant type="String" value="MasterBone" />
+					<variant type="Bool" value="false" />
+					<variant type="Float" value="0" />
+					<variant type="Float" value="0" />
+					<variant type="Int" value="0" />
+					<variant type="ResourceRef" value="Animation;Models/BIGBOT_SKILL_1A.ani" />
+					<variant type="String" value="MasterBone" />
+					<variant type="Bool" value="false" />
+					<variant type="Float" value="0" />
+					<variant type="Float" value="0" />
+					<variant type="Int" value="0" />
+					<variant type="ResourceRef" value="Animation;Models/BIGBOT_SKILL_1B.ani" />
+					<variant type="String" value="MasterBone" />
+					<variant type="Bool" value="false" />
+					<variant type="Float" value="0" />
+					<variant type="Float" value="0" />
+					<variant type="Int" value="0" />
+					<variant type="ResourceRef" value="Animation;Models/BIGBOT_TURN_LEFT.ani" />
+					<variant type="String" value="MasterBone" />
+					<variant type="Bool" value="false" />
+					<variant type="Float" value="0" />
+					<variant type="Float" value="0" />
+					<variant type="Int" value="0" />
+					<variant type="ResourceRef" value="Animation;Models/BIGBOT_TURN_RIGHT.ani" />
+					<variant type="String" value="MasterBone" />
+					<variant type="Bool" value="false" />
+					<variant type="Float" value="0" />
+					<variant type="Float" value="0" />
+					<variant type="Int" value="0" />
+					<variant type="ResourceRef" value="Animation;Models/BIGBOT_WALK.ani" />
+					<variant type="String" value="MasterBone" />
+					<variant type="Bool" value="true" />
+					<variant type="Float" value="1" />
+					<variant type="Float" value="0.676971" />
+					<variant type="Int" value="0" />
+					<variant type="ResourceRef" value="Animation;Models/BIGBOT_ATTACK_2.ani" />
+					<variant type="String" value="MasterBone" />
+					<variant type="Bool" value="false" />
+					<variant type="Float" value="0" />
+					<variant type="Float" value="1.96667" />
+					<variant type="Int" value="1" />
+					<variant type="ResourceRef" value="Animation;Models/BIGBOT_ATTACK_1.ani" />
+					<variant type="String" value="MasterBone" />
+					<variant type="Bool" value="true" />
+					<variant type="Float" value="1" />
+					<variant type="Float" value="0.745019" />
+					<variant type="Int" value="1" />
+				</attribute>
+			</component>
+			<node id="16778381">
+				<attribute name="Is Enabled" value="true" />
+				<attribute name="Name" value="MasterBone" />
+				<attribute name="Position" value="-9.48032e-007 0.0902589 -10.8442" />
+				<attribute name="Rotation" value="-4.21469e-007 -3.59651e-007 0.707107 0.707107" />
+				<attribute name="Scale" value="1 1 1" />
+				<attribute name="Variables" />
+				<node id="16778382">
+					<attribute name="Is Enabled" value="true" />
+					<attribute name="Name" value="Bone" />
+					<attribute name="Position" value="-0.227744 8.74913 7.08967" />
+					<attribute name="Rotation" value="0.706621 0.706621 -0.026218 -0.0262173" />
+					<attribute name="Scale" value="1 1 1" />
+					<attribute name="Variables" />
+					<node id="16778383">
+						<attribute name="Is Enabled" value="true" />
+						<attribute name="Name" value="Rotator" />
+						<attribute name="Position" value="-9.53322e-009 0.733549 -6.89009e-008" />
+						<attribute name="Rotation" value="1 2.4708e-016 1.1848e-007 -1.85094e-016" />
+						<attribute name="Scale" value="1 1 1" />
+						<attribute name="Variables" />
+						<node id="16778384">
+							<attribute name="Is Enabled" value="true" />
+							<attribute name="Name" value="Center" />
+							<attribute name="Position" value="-8.93809e-009 0.939351 2.79223e-008" />
+							<attribute name="Rotation" value="0.972416 0.00143845 0.230998 -0.032331" />
+							<attribute name="Scale" value="1 1 1" />
+							<attribute name="Variables" />
+							<node id="16778385">
+								<attribute name="Is Enabled" value="true" />
+								<attribute name="Name" value="Plecho.L" />
+								<attribute name="Position" value="-6.26869e-008 8.46405 -5.4766e-008" />
+								<attribute name="Rotation" value="0.512034 0.501977 0.498015 -0.487669" />
+								<attribute name="Scale" value="1 0.999999 1" />
+								<attribute name="Variables" />
+								<node id="16778386">
+									<attribute name="Is Enabled" value="true" />
+									<attribute name="Name" value="Ruka.L" />
+									<attribute name="Position" value="-5.41377e-009 5.86144 -4.81056e-006" />
+									<attribute name="Rotation" value="0.908551 -0.082644 -0.113825 -0.393382" />
+									<attribute name="Scale" value="1 1 1" />
+									<attribute name="Variables" />
+									<node id="16778387">
+										<attribute name="Is Enabled" value="true" />
+										<attribute name="Name" value="Ruka.L.001" />
+										<attribute name="Position" value="1.32227e-006 7.39442 8.25037e-007" />
+										<attribute name="Rotation" value="0.977003 -0.0227501 -0.00306642 -0.211984" />
+										<attribute name="Scale" value="1 1 1" />
+										<attribute name="Variables" />
+										<node id="16778388">
+											<attribute name="Is Enabled" value="true" />
+											<attribute name="Name" value="Ruka.L.003" />
+											<attribute name="Position" value="6.53249e-007 6.15619 7.58047e-007" />
+											<attribute name="Rotation" value="0.99995 0.00734178 -4.94712e-005 -0.00674254" />
+											<attribute name="Scale" value="1 1 1" />
+											<attribute name="Variables" />
+											<node id="16778389">
+												<attribute name="Is Enabled" value="true" />
+												<attribute name="Name" value="LaserJoint" />
+												<attribute name="Position" value="-0.0963898 1.66362 -0.0295105" />
+												<attribute name="Rotation" value="0.707107 -0.707107 0 0" />
+												<attribute name="Scale" value="1 1 1" />
+												<attribute name="Variables" />
+												<node id="16778390">
+													<attribute name="Is Enabled" value="true" />
+													<attribute name="Name" value="LaserFx" />
+													<attribute name="Position" value="0 0 0" />
+													<attribute name="Rotation" value="1 0 0 0" />
+													<attribute name="Scale" value="1 1 1" />
+													<attribute name="Variables">
+														<variant hash="6691218" type="Int" value="1" />
+													</attribute>
+													<component type="AnimatedModel" id="16777544">
+														<attribute name="Model" value="Model;Models/LaserObject.mdl" />
+														<attribute name="Material" value="Material;Materials/MAT_LASER.xml;Materials/MAT_LASER_3.xml;Materials/MAT_LASER_2.xml" />
+														<attribute name="Update When Invisible" value="true" />
+														<attribute name="Animation LOD Bias" value="1.02" />
+														<attribute name="Bone Animation Enabled">
+															<variant type="Bool" value="true" />
+															<variant type="Bool" value="true" />
+															<variant type="Bool" value="true" />
+															<variant type="Bool" value="true" />
+															<variant type="Bool" value="true" />
+															<variant type="Bool" value="true" />
+															<variant type="Bool" value="true" />
+															<variant type="Bool" value="true" />
+															<variant type="Bool" value="true" />
+															<variant type="Bool" value="true" />
+															<variant type="Bool" value="true" />
+															<variant type="Bool" value="true" />
+															<variant type="Bool" value="true" />
+															<variant type="Bool" value="true" />
+														</attribute>
+														<attribute name="Animation States">
+															<variant type="Int" value="1" />
+															<variant type="ResourceRef" value="Animation;Models/LASERFIRE.ani" />
+															<variant type="String" value="MasteBone" />
+															<variant type="Bool" value="true" />
+															<variant type="Float" value="1" />
+															<variant type="Float" value="1.25005" />
+															<variant type="Int" value="1" />
+														</attribute>
+													</component>
+													<node id="16778391">
+														<attribute name="Is Enabled" value="true" />
+														<attribute name="Name" value="MasteBone" />
+														<attribute name="Position" value="0 0 -0" />
+														<attribute name="Rotation" value="4.3913e-008 1.71564e-010 -1 -0.000687335" />
+														<attribute name="Scale" value="1 1 1" />
+														<attribute name="Variables" />
+														<node id="16778392">
+															<attribute name="Is Enabled" value="true" />
+															<attribute name="Name" value="RedLaserBone" />
+															<attribute name="Position" value="1.30674e-011 7.41014e-005 -0.00948944" />
+															<attribute name="Rotation" value="5.34218e-008 -5.36331e-008 -0.707593 0.706621" />
+															<attribute name="Scale" value="0.999901 1.05267 0.999901" />
+															<attribute name="Variables" />
+														</node>
+														<node id="16778393">
+															<attribute name="Is Enabled" value="true" />
+															<attribute name="Name" value="TwoBlueLinesBone" />
+															<attribute name="Position" value="-4.37973e-010 -0.00149393 1.08695" />
+															<attribute name="Rotation" value="0.468575 -0.467932 0.530212 -0.529484" />
+															<attribute name="Scale" value="1 1 1" />
+															<attribute name="Variables" />
+														</node>
+														<node id="16778394">
+															<attribute name="Is Enabled" value="true" />
+															<attribute name="Name" value="YellowLaserBone" />
+															<attribute name="Position" value="2.42907e-009 0.00820965 -6.01548" />
+															<attribute name="Rotation" value="-0.24966 0.249317 -0.662086 0.661176" />
+															<attribute name="Scale" value="0.999901 1.05267 0.999901" />
+															<attribute name="Variables" />
+														</node>
+														<node id="16778395">
+															<attribute name="Is Enabled" value="true" />
+															<attribute name="Name" value="Ring0Bone" />
+															<attribute name="Position" value="1.10034e-011 3.55677e-005 -0.0273079" />
+															<attribute name="Rotation" value="0.855659 -0.00350213 0.00282977 -0.51752" />
+															<attribute name="Scale" value="0.413232 0.413232 0.413232" />
+															<attribute name="Variables" />
+															<node id="16778396">
+																<attribute name="Is Enabled" value="true" />
+																<attribute name="Name" value="Ring0Bone.001" />
+																<attribute name="Position" value="3.14879e-011 0.0213182 -2.22963" />
+																<attribute name="Rotation" value="0.999988 -0.00481171 2.33317e-010 -1.14848e-008" />
+																<attribute name="Scale" value="1.56719 1.56719 1.56719" />
+																<attribute name="Variables" />
+															</node>
+														</node>
+														<node id="16778397">
+															<attribute name="Is Enabled" value="true" />
+															<attribute name="Name" value="Ring0Bone.002" />
+															<attribute name="Position" value="4.16297e-010 0.00142334 -1.03316" />
+															<attribute name="Rotation" value="0.855659 -0.00350224 0.00282977 -0.51752" />
+															<attribute name="Scale" value="0.536346 0.536346 0.536346" />
+															<attribute name="Variables" />
+															<node id="16778398">
+																<attribute name="Is Enabled" value="true" />
+																<attribute name="Name" value="Ring0Bone.003" />
+																<attribute name="Position" value="8.5729e-010 0.00944263 -0.987555" />
+																<attribute name="Rotation" value="0.999997 -0.00240207 -4.23505e-011 7.59719e-009" />
+																<attribute name="Scale" value="1 1 1" />
+																<attribute name="Variables" />
+															</node>
+														</node>
+														<node id="16778399">
+															<attribute name="Is Enabled" value="true" />
+															<attribute name="Name" value="Ring0Bone.004" />
+															<attribute name="Position" value="6.60579e-009 0.0225371 -16.3941" />
+															<attribute name="Rotation" value="0.999992 -0.00409307 -2.02568e-010 2.00641e-010" />
+															<attribute name="Scale" value="0.102077 0.102077 0.102077" />
+															<attribute name="Variables" />
+														</node>
+														<node id="16778400">
+															<attribute name="Is Enabled" value="true" />
+															<attribute name="Name" value="Ring0Bone.005" />
+															<attribute name="Position" value="8.26898e-009 0.0282114 -20.5218" />
+															<attribute name="Rotation" value="0.999992 -0.00409362 -2.02568e-010 2.0064e-010" />
+															<attribute name="Scale" value="0.141636 0.141636 0.141636" />
+															<attribute name="Variables" />
+														</node>
+														<node id="16778401">
+															<attribute name="Is Enabled" value="true" />
+															<attribute name="Name" value="Ring0Bone.006" />
+															<attribute name="Position" value="1.06153e-008 0.0362161 -26.3448" />
+															<attribute name="Rotation" value="0.999992 -0.00409307 -2.02568e-010 2.0064e-010" />
+															<attribute name="Scale" value="0.110491 0.110491 0.110491" />
+															<attribute name="Variables" />
+														</node>
+														<node id="16778402">
+															<attribute name="Is Enabled" value="true" />
+															<attribute name="Name" value="Ring0Bone.007" />
+															<attribute name="Position" value="1.28187e-008 0.0437811 -31.8132" />
+															<attribute name="Rotation" value="0.999992 -0.00409417 -2.02568e-010 2.00641e-010" />
+															<attribute name="Scale" value="0.106278 0.106278 0.106278" />
+															<attribute name="Variables" />
+														</node>
+														<node id="16778403">
+															<attribute name="Is Enabled" value="true" />
+															<attribute name="Name" value="Ring0Bone.008" />
+															<attribute name="Position" value="2.12173e-008 0.0724351 -52.6569" />
+															<attribute name="Rotation" value="0.999992 -0.00409417 -2.02568e-010 2.00641e-010" />
+															<attribute name="Scale" value="0.147872 0.147872 0.147872" />
+															<attribute name="Variables" />
+														</node>
+														<node id="16778404">
+															<attribute name="Is Enabled" value="true" />
+															<attribute name="Name" value="ThunderBone" />
+															<attribute name="Position" value="7.03486 -0.0121405 8.82141" />
+															<attribute name="Rotation" value="-0.00139392 -0.986459 0.0729005 -0.146905" />
+															<attribute name="Scale" value="0.492366 0.492377 0.492252" />
+															<attribute name="Variables" />
+														</node>
+													</node>
+												</node>
+											</node>
+										</node>
+										<node id="16778405">
+											<attribute name="Is Enabled" value="true" />
+											<attribute name="Name" value="" />
+											<attribute name="Position" value="0 0 0" />
+											<attribute name="Rotation" value="1 0 0 0" />
+											<attribute name="Scale" value="1 1 1" />
+											<attribute name="Variables" />
+											<component type="CollisionShape" id="16777545">
+												<attribute name="Shape Type" value="Capsule" />
+												<attribute name="Size" value="7 13 7" />
+												<attribute name="Offset Position" value="0 5.26 0" />
+											</component>
+											<component type="RigidBody" id="16777546">
+												<attribute name="Physics Rotation" value="0.698567 0.704565 -0.0714985 -0.102374" />
+												<attribute name="Physics Position" value="-40.7676 32.8895 49.2604" />
+												<attribute name="Mass" value="1" />
+												<attribute name="Collision Layer" value="32" />
+												<attribute name="Collision Mask" value="159" />
+											</component>
+										</node>
+									</node>
+								</node>
+							</node>
+							<node id="16778406">
+								<attribute name="Is Enabled" value="true" />
+								<attribute name="Name" value="Plecho.R" />
+								<attribute name="Position" value="-6.26869e-008 8.46405 -5.4766e-008" />
+								<attribute name="Rotation" value="0.512034 0.501977 -0.498015 0.487669" />
+								<attribute name="Scale" value="1 0.999999 1" />
+								<attribute name="Variables" />
+								<node id="16778407">
+									<attribute name="Is Enabled" value="true" />
+									<attribute name="Name" value="Ruka.R" />
+									<attribute name="Position" value="-1.00195e-007 5.86144 1.64532e-006" />
+									<attribute name="Rotation" value="0.948439 0.30477 -0.0757253 0.0429355" />
+									<attribute name="Scale" value="1 1 1" />
+									<attribute name="Variables" />
+									<node id="16778408">
+										<attribute name="Is Enabled" value="true" />
+										<attribute name="Name" value="Ruka.R.001" />
+										<attribute name="Position" value="-5.35762e-007 7.39442 -9.24212e-007" />
+										<attribute name="Rotation" value="0.83425 0.439057 -0.00226716 0.333543" />
+										<attribute name="Scale" value="1 1 1" />
+										<attribute name="Variables" />
+										<node id="16778409">
+											<attribute name="Is Enabled" value="true" />
+											<attribute name="Name" value="Ruka.R.002" />
+											<attribute name="Position" value="4.83002e-007 6.15619 -2.82351e-007" />
+											<attribute name="Rotation" value="0.876795 -0.480818 -0.00324227 0.00591227" />
+											<attribute name="Scale" value="1 1 1" />
+											<attribute name="Variables" />
+											<node id="16778410">
+												<attribute name="Is Enabled" value="true" />
+												<attribute name="Name" value="Ruka.R.005" />
+												<attribute name="Position" value="-2.46985e-007 2.44459 -3.18919e-007" />
+												<attribute name="Rotation" value="0.952767 0.28722 -0.0284857 0.0944932" />
+												<attribute name="Scale" value="1 1 1" />
+												<attribute name="Variables" />
+											</node>
+										</node>
+										<node id="16778411">
+											<attribute name="Is Enabled" value="true" />
+											<attribute name="Name" value="Ruka.R.003" />
+											<attribute name="Position" value="4.83002e-007 6.15619 -2.82351e-007" />
+											<attribute name="Rotation" value="0.999847 0.0161224 0.0001087 0.00674183" />
+											<attribute name="Scale" value="1 1 1" />
+											<attribute name="Variables" />
+											<node id="16778412">
+												<attribute name="Is Enabled" value="true" />
+												<attribute name="Name" value="Ruka.R.006" />
+												<attribute name="Position" value="-8.20935e-007 2.14539 -4.23121e-007" />
+												<attribute name="Rotation" value="0.994845 -0.0233164 0.00231252 0.0986665" />
+												<attribute name="Scale" value="1 1 1" />
+												<attribute name="Variables" />
+											</node>
+										</node>
+										<node id="16778413">
+											<attribute name="Is Enabled" value="true" />
+											<attribute name="Name" value="Ruka.R.004" />
+											<attribute name="Position" value="4.83002e-007 6.15619 -2.82351e-007" />
+											<attribute name="Rotation" value="0.906208 0.422778 0.00285094 0.00611048" />
+											<attribute name="Scale" value="1 1 1" />
+											<attribute name="Variables" />
+											<node id="16778414">
+												<attribute name="Is Enabled" value="true" />
+												<attribute name="Name" value="Ruka.R.007" />
+												<attribute name="Position" value="-3.44098e-007 2.34693 3.71158e-007" />
+												<attribute name="Rotation" value="0.982845 -0.155808 0.0154525 0.0974763" />
+												<attribute name="Scale" value="1 1 1" />
+												<attribute name="Variables" />
+											</node>
+										</node>
+										<node id="16778415">
+											<attribute name="Is Enabled" value="true" />
+											<attribute name="Name" value="" />
+											<attribute name="Position" value="0 0 0" />
+											<attribute name="Rotation" value="1 0 0 0" />
+											<attribute name="Scale" value="1 1 1" />
+											<attribute name="Variables" />
+											<component type="CollisionShape" id="16777547">
+												<attribute name="Shape Type" value="Capsule" />
+												<attribute name="Size" value="7 10 7" />
+												<attribute name="Offset Position" value="-0 3.81 -0" />
+											</component>
+											<component type="RigidBody" id="16777548">
+												<attribute name="Physics Rotation" value="-0.338085 -0.646276 0.174699 0.661443" />
+												<attribute name="Physics Position" value="-34.8417 31.9002 45.3682" />
+												<attribute name="Mass" value="1" />
+												<attribute name="Collision Layer" value="32" />
+												<attribute name="Collision Mask" value="159" />
+											</component>
+										</node>
+									</node>
+								</node>
+							</node>
+							<node id="16778416">
+								<attribute name="Is Enabled" value="true" />
+								<attribute name="Name" value="Bone.003" />
+								<attribute name="Position" value="-6.26869e-008 8.46405 -5.4766e-008" />
+								<attribute name="Rotation" value="0.964789 0.263024 -7.97591e-009 1.4743e-009" />
+								<attribute name="Scale" value="1 1 1" />
+								<attribute name="Variables" />
+								<node id="16778417">
+									<attribute name="Is Enabled" value="true" />
+									<attribute name="Name" value="Krishka" />
+									<attribute name="Position" value="0 5.47836 -4.60565e-007" />
+									<attribute name="Rotation" value="-3.29891e-008 3.03106e-008 -0.496223 0.868195" />
+									<attribute name="Scale" value="1 1 1" />
+									<attribute name="Variables" />
+								</node>
+							</node>
+							<node id="16778418">
+								<attribute name="Is Enabled" value="true" />
+								<attribute name="Name" value="Bone.004" />
+								<attribute name="Position" value="-6.26869e-008 8.46405 -5.4766e-008" />
+								<attribute name="Rotation" value="0.533825 0.845595 -2.17731e-008 1.34356e-008" />
+								<attribute name="Scale" value="1 1 1" />
+								<attribute name="Variables" />
+								<node id="16778419">
+									<attribute name="Is Enabled" value="true" />
+									<attribute name="Name" value="Bone.002" />
+									<attribute name="Position" value="-0.0363907 6.19567 -0.316927" />
+									<attribute name="Rotation" value="0.566104 -0.823725 -0.0208098 -0.0238836" />
+									<attribute name="Scale" value="1 1 1" />
+									<attribute name="Variables" />
+									<node id="16778420">
+										<attribute name="Is Enabled" value="true" />
+										<attribute name="Name" value="Truba1" />
+										<attribute name="Position" value="4.23872 11.6225 -1.67156" />
+										<attribute name="Rotation" value="0.71395 -0.0189125 0.699408 -0.0273128" />
+										<attribute name="Scale" value="1 1 1" />
+										<attribute name="Variables" />
+									</node>
+									<node id="16778421">
+										<attribute name="Is Enabled" value="true" />
+										<attribute name="Name" value="Truba2" />
+										<attribute name="Position" value="5.65842 9.54666 -1.0103" />
+										<attribute name="Rotation" value="0.71395 -0.0189125 0.699408 -0.0273128" />
+										<attribute name="Scale" value="1 1 1" />
+										<attribute name="Variables" />
+									</node>
+									<node id="16778422">
+										<attribute name="Is Enabled" value="true" />
+										<attribute name="Name" value="Truba3" />
+										<attribute name="Position" value="8.06541 8.12657 -0.25532" />
+										<attribute name="Rotation" value="0.71395 -0.0189125 0.699408 -0.0273127" />
+										<attribute name="Scale" value="1 1 1" />
+										<attribute name="Variables" />
+									</node>
+								</node>
+							</node>
+							<node id="16778423">
+								<attribute name="Is Enabled" value="true" />
+								<attribute name="Name" value="Bone.005" />
+								<attribute name="Position" value="-6.26869e-008 8.46405 -5.4766e-008" />
+								<attribute name="Rotation" value="-3.42422e-008 9.65871e-008 -0.48752 0.873112" />
+								<attribute name="Scale" value="1 1 1" />
+								<attribute name="Variables" />
+								<node id="16778424">
+									<attribute name="Is Enabled" value="true" />
+									<attribute name="Name" value="Head" />
+									<attribute name="Position" value="2.36877e-007 4.02392 8.27961e-007" />
+									<attribute name="Rotation" value="0.905453 -0.358348 0.153604 0.167772" />
+									<attribute name="Scale" value="1 1 1" />
+									<attribute name="Variables" />
+									<node id="16778425">
+										<attribute name="Is Enabled" value="true" />
+										<attribute name="Name" value="HeadHelper" />
+										<attribute name="Position" value="-7.2046e-006 3.12602 -0.535995" />
+										<attribute name="Rotation" value="1 9.14732e-009 -4.12962e-005 -4.46937e-010" />
+										<attribute name="Scale" value="1 1 1" />
+										<attribute name="Variables" />
+									</node>
+									<node id="16778426">
+										<attribute name="Is Enabled" value="true" />
+										<attribute name="Name" value="Chelust" />
+										<attribute name="Position" value="-7.2046e-006 3.12602 -0.535995" />
+										<attribute name="Rotation" value="0.808309 0.585538 0.016105 0.0593598" />
+										<attribute name="Scale" value="1 1 1" />
+										<attribute name="Variables" />
+									</node>
+								</node>
+							</node>
+							<node id="16778427">
+								<attribute name="Is Enabled" value="true" />
+								<attribute name="Name" value="HitBox" />
+								<attribute name="Position" value="-3.30595 9.32945 6.22647" />
+								<attribute name="Rotation" value="0.991445 0 0 0.130526" />
+								<attribute name="Scale" value="7 7 7" />
+								<attribute name="Variables">
+									<variant hash="964697786" type="String" value="hitbox" />
+								</attribute>
+								<component type="RigidBody" id="16777549">
+									<attribute name="Physics Rotation" value="-0.192774 0.0959767 0.976136 -0.0280381" />
+									<attribute name="Physics Position" value="-38.1117 33.1539 44.4765" />
+									<attribute name="Collision Mask" value="159" />
+								</component>
+								<component type="CollisionShape" id="16777550">
+									<attribute name="Shape Type" value="Capsule" />
+									<attribute name="Size" value="1 2 1" />
+								</component>
+							</node>
+						</node>
+					</node>
+					<node id="16778428">
+						<attribute name="Is Enabled" value="true" />
+						<attribute name="Name" value="Noga.L" />
+						<attribute name="Position" value="0.130934 -0.205801 1.65886e-008" />
+						<attribute name="Rotation" value="0.5 0.5 0.5 -0.5" />
+						<attribute name="Scale" value="1 1 1" />
+						<attribute name="Variables" />
+						<node id="16778429">
+							<attribute name="Is Enabled" value="true" />
+							<attribute name="Name" value="Noga.L.001" />
+							<attribute name="Position" value="4.18548e-007 3.25609 3.09642e-007" />
+							<attribute name="Rotation" value="0.671644 0.156678 0.333644 0.642673" />
+							<attribute name="Scale" value="1 0.999999 1" />
+							<attribute name="Variables" />
+							<node id="16778430">
+								<attribute name="Is Enabled" value="true" />
+								<attribute name="Name" value="Noga.L.002" />
+								<attribute name="Position" value="5.86826e-007 5.06935 -5.48117e-007" />
+								<attribute name="Rotation" value="0.999998 -0.00198013 -0.000217974 0.000923351" />
+								<attribute name="Scale" value="1 1 1" />
+								<attribute name="Variables" />
+								<node id="16778431">
+									<attribute name="Is Enabled" value="true" />
+									<attribute name="Name" value="Noga.L.003" />
+									<attribute name="Position" value="-3.09699e-007 2.04448 -5.03871e-007" />
+									<attribute name="Rotation" value="1.90997e-006 2.07263e-006 -0.707971 -0.706242" />
+									<attribute name="Scale" value="1 1 1" />
+									<attribute name="Variables" />
+									<node id="16778432">
+										<attribute name="Is Enabled" value="true" />
+										<attribute name="Name" value="Noga.L.006" />
+										<attribute name="Position" value="-2.38419e-007 1.57375 3.27826e-007" />
+										<attribute name="Rotation" value="0.967575 -0.228925 0.0995983 -0.0383742" />
+										<attribute name="Scale" value="1 1 1" />
+										<attribute name="Variables" />
+									</node>
+								</node>
+								<node id="16778433">
+									<attribute name="Is Enabled" value="true" />
+									<attribute name="Name" value="Noga.L.004" />
+									<attribute name="Position" value="-3.09699e-007 2.04448 -5.03871e-007" />
+									<attribute name="Rotation" value="0.717446 -0.696614 -9.18846e-008 -7.93586e-008" />
+									<attribute name="Scale" value="1 1 1" />
+									<attribute name="Variables" />
+									<node id="16778434">
+										<attribute name="Is Enabled" value="true" />
+										<attribute name="Name" value="Noga.L.005" />
+										<attribute name="Position" value="5.03845e-008 1.64385 -6.20168e-007" />
+										<attribute name="Rotation" value="0.995764 0.0919491 -6.94291e-010 3.04685e-009" />
+										<attribute name="Scale" value="1 1 1" />
+										<attribute name="Variables" />
+										<node id="16778435">
+											<attribute name="Is Enabled" value="true" />
+											<attribute name="Name" value="footL" />
+											<attribute name="Position" value="0.25166 -0.0839244 0.0131993" />
+											<attribute name="Rotation" value="0.994684 -0.102978 -1.00966e-008 -6.73751e-008" />
+											<attribute name="Scale" value="1 1 1" />
+											<attribute name="Variables" />
+										</node>
+									</node>
+								</node>
+								<node id="16778436">
+									<attribute name="Is Enabled" value="true" />
+									<attribute name="Name" value="Noga.L.007" />
+									<attribute name="Position" value="-3.09699e-007 2.04448 -5.03871e-007" />
+									<attribute name="Rotation" value="0.5 -0.5 -0.5 -0.5" />
+									<attribute name="Scale" value="1 1 1" />
+									<attribute name="Variables" />
+									<node id="16778437">
+										<attribute name="Is Enabled" value="true" />
+										<attribute name="Name" value="Noga.L.008" />
+										<attribute name="Position" value="2.33508e-008 1.29699 1.46243e-007" />
+										<attribute name="Rotation" value="0.98861 0.150499 -7.1392e-008 1.26933e-008" />
+										<attribute name="Scale" value="1 1 1" />
+										<attribute name="Variables" />
+									</node>
+								</node>
+								<node id="16778438">
+									<attribute name="Is Enabled" value="true" />
+									<attribute name="Name" value="Noga.L.009" />
+									<attribute name="Position" value="-3.09699e-007 2.04448 -5.03871e-007" />
+									<attribute name="Rotation" value="0.5 -0.5 0.5 0.5" />
+									<attribute name="Scale" value="1 1 1" />
+									<attribute name="Variables" />
+									<node id="16778439">
+										<attribute name="Is Enabled" value="true" />
+										<attribute name="Name" value="Noga.L.010" />
+										<attribute name="Position" value="-4.67617e-007 1.41708 -1.30885e-007" />
+										<attribute name="Rotation" value="0.991611 0.129262 1.88901e-007 7.57165e-009" />
+										<attribute name="Scale" value="1 1 1" />
+										<attribute name="Variables" />
+									</node>
+								</node>
+							</node>
+						</node>
+					</node>
+					<node id="16778440">
+						<attribute name="Is Enabled" value="true" />
+						<attribute name="Name" value="Noga.R" />
+						<attribute name="Position" value="-0.205603 -0.205801 2.61608e-008" />
+						<attribute name="Rotation" value="0.5 0.5 -0.5 0.5" />
+						<attribute name="Scale" value="1 1 1" />
+						<attribute name="Variables" />
+						<node id="16778441">
+							<attribute name="Is Enabled" value="true" />
+							<attribute name="Name" value="Noga.R.001" />
+							<attribute name="Position" value="-1.04545e-007 3.19802 -3.19422e-007" />
+							<attribute name="Rotation" value="0.382197 0.549979 -0.67458 -0.310468" />
+							<attribute name="Scale" value="1 1 1" />
+							<attribute name="Variables" />
+							<node id="16778442">
+								<attribute name="Is Enabled" value="true" />
+								<attribute name="Name" value="Noga.R.002" />
+								<attribute name="Position" value="6.858e-009 5.06938 -2.05547e-007" />
+								<attribute name="Rotation" value="0.942021 -0.335536 0.00154499 -0.00296223" />
+								<attribute name="Scale" value="1 1 1" />
+								<attribute name="Variables" />
+								<node id="16778443">
+									<attribute name="Is Enabled" value="true" />
+									<attribute name="Name" value="Noga.R.003" />
+									<attribute name="Position" value="5.15086e-007 2.04448 9.21691e-009" />
+									<attribute name="Rotation" value="-1.90544e-006 -2.07032e-006 -0.707971 -0.706242" />
+									<attribute name="Scale" value="1 1 1" />
+									<attribute name="Variables" />
+									<node id="16778444">
+										<attribute name="Is Enabled" value="true" />
+										<attribute name="Name" value="Noga.R.006" />
+										<attribute name="Position" value="-4.19959e-007 1.57375 1.30381e-008" />
+										<attribute name="Rotation" value="0.996966 0.0778357 2.60866e-006 -2.32981e-007" />
+										<attribute name="Scale" value="1 1 1" />
+										<attribute name="Variables" />
+									</node>
+								</node>
+								<node id="16778445">
+									<attribute name="Is Enabled" value="true" />
+									<attribute name="Name" value="Noga.R.004" />
+									<attribute name="Position" value="5.15086e-007 2.04448 9.21691e-009" />
+									<attribute name="Rotation" value="0.717446 -0.696614 8.5532e-008 8.4239e-008" />
+									<attribute name="Scale" value="1 1 1" />
+									<attribute name="Variables" />
+									<node id="16778446">
+										<attribute name="Is Enabled" value="true" />
+										<attribute name="Name" value="Noga.R.005" />
+										<attribute name="Position" value="1.33054e-008 1.64385 1.90305e-008" />
+										<attribute name="Rotation" value="0.995764 0.0919491 4.11116e-009 6.87016e-011" />
+										<attribute name="Scale" value="1 1 1" />
+										<attribute name="Variables" />
+										<node id="16778447">
+											<attribute name="Is Enabled" value="true" />
+											<attribute name="Name" value="footR" />
+											<attribute name="Position" value="-0.355349 -0.0732021 0.0626325" />
+											<attribute name="Rotation" value="0.994684 -0.102978 -5.84403e-009 -6.09742e-008" />
+											<attribute name="Scale" value="1 1 1" />
+											<attribute name="Variables" />
+										</node>
+									</node>
+								</node>
+								<node id="16778448">
+									<attribute name="Is Enabled" value="true" />
+									<attribute name="Name" value="Noga.R.007" />
+									<attribute name="Position" value="5.15086e-007 2.04448 9.21691e-009" />
+									<attribute name="Rotation" value="0.5 -0.5 0.5 0.5" />
+									<attribute name="Scale" value="1 1 1" />
+									<attribute name="Variables" />
+									<node id="16778449">
+										<attribute name="Is Enabled" value="true" />
+										<attribute name="Name" value="Noga.R.008" />
+										<attribute name="Position" value="3.04161e-008 1.29699 -1.55128e-008" />
+										<attribute name="Rotation" value="0.98861 0.150499 1.01218e-007 -1.67627e-008" />
+										<attribute name="Scale" value="1 1 1" />
+										<attribute name="Variables" />
+									</node>
+								</node>
+								<node id="16778450">
+									<attribute name="Is Enabled" value="true" />
+									<attribute name="Name" value="Noga.R.009" />
+									<attribute name="Position" value="5.15086e-007 2.04448 9.21691e-009" />
+									<attribute name="Rotation" value="0.5 -0.5 -0.5 -0.5" />
+									<attribute name="Scale" value="1 1 1" />
+									<attribute name="Variables" />
+									<node id="16778451">
+										<attribute name="Is Enabled" value="true" />
+										<attribute name="Name" value="Noga.R.010" />
+										<attribute name="Position" value="-3.59469e-008 1.41708 -7.26774e-009" />
+										<attribute name="Rotation" value="0.991611 0.129262 -1.72064e-007 -6.01283e-009" />
+										<attribute name="Scale" value="1 1 1" />
+										<attribute name="Variables" />
+									</node>
+								</node>
+							</node>
+						</node>
+					</node>
+				</node>
+				<node id="16778452">
+					<attribute name="Is Enabled" value="true" />
+					<attribute name="Name" value="IK_Noga.L" />
+					<attribute name="Position" value="3.6683 2.62164 1.98331" />
+					<attribute name="Rotation" value="0.0854933 -0.972226 0.128235 -0.176136" />
+					<attribute name="Scale" value="0.999576 0.999835 0.996524" />
+					<attribute name="Variables" />
+					<node id="16778453">
+						<attribute name="Is Enabled" value="true" />
+						<attribute name="Name" value="IK_PoleNoga.L" />
+						<attribute name="Position" value="-1.65471e-007 -5.45242 -2.02378" />
+						<attribute name="Rotation" value="5.54495e-008 -7.94827e-006 -0.00567118 0.999984" />
+						<attribute name="Scale" value="1 1 1.0026" />
+						<attribute name="Variables" />
+					</node>
+				</node>
+				<node id="16778454">
+					<attribute name="Is Enabled" value="true" />
+					<attribute name="Name" value="IK_Noga.R" />
+					<attribute name="Position" value="-4.78773 11.3553 0.635881" />
+					<attribute name="Rotation" value="0.00319114 -0.999995 -1.387e-008 -5.42393e-007" />
+					<attribute name="Scale" value="1 1 0.995934" />
+					<attribute name="Variables" />
+					<node id="16778455">
+						<attribute name="Is Enabled" value="true" />
+						<attribute name="Name" value="IK_PoleNoga.R" />
+						<attribute name="Position" value="1.44181e-007 -5.45243 -2.02378" />
+						<attribute name="Rotation" value="-4.49896e-008 7.94319e-006 -0.00567117 0.999984" />
+						<attribute name="Scale" value="1 1 1.0026" />
+						<attribute name="Variables" />
+					</node>
+				</node>
+				<node id="16778456">
+					<attribute name="Is Enabled" value="true" />
+					<attribute name="Name" value="IK_Ruka.L" />
+					<attribute name="Position" value="8.29663 23.8697 17.202" />
+					<attribute name="Rotation" value="0.0095072 -0.999955 -9.82183e-008 -5.50041e-007" />
+					<attribute name="Scale" value="1 1 0.999421" />
+					<attribute name="Variables" />
+				</node>
+				<node id="16778457">
+					<attribute name="Is Enabled" value="true" />
+					<attribute name="Name" value="IK_Ruka.R" />
+					<attribute name="Position" value="-12.5611 8.87794 9.62023" />
+					<attribute name="Rotation" value="0.00819605 -0.999967 -4.08465e-007 -5.52517e-007" />
+					<attribute name="Scale" value="1 1 0.999977" />
+					<attribute name="Variables" />
+				</node>
+				<node id="16778458">
+					<attribute name="Is Enabled" value="true" />
+					<attribute name="Name" value="IK_PoleRuka.R" />
+					<attribute name="Position" value="-13.2696 -3.50765 18.1669" />
+					<attribute name="Rotation" value="-0.00414449 -0.999991 3.51938e-007 -6.4774e-007" />
+					<attribute name="Scale" value="1 1 1.00224" />
+					<attribute name="Variables" />
+				</node>
+				<node id="16778459">
+					<attribute name="Is Enabled" value="true" />
+					<attribute name="Name" value="IK_PoleRuka.L" />
+					<attribute name="Position" value="13.2696 -3.50765 18.1669" />
+					<attribute name="Rotation" value="-0.00414449 -0.999991 -3.56521e-007 -4.56879e-007" />
+					<attribute name="Scale" value="1 1 1.00224" />
+					<attribute name="Variables" />
+				</node>
+				<node id="16778460">
+					<attribute name="Is Enabled" value="true" />
+					<attribute name="Name" value="ROCK_JOINT" />
+					<attribute name="Position" value="3.85579 9.94811 -6.38205" />
+					<attribute name="Rotation" value="7.34698e-006 6.50118e-008 -0.999961 -0.00884844" />
+					<attribute name="Scale" value="1 1 1" />
+					<attribute name="Variables" />
+				</node>
+				<node id="16778461">
+					<attribute name="Is Enabled" value="true" />
+					<attribute name="Name" value="HitedSmokes" />
+					<attribute name="Position" value="0 0 0" />
+					<attribute name="Rotation" value="1 0 0 0" />
+					<attribute name="Scale" value="1 1 1" />
+					<attribute name="Variables" />
+					<node id="16778462">
+						<attribute name="Is Enabled" value="true" />
+						<attribute name="Name" value="smoke1" />
+						<attribute name="Position" value="12.9674 21.6387 1.52588e-005" />
+						<attribute name="Rotation" value="1 0 0 0" />
+						<attribute name="Scale" value="1 1 1" />
+						<attribute name="Variables" />
+					</node>
+					<node id="16778463">
+						<attribute name="Is Enabled" value="true" />
+						<attribute name="Name" value="smoke2" />
+						<attribute name="Position" value="0 28.781 0" />
+						<attribute name="Rotation" value="1 0 0 0" />
+						<attribute name="Scale" value="1 1 1" />
+						<attribute name="Variables" />
+					</node>
+					<node id="16778464">
+						<attribute name="Is Enabled" value="true" />
+						<attribute name="Name" value="smoke3" />
+						<attribute name="Position" value="-12.6733 28.595 -1.52588e-005" />
+						<attribute name="Rotation" value="1 0 0 0" />
+						<attribute name="Scale" value="1 1 1" />
+						<attribute name="Variables" />
+					</node>
+					<node id="16778465">
+						<attribute name="Is Enabled" value="true" />
+						<attribute name="Name" value="smoke4" />
+						<attribute name="Position" value="-11.2181 11.9526 -1.33514e-005" />
+						<attribute name="Rotation" value="1 0 0 0" />
+						<attribute name="Scale" value="1 1 1" />
+						<attribute name="Variables" />
+					</node>
+					<node id="16778466">
 						<attribute name="Is Enabled" value="true" />
 						<attribute name="Name" value="smoke5" />
 						<attribute name="Position" value="11.0071 12.1491 1.33514e-005" />

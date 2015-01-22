@@ -1,3 +1,4 @@
 <animation>
     <trigger time="1.77" type="String" value="smoke" />
+    <trigger time="0.70" type="String" value="laser" />
 </animation>

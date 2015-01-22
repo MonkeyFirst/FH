@@ -1,6 +1,7 @@
 <animation>
     <trigger time="0.17" type="String" value="StepL" />
     <trigger time="0.67" type="String" value="StepL" />
+    <trigger time="0.95" type="String" value="laser" />
     <trigger time="1.03" type="String" value="StepL" />
     <trigger time="1.33" type="String" value="StepL" />
     <trigger time="2.00" type="String" value="StepL" />
