@@ -1,22 +1,24 @@
 #pragma once
 
-#include <Urho3D/Scene/LogicComponent.h>
-#include <Urho3D/Graphics/Geometry.h>
-#include <Urho3D/Graphics/StaticModel.h>
-#include <Urho3D/Graphics/Animation.h>
-#include <Urho3D/Scene/AnimationDefs.h>
-#include <Urho3D/Graphics/AnimatedModel.h>
-#include <Urho3D/Graphics/AnimationState.h>
-#include <Urho3D/Graphics/AnimationController.h>
-#include <Urho3D/Scene/ValueAnimation.h>
-#include <Urho3D/Graphics/Material.h>
-#include <Urho3D/Scene/SplinePath.h>
-#include <Urho3D/Container/Ptr.h>
-#include <Urho3D/Audio/Sound.h>
-#include <Urho3D/Audio/SoundSource.h>
-#include <Urho3D/Audio/SoundSource3D.h>
+//#include <Urho3D/Scene/LogicComponent.h>
+//#include <Urho3D/Graphics/Geometry.h>
+//#include <Urho3D/Graphics/StaticModel.h>
+//#include <Urho3D/Graphics/Animation.h>
+//#include <Urho3D/Scene/AnimationDefs.h>
+//#include <Urho3D/Graphics/AnimatedModel.h>
+//#include <Urho3D/Graphics/AnimationState.h>
+//#include <Urho3D/Graphics/AnimationController.h>
+//#include <Urho3D/Scene/ValueAnimation.h>
+//#include <Urho3D/Graphics/Material.h>
+//#include <Urho3D/Scene/SplinePath.h>
+//#include <Urho3D/Container/Ptr.h>
+//#include <Urho3D/Audio/Sound.h>
+//#include <Urho3D/Audio/SoundSource.h>
+//#include <Urho3D/Audio/SoundSource3D.h>
 
 #include "BigBotStates.h"
+#include "GameMain.h"
+#include "Gameworld.h"
 
 
 class BigBot : public LogicComponent

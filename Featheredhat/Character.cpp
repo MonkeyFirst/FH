@@ -1,5 +1,7 @@
 #include "Common.h"
 #include "Character.h"
+#include "UserScripts.h"
+#include "Gameworld.h"
 
 
 

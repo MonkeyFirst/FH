@@ -1,6 +1,6 @@
 #include "Common.h"
 #include "BigBotStates.h"
-//#include "BigBot.h"
+#include "BigBot.h"
 
 
 BigBotAIState::BigBotAIState() 

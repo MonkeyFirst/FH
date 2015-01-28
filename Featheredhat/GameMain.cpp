@@ -1,5 +1,7 @@
 #include "Common.h"
 #include "GameMain.h"
+#include "UserScripts.h"
+
 
 DEFINE_APPLICATION_MAIN(GameMain)
 

@@ -1,5 +1,7 @@
 #include "Common.h"
 #include "BigBot.h"
+#include "UserScripts.h"
+
 
 BigBot::BigBot(Context* context) : LogicComponent(context)
 {

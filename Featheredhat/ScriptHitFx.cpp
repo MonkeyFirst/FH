@@ -1,5 +1,5 @@
 #include "Common.h"
-#include "ScriptHitFx.h"
+#include "UserScripts.h"
 
 
 ScriptHitFx::ScriptHitFx(Context* context) : LogicComponent(context)

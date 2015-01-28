@@ -1,6 +1,8 @@
 #include "Common.h"
 #include "BotAI.h"
 
+#include "UserScripts.h"
+
 BotAI::BotAI(Context* context) : LogicComponent(context)
 {
 	// Only the physics update event is needed: unsubscribe from the rest for optimization
